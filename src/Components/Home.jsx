@@ -3,7 +3,7 @@ import Header from '../Partials/Header'
 import Footer from '../Partials/Footer'
 import { BsArrowDown, BsArrowRight } from 'react-icons/bs';
 
-import HeroBg from '../Images/Home/herobg.png';
+import HeroBg from '../Images/Home/Herobg.gif';
 import Cell from '../Images/Home/cell.png';
 import Fiber from '../Images/Home/fiber.png';
 import FTTH from '../Images/Home/ftth.png';
