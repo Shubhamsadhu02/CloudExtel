@@ -19,7 +19,7 @@ export default function Header() {
         },
         {
             title: 'Our Solutions',
-            path: '/portfolio',
+            path: '/our-solution',
             cName: 'nav-text'
         },
         {
@@ -46,7 +46,7 @@ export default function Header() {
 
     return (
         <>
-            <section style={{ position: 'absolute', width: '100%', padding: '35px 100px' }}>
+            <section style={{ position: 'absolute', width: '100%', padding: '35px 100px', zIndex: '1000' }}>
                 <div className="container">
                     <IconContext.Provider value={{ color: '#fff' }}>
                         <div className='navbar'>

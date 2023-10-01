@@ -47,7 +47,6 @@ textarea:focus {
 
 /* Header and sidebar css */
 .navbar {
-    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -95,6 +94,7 @@ textarea:focus {
 .nav-menu.active {
     left: 0;
     transition: 350ms;
+    z-index: 1000;
 }
 
 .nav-text {
@@ -207,9 +207,14 @@ textarea:focus {
 }
 
 .overlay {
-    background: #FFF;
+    background: #111;
     opacity: 0.5;
     height: inherit;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .hero .container {
@@ -512,4 +517,21 @@ textarea:focus {
     background: url('../Images/Home/optic.png');
     background-size: contain;
     background-position: initial;
+}
+
+.hero__blue .container {
+    position: relative;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.go-back
+{
+    font-size: 2rem;
+    color: #FFF;
+    margin-bottom: 25px;
+    cursor: pointer;
 }
