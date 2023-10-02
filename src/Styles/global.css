@@ -10,6 +10,7 @@
 body,
 html {
     overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a:link {
@@ -196,6 +197,75 @@ textarea:focus {
     font-weight: 600;
 }
 
+/* Contact Us CSS */
+
+.contactUs {
+    padding: 120px 0;
+}
+
+.contactUs__phone,
+.contactUs__location {
+    display: flex;
+    align-items: center;
+}
+
+.contactUs__phone svg,
+.contactUs__location svg {
+    font-size: 1.3rem;
+    color: #1456A2;
+    margin-right: 10px;
+}
+
+.contactUs__phone p,
+.contactUs__location p,
+.team__descp p {
+    margin-bottom: 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--Black, #233852);
+}
+
+.contactUs__box {
+    background: #F5FAFE;
+    padding: 35px;
+}
+
+.contactUs__inputs input {
+    border: 1px solid #D4E2ED;
+    background: #FFF;
+    padding: 24px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.contactUs__inputs textarea {
+    width: 100%;
+    height: 166px;
+    border: 1px solid #D4E2ED;
+    resize: none;
+    margin-bottom: 24px;
+    padding: 24px;
+}
+
+.submit__btn button {
+    border-radius: 48px;
+    background: var(--Primary, #1456A2);
+    border: none;
+    padding: 16px 24px;
+    color: var(--White, #FFF);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+}
+
+.contactUs .contact__position {
+    position: absolute;
+    bottom: 60px;
+    right: -45px;
+}
+
 /* home styles Css */
 .hero {
     display: flex;
@@ -227,7 +297,7 @@ textarea:focus {
 }
 
 .hero__heading h1 {
-    font-size: 80px;
+    font-size: 72px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
@@ -313,7 +383,8 @@ textarea:focus {
     opacity: 0.64;
 }
 
-.networks__container--image img {
+.networks__container--image img,
+.why__container--image img {
     width: 40px;
     height: 40px;
 }
@@ -325,6 +396,10 @@ textarea:focus {
     font-weight: 600;
     line-height: 120%;
     color: var(--Black, #233852);
+}
+
+.hero__header--white h1{
+    color: #FFF;
 }
 
 .networks__content1 {
@@ -352,7 +427,10 @@ textarea:focus {
     color: var(--Black, #233852);
 }
 
-.hero__para--light p {
+.hero__para--light p,
+.why__container--para p,
+.board__desgn p,
+.team__desgn p {
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -361,7 +439,7 @@ textarea:focus {
     opacity: 0.64;
 }
 
-.next__sign {
+.next__sign a {
     font-size: 1.5rem;
     border: 1px solid #233852;
     border-radius: 50%;
@@ -373,7 +451,7 @@ textarea:focus {
     justify-content: center;
 }
 
-.networks__image::after {
+.Story__image::after {
     background: url('../Images/Home/story.png');
     background-size: contain;
     background-position: initial;
@@ -487,7 +565,8 @@ textarea:focus {
     line-height: 130%;
 }
 
-.optic {
+.optic,
+.joinUS {
     padding: 80px 100px;
 }
 
@@ -542,6 +621,12 @@ textarea:focus {
 
 .networks__content4 {
     padding: 0 60px;
+}
+
+.networks__content5
+{
+    padding: 110px 0;
+    padding-right: 320px;
 }
 
 .read__more p {
@@ -601,6 +686,7 @@ textarea:focus {
 .tab.active {
     border-bottom: 5px solid #1456A2;
     color: var(--Primary, #1456A2);
+    opacity: 1;
 }
 
 .tab-content {
@@ -615,4 +701,94 @@ textarea:focus {
     right: 0;
     background-color: white;
     z-index: 100;
-  }
+}
+
+.solution__image::after {
+    background: url('../Images/Solutions/solutionhead.png');
+    background-size: contain;
+    background-position: initial;
+    background-repeat: no-repeat;
+}
+
+.about__image::after {
+    background: url('../Images/AboutUs/about.png');
+    background-size: contain;
+    background-position: initial;
+}
+
+.aboutUs__tabs--container {
+    padding: 100px 0;
+}
+
+.hero__list ul li {
+    display: flex;
+    align-items: center;
+    color: #233852;
+    margin-bottom: 20px;
+}
+
+.hero__list ul li svg {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.hero__list ul li p {
+    color: var(--Black, #233852);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    margin-bottom: 0;
+}
+
+.why__container--header h2,
+.board__name h2,
+.team__name h2 {
+    color: var(--Black, #233852);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    margin-top: 20px;
+}
+
+.whyUs__list .row .col-lg-4:nth-child(3n+2){
+    border-right: 1px solid rgba(114, 128, 144, 0.64);
+    border-left: 1px solid rgba(114, 128, 144, 0.64);
+}
+
+.whyus__container{
+    padding: 25px;
+}
+
+.board__container,
+.team__container{
+    background: #FFF;
+    padding: 15px;
+}
+
+.board__desgn p{
+    height: 70px;
+    width: 90%;
+}
+
+.board__linkdln{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #1456A20F;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.heritage__image::after {
+    background: url('../Images/AboutUs/heritage.png');
+    background-size: contain;
+    background-position: initial;
+}
+
+.swiper-slide {
+  width: 60% !important;
+}

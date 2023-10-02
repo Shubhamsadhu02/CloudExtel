@@ -24,7 +24,7 @@ export default function Header() {
         },
         {
             title: 'About us',
-            path: '/investment',
+            path: '/about-us',
             cName: 'nav-text'
         },
         {
@@ -34,7 +34,7 @@ export default function Header() {
         },
         {
             title: 'Contact us',
-            path: '/ourteam',
+            path: '/contact-us',
             cName: 'nav-text'
         },
         {
@@ -57,7 +57,7 @@ export default function Header() {
                             </div>
                             <div className="navbar__left">
                                 <div className="contact-nav">
-                                    <Link to={'/contact'}>Contact us</Link><BsArrowRight />
+                                    <Link to={'/contact-us'}>Contact us</Link><BsArrowRight />
                                 </div>
                                 <Link to='#' className='menu-bars'>
                                     <LiaGripLinesSolid onClick={showSidebar} />

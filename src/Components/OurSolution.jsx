@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../Partials/Header'
 import Footer from '../Partials/Footer'
-import { BsArrowDown, BsArrowLeft, BsArrowRight } from 'react-icons/bs'
-import { useNavigate } from 'react-router-dom';
+import { BsArrowDown, BsArrowRight } from 'react-icons/bs'
 
 import Solutionhead from '../Images/Solutions/solutionhead.png';
 import Cell from '../Images/Solutions/cell.png';
@@ -10,13 +9,9 @@ import Fiber from '../Images/Solutions/fiber.png';
 import FTTH from '../Images/Solutions/FTTH.png';
 import Virtualized from '../Images/Solutions/Virtualized.png';
 import Optic from '../Images/Home/optic.png';
+import TopSection from './TopSection';
 
 export default function OurSolution() {
-    const naviagte = useNavigate();
-    const handleBack = () => {
-        naviagte(-1);
-    }
-
     const [activeTab, setActiveTab] = useState('cell');
     const [isTabsSticky, setIsTabsSticky] = useState(false);
 
@@ -54,25 +49,8 @@ export default function OurSolution() {
     return (
         <>
             <Header />
-            <section className='hero__blue' style={{ background: '#1456A2', height: '520px', position: 'relative' }}>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-sm-12 col-lg-7">
-                            <div className="go-back" onClick={handleBack}>
-                                <BsArrowLeft />
-                            </div>
-                            <div className="hero__heading">
-                                <h1>Innovative telecom Solutions</h1>
-                            </div>
-                        </div>
-                        <div className="col-sm-12 col-lg-5" style={{ position: 'absolute', right: '0', bottom: '0' }}>
-                            <div className="hero__blue--image">
-                                <img src={Solutionhead} alt="Solution" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
+            <TopSection title={"Innovative telecom Solutions"} image={Solutionhead} height={'520px'}/>
 
             <section className='solution__tabs'>
                 <div className="container">

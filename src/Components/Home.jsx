@@ -127,11 +127,11 @@ export default function Home() {
                   <p>Our founders, seasoned veterans in the technology and networking industry, recognized the growing challenges faced by businesses in an ever-evolving digital landscape.</p>
                 </div>
                 <div className="next__sign mt-4">
-                  <BsArrowRight />
+                  <Link to={'/our-solution'}><BsArrowRight /></Link>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 networks__image background__overflow--Left">
+            <div className="col-lg-4 Story__image background__overflow--Left">
             </div>
           </div>
         </div>
@@ -251,7 +251,7 @@ export default function Home() {
                 <p>We are thrilled to announce the expansion of our fiber optic network coverage across multiple cities and regions</p>
               </div>
               <div className="hero__contact">
-                <Link to={'/contact'}>Contact us</Link><BsArrowRight />
+                <Link to={'/contact-us'}>Contact us</Link><BsArrowRight />
               </div>
             </div>
             <div className="col-sm-12 col-lg-6" style={{background: `url(${Optic})`, backgroundSize: 'contain', backgroundPosition: 'right', backgroundRepeat: 'no-repeat'}}>
