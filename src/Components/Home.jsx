@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../Partials/Header'
 import Footer from '../Partials/Footer'
 import { BsArrowDown, BsArrowRight } from 'react-icons/bs';
@@ -17,8 +17,40 @@ import Optic from '../Images/Home/optic.png';
 import HomeNewsSection from './HomeNewsSection';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import CountUp from 'react-countup';
 
 export default function Home() {
+  
+  const [startAnimation, setStartAnimation] = useState(false);
+
+  useEffect(() => {
+    // Function to start the CountUp animation when the component is mounted
+    const startCountUp = () => {
+      setStartAnimation(true);
+    };
+
+    // Attach scroll event listener to trigger the CountUp animation when the section is in the viewport
+    const handleScroll = () => {
+      const section = document.querySelector('.data');
+      if (section) {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight) {
+          startCountUp();
+          window.removeEventListener('scroll', handleScroll); // Remove the scroll event listener once animation is triggered
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <Header />
@@ -143,7 +175,7 @@ export default function Home() {
             <ul>
               <li>
                 <div className="data__number">
-                  <h3>5,600 KMs+</h3>
+                  <h3>{startAnimation ? (<CountUp end={5600} duration={2} />) : ('0')}&nbsp;KMs+</h3>
                 </div>
                 <div className="data__name">
                   <p>Fiber Laid</p>
@@ -151,7 +183,7 @@ export default function Home() {
               </li>
               <li>
                 <div className="data__number">
-                  <h3>4700+</h3>
+                  <h3>{startAnimation ? (<CountUp end={4700} duration={2} />) : ('0')}&nbsp;+</h3>
                 </div>
                 <div className="data__name">
                   <p>Small Cells Sites</p>
@@ -159,7 +191,7 @@ export default function Home() {
               </li>
               <li>
                 <div className="data__number">
-                  <h3>427+</h3>
+                  <h3>{startAnimation ? (<CountUp end={427} duration={2} />) : ('0')}&nbsp;+</h3>
                 </div>
                 <div className="data__name">
                   <p>Cities / Towns across <br /> 30 states & UTs</p>
@@ -167,7 +199,7 @@ export default function Home() {
               </li>
               <li>
                 <div className="data__number">
-                  <h3>1900+</h3>
+                  <h3>{startAnimation ? (<CountUp end={1900} duration={2} />) : ('0')}&nbsp;+</h3>
                 </div>
                 <div className="data__name">
                   <p>Societies</p>
@@ -175,7 +207,7 @@ export default function Home() {
               </li>
               <li>
                 <div className="data__number">
-                  <h3>1.35 lac+</h3>
+                  <h3>{startAnimation ? (<CountUp end={1.35} decimals={2} duration={2} />) : ('0')}&nbsp;lac+</h3>
                 </div>
                 <div className="data__name">
                   <p>Home Passed</p>

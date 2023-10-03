@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="container">
           <div className="footer" style={{ padding: "70px 35px 20px" }}>
             <div className="row">
-              <div className="col-lg-3">
+              <div className="col-sm-12 col-lg-3">
                 <a href='/'><img src={Logo} alt='CloudExtel Logo' height="31" width="150" /></a>
                 <div className="location">
                 <FaMapMarkerAlt />
@@ -20,7 +20,7 @@ export default function Footer() {
                   Mumbai, Maharashtra - 400028 </p>
                 </div>
               </div>
-              <div className="col-lg-3">
+              <div className="col-sm-12 col-lg-3">
                 <div className="footer-list">
                   <ul>
                     <li>
@@ -38,7 +38,7 @@ export default function Footer() {
                   </ul>
                 </div>
               </div>
-              <div className="col-lg-3">
+              <div className="col-sm-12 col-lg-3">
                 <div className="footer-list">
                   <ul>
                     <li>
@@ -50,7 +50,7 @@ export default function Footer() {
                   </ul>
                 </div>
               </div>
-              <div className="col-lg-3">
+              <div className="col-sm-12 col-lg-3">
                 <div className="social-list">
                   <ul className='d-flex'>
                     <li><BiLogoFacebook/></li>

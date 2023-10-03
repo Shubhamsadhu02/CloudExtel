@@ -262,8 +262,8 @@ textarea:focus {
 
 .contactUs .contact__position {
     position: absolute;
-    bottom: 60px;
-    right: -45px;
+    bottom: 80px;
+    right: -60px;
 }
 
 /* home styles Css */
@@ -317,7 +317,6 @@ textarea:focus {
     font-weight: 600;
     line-height: 130%;
 }
-
 .background__overflow--Right {
     position: relative;
 }
@@ -350,8 +349,7 @@ textarea:focus {
 .networks .col-lg-4 {
     display: flex;
     align-items: center;
-    height: 100vh;
-    padding: 130px 100px;
+    padding: 120px 100px;
     padding-left: 0;
 }
 
@@ -487,6 +485,7 @@ textarea:focus {
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
+    display: flex;
 }
 
 .data__name p,
