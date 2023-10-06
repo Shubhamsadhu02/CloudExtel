@@ -1,6 +1,6 @@
 import React from 'react'
 import { BsArrowRight } from 'react-icons/bs'
-import News from '../Images/Home/news.png';
+import News from '../../Images/Home/news.png';
 
 export default function HomeNewsSection() {
   return (

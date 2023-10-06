@@ -68,7 +68,18 @@ textarea:focus {
     margin-left: 12px;
 }
 
-.menu-bars {
+.contact-nav__blue,
+.menu-bars__blue {
+    border: 1px solid rgba(35, 56, 82, 0.40);
+    padding: 16px 24px;
+    border-radius: 48px;
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+}
+
+.menu-bars,
+.menu-bars__blue {
     font-size: 2rem;
     padding: 10px 24px;
 }
@@ -79,6 +90,19 @@ textarea:focus {
     font-style: normal;
     font-weight: 600;
     margin-right: 10px;
+}
+
+.contact-nav__blue a {
+    color: var(--White, #233852);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.contact-nav__blue svg,
+.menu-bars__blue svg {
+    color: #233852 !important;
 }
 
 .nav-menu {
@@ -199,7 +223,8 @@ textarea:focus {
 
 /* Contact Us CSS */
 
-.contactUs {
+.contactUs,
+.career {
     padding: 120px 0;
 }
 
@@ -226,6 +251,11 @@ textarea:focus {
     color: var(--Black, #233852);
 }
 
+.team__descp {
+    height: 350px;
+    overflow-y: auto;
+}
+
 .contactUs__box {
     background: #F5FAFE;
     padding: 35px;
@@ -236,6 +266,20 @@ textarea:focus {
     background: #FFF;
     padding: 24px;
     width: 100%;
+    margin-bottom: 24px;
+}
+
+.career__inputs input {
+    width: 94%;
+    border: none;
+    margin-bottom: 0;
+}
+
+.career__inputs {
+    width: 60%;
+    border: 1px solid #D4E2ED;
+    background: #FFF;
+    padding: 12px 24px;
     margin-bottom: 24px;
 }
 
@@ -317,6 +361,7 @@ textarea:focus {
     font-weight: 600;
     line-height: 130%;
 }
+
 .background__overflow--Right {
     position: relative;
 }
@@ -343,14 +388,6 @@ textarea:focus {
     width: 100vw;
     height: 100%;
 
-}
-
-.networks .col-lg-8,
-.networks .col-lg-4 {
-    display: flex;
-    align-items: center;
-    padding: 120px 100px;
-    padding-left: 0;
 }
 
 .networks__container {
@@ -396,7 +433,7 @@ textarea:focus {
     color: var(--Black, #233852);
 }
 
-.hero__header--white h1{
+.hero__header--white h1 {
     color: #FFF;
 }
 
@@ -414,7 +451,11 @@ textarea:focus {
 }
 
 .networks__content2 {
-    width: 505px;
+    padding: 120px 220px 120px 60px;
+}
+
+.networks__content6 {
+    padding: 120px 100px 120px 60px;
 }
 
 .hero__subHeader h4 {
@@ -479,7 +520,8 @@ textarea:focus {
     border-right: none !important;
 }
 
-.data__number h3 {
+.data__number h3,
+.perks__header h3 {
     color: var(--White, #FFF);
     font-size: 32px;
     font-style: normal;
@@ -622,8 +664,7 @@ textarea:focus {
     padding: 0 60px;
 }
 
-.networks__content5
-{
+.networks__content5 {
     padding: 110px 0;
     padding-right: 320px;
 }
@@ -752,27 +793,27 @@ textarea:focus {
     margin-top: 20px;
 }
 
-.whyUs__list .row .col-lg-4:nth-child(3n+2){
+.whyUs__list .row .col-lg-4:nth-child(3n+2) {
     border-right: 1px solid rgba(114, 128, 144, 0.64);
     border-left: 1px solid rgba(114, 128, 144, 0.64);
 }
 
-.whyus__container{
+.whyus__container {
     padding: 25px;
 }
 
 .board__container,
-.team__container{
+.team__container {
     background: #FFF;
     padding: 15px;
 }
 
-.board__desgn p{
+.board__desgn p {
     height: 70px;
     width: 90%;
 }
 
-.board__linkdln{
+.board__linkdln {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -789,5 +830,97 @@ textarea:focus {
 }
 
 .swiper-slide {
-  width: 60% !important;
+    width: 60% !important;
+}
+
+.career__TopSection {
+    padding: 120px 0;
+    padding-top: 220px;
+}
+
+.View_opportunities h4 {
+    color: var(--White, #1456A2);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    margin-top: 3rem;
+}
+
+.imgae__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 80px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+.sub-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 18px;
+}
+
+.perks {
+    background: var(--Primary, #1456A2);
+    padding: 120px 100px;
+}
+
+.perks__header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+    padding: 24px 0;
+}
+
+.perks__header h3 {
+    width: 60%;
+}
+
+.perks__para p {
+    color: var(--White, #FFF);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    opacity: 0.64;
+    padding-top: 24px;
+}
+
+.perks__image img {
+    width: 48px;
+    height: 48px;
+}
+
+.fuelling__image::after {
+    background: url('../Images/Careers/Fulleing.png');
+    background-size: contain;
+    background-position: initial;
+}
+
+.career__inputs svg {
+    width: 35px;
+    height: 35px;
+    color: #1456A2;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

@@ -1,11 +1,12 @@
 import {BrowserRouter as Router,Route,Routes} from "react-router-dom";
 import './Styles/global.css';
 
-import Home from "./Components/Home";
-import OurSolution from "./Components/OurSolution";
-import AboutUs from "./Components/AboutUs";
+import Home from "./Components/Home/Home";
+import OurSolution from "./Components/OurSolutions/OurSolution";
+import AboutUs from "./Components/AboutUs/AboutUs";
 import ScrollToTop from "./Partials/ScrollToTop";
-import ContactUs from "./Components/ContactUs";
+import ContactUs from "./Components/ContactUs/ContactUs";
+import Career from "./Components/Careers/Career";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/our-solution" element={<OurSolution/>} />
         <Route path="/about-us" element={<AboutUs/>} />
         <Route path="/contact-us" element={<ContactUs/>} />
+        <Route path="/careers" element={<Career/>} />
       </Routes>
     </Router>
   );

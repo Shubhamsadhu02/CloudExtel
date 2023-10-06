@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import Header from '../Partials/Header'
-import Footer from '../Partials/Footer'
-import TopSection from './TopSection'
+import Header from '../../Partials/Header'
+import Footer from '../../Partials/Footer'
+import TopSection from '../TopSection'
 
-import AboutImg from '../Images/AboutUs/about.png';
-import Choose from '../Images/AboutUs/choose.png';
-import Customer from '../Images/AboutUs/customer.png';
-import Innovative from '../Images/AboutUs/idea.png';
-import Process from '../Images/AboutUs/settings.png';
-import Scalability from '../Images/AboutUs/resize.png';
-import Profatability from '../Images/AboutUs/funds.png';
-import Commitment from '../Images/AboutUs/hand-shake.png';
-import Union from '../Images/AboutUs/Union.png';
+import AboutImg from '../../Images/AboutUs/about.png';
+import Choose from '../../Images/AboutUs/choose.png';
+import Customer from '../../Images/AboutUs/customer.png';
+import Innovative from '../../Images/AboutUs/idea.png';
+import Process from '../../Images/AboutUs/settings.png';
+import Scalability from '../../Images/AboutUs/resize.png';
+import Profatability from '../../Images/AboutUs/funds.png';
+import Commitment from '../../Images/AboutUs/hand-shake.png';
+import Union from '../../Images/AboutUs/Union.png';
 import { BsArrowRight, BsCheck2 } from 'react-icons/bs';
 import OurBoard from './OurBoard';
 import OurTeam from './OurTeam';

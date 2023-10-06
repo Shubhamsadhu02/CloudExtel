@@ -6,8 +6,10 @@ import { RxCross1 } from 'react-icons/rx';
 import { BsArrowRight } from 'react-icons/bs'
 
 import Logo from '../Images/logo.png';
+import LogoBlue from '../Images/logoBlue.png';
 
-export default function Header() {
+export default function Header(props) {
+    const isWhite = props.isWhite ?? true;
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
 
@@ -29,7 +31,7 @@ export default function Header() {
         },
         {
             title: 'Careers',
-            path: '/community',
+            path: '/careers',
             cName: 'nav-text'
         },
         {
@@ -52,14 +54,14 @@ export default function Header() {
                         <div className='navbar'>
                             <div className="navbar__right">
                                 <div className="logo">
-                                    <a href="/" className="navbar-brand"><img src={Logo} alt='CloudExtel Logo' height="31" width="150" /></a>
+                                    <a href="/" className="navbar-brand"><img src={isWhite ? Logo : LogoBlue} alt='CloudExtel Logo' height="31" width="150" /></a>
                                 </div>
                             </div>
                             <div className="navbar__left">
-                                <div className="contact-nav">
+                                <div className={isWhite ? 'contact-nav' : 'contact-nav__blue'}>
                                     <Link to={'/contact-us'}>Contact us</Link><BsArrowRight />
                                 </div>
-                                <Link to='#' className='menu-bars'>
+                                <Link to='#' className={isWhite ? 'menu-bars' : 'menu-bars__blue'}>
                                     <LiaGripLinesSolid onClick={showSidebar} />
                                 </Link>
                             </div>

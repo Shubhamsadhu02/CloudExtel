@@ -24,16 +24,16 @@ export default function Footer() {
                 <div className="footer-list">
                   <ul>
                     <li>
-                      <Link to={'/investment'}>About</Link>
+                      <Link to={'/about-us'}>About</Link>
                     </li>
                     <li>
-                      <Link to={'/contact'}>Solutions</Link>
+                      <Link to={'/our-solution'}>Solutions</Link>
                     </li>
                     <li>
-                      <Link to={'/contact'}>Services</Link>
+                      <Link to={'#'}>Services</Link>
                     </li>
                     <li>
-                      <Link to={'/contact'}>Careers</Link>
+                      <Link to={'/careers'}>Careers</Link>
                     </li>
                   </ul>
                 </div>
@@ -42,10 +42,10 @@ export default function Footer() {
                 <div className="footer-list">
                   <ul>
                     <li>
-                      <Link to={'/investment'}>Terms & Conditions</Link>
+                      <Link to={'#'}>Terms & Conditions</Link>
                     </li>
                     <li>
-                      <Link to={'/contact'}>Privacy Policy</Link>
+                      <Link to={'#'}>Privacy Policy</Link>
                     </li>
                   </ul>
                 </div>

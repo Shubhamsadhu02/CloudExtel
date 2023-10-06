@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react'
-import Header from '../Partials/Header'
-import Footer from '../Partials/Footer'
+import Header from '../../Partials/Header'
+import Footer from '../../Partials/Footer'
 import { BsArrowDown, BsArrowRight } from 'react-icons/bs';
 
-import HeroBg from '../Images/Home/Herobg.gif';
-import Cell from '../Images/Home/cell.png';
-import Fiber from '../Images/Home/fiber.png';
-import FTTH from '../Images/Home/ftth.png';
-import Virtualize from '../Images/Home/virtualized.png';
-import India from '../Images/Home/India.png';
-import Gas from '../Images/Home/gas.png';
-import Netfra from '../Images/Home/netfra.png';
-import Orange from '../Images/Home/orange.png';
-import Optic from '../Images/Home/optic.png';
+import HeroBg from '../../Images/Home/Herobg.gif';
+import Cell from '../../Images/Home/cell.png';
+import Fiber from '../../Images/Home/fiber.png';
+import FTTH from '../../Images/Home/ftth.png';
+import Virtualize from '../../Images/Home/virtualized.png';
+import India from '../../Images/Home/India.png';
+import Gas from '../../Images/Home/gas.png';
+import Netfra from '../../Images/Home/netfra.png';
+import Orange from '../../Images/Home/orange.png';
+import Optic from '../../Images/Home/optic.png';
 
 import HomeNewsSection from './HomeNewsSection';
 import { Link } from 'react-router-dom';
@@ -24,12 +24,10 @@ export default function Home() {
   const [startAnimation, setStartAnimation] = useState(false);
 
   useEffect(() => {
-    // Function to start the CountUp animation when the component is mounted
     const startCountUp = () => {
       setStartAnimation(true);
     };
 
-    // Attach scroll event listener to trigger the CountUp animation when the section is in the viewport
     const handleScroll = () => {
       const section = document.querySelector('.data');
       if (section) {
@@ -38,14 +36,13 @@ export default function Home() {
 
         if (sectionTop < windowHeight) {
           startCountUp();
-          window.removeEventListener('scroll', handleScroll); // Remove the scroll event listener once animation is triggered
+          window.removeEventListener('scroll', handleScroll); 
         }
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    // Clean up the event listener when the component unmounts
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };

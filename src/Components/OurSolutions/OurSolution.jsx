@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import Header from '../Partials/Header'
-import Footer from '../Partials/Footer'
+import Header from '../../Partials/Header'
+import Footer from '../../Partials/Footer'
 import { BsArrowDown, BsArrowRight } from 'react-icons/bs'
 
-import Solutionhead from '../Images/Solutions/solutionhead.png';
-import Cell from '../Images/Solutions/cell.png';
-import Fiber from '../Images/Solutions/fiber.png';
-import FTTH from '../Images/Solutions/FTTH.png';
-import Virtualized from '../Images/Solutions/Virtualized.png';
-import Optic from '../Images/Home/optic.png';
-import TopSection from './TopSection';
+import Solutionhead from '../../Images/Solutions/solutionhead.png';
+import Cell from '../../Images/Solutions/cell.png';
+import Fiber from '../../Images/Solutions/fiber.png';
+import FTTH from '../../Images/Solutions/FTTH.png';
+import Virtualized from '../../Images/Solutions/Virtualized.png';
+import Optic from '../../Images/Home/optic.png';
+import TopSection from '../TopSection';
 
 export default function OurSolution() {
     const [activeTab, setActiveTab] = useState('cell');

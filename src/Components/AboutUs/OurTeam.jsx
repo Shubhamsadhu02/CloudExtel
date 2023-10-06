@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
 import { Autoplay } from 'swiper/modules';
 
-import Kunal from '../Images/AboutUs/OurTeam/Kunal.png';
+import Kunal from '../../Images/AboutUs/OurTeam/Kunal.png';
 
 export default function OurTeam() {
 

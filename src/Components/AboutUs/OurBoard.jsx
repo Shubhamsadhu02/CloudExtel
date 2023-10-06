@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import Ashish from '../Images/AboutUs/OurBorad/Ashish.png';
-import Brandon from '../Images/AboutUs/OurBorad/Brandon.png';
-import Ivan from '../Images/AboutUs/OurBorad/Ivan.png';
-import Kunal from '../Images/AboutUs/OurBorad/Kunal.png';
-import Maheep from '../Images/AboutUs/OurBorad/Maheep.png';
-import Naveen from '../Images/AboutUs/OurBorad/Naveen.png';
-import Oliver from '../Images/AboutUs/OurBorad/Oliver.png';
-import Sol from '../Images/AboutUs/OurBorad/Sol.png';
+import Ashish from '../../Images/AboutUs/OurBorad/Ashish.png';
+import Brandon from '../../Images/AboutUs/OurBorad/Brandon.png';
+import Ivan from '../../Images/AboutUs/OurBorad/Ivan.png';
+import Kunal from '../../Images/AboutUs/OurBorad/Kunal.png';
+import Maheep from '../../Images/AboutUs/OurBorad/Maheep.png';
+import Naveen from '../../Images/AboutUs/OurBorad/Naveen.png';
+import Oliver from '../../Images/AboutUs/OurBorad/Oliver.png';
+import Sol from '../../Images/AboutUs/OurBorad/Sol.png';
 import { BiLogoLinkedin } from 'react-icons/bi';
 
 export default function OurBoard() {
