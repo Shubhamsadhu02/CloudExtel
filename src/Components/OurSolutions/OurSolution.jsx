@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../../Partials/Header'
 import Footer from '../../Partials/Footer'
-import { BsArrowDown, BsArrowRight } from 'react-icons/bs'
+import { BsArrowDown, BsArrowRight, BsArrowUp } from 'react-icons/bs'
 
 import Solutionhead from '../../Images/Solutions/solutionhead.png';
 import Cell from '../../Images/Solutions/cell.png';
@@ -46,11 +46,25 @@ export default function OurSolution() {
         };
     }, []);
 
+    const [isExpanded, setIsExpanded] = useState({
+        cell: false,
+        fiber: false,
+        ftth: false,
+        virtualized: false,
+      });
+
+      const toggleDescription = (tabId) => {
+        setIsExpanded((prevState) => ({
+          ...prevState,
+          [tabId]: !prevState[tabId],
+        }));
+      };
+
     return (
         <>
             <Header />
 
-            <TopSection title={"Innovative telecom Solutions"} image={Solutionhead} height={'520px'}/>
+            <TopSection title={"Innovative telecom Solutions"} image={Solutionhead} height={'520px'} />
 
             <section className='solution__tabs'>
                 <div className="container">
@@ -78,10 +92,13 @@ export default function OurSolution() {
                                     </div>
                                     <div className="hero__para mt-4">
                                         <p>Small Cells Hosting is a service which assists telecom operators in augmenting their 4G networks for data capacity offload, network quality improvement and enhanced customer experience in high traffic density locations in urban centers, or those towns where 4G signal density requires enhancement.</p>
+                                        {isExpanded.cell && (<>
                                         <p>Small Cells, which are miniaturized base stations, are able to be installed and operated closer to where end consumers need improved 4G signals by being installed on the sites which we build, own and operate.</p>
-                                    </div>
-                                    <div className="read__more">
-                                        <p>Read More <BsArrowDown /></p>
+                                        </>
+                                        )}
+                                        </div>
+                                    <div className="read__more" onClick={() => toggleDescription('cell')}>
+                                        <p>{isExpanded.cell? ( <>Read Less <BsArrowUp /> </>) : ( <>Read More <BsArrowDown /> </>)}</p>
                                     </div>
                                 </div>
                             </div>
@@ -100,14 +117,17 @@ export default function OurSolution() {
                                     <div className="hero__para mt-4">
                                         <p>Dark Fiber Leasing Services allow telecom operators with limitless scalability and network control at a fraction of the cost of self-building. Benefit from unparalleled security as each operator gets dedicated usage. </p>
                                     </div>
+                                    {isExpanded.fiber && (<>
                                     <div className="hero__subHeader1 mt-4">
                                         <h3>Overhead Fiber Connectivity </h3>
                                     </div>
                                     <div className="hero__para mt-4">
                                         <p>At CloudExtel, we tailor fiber connectivity solutions for Telecom operators. Whether linking high-capacity nodes in networks, powering Data Centers with DC-DC links, connecting businesses, or driving Smart City initiatives, we've got you covered</p>
                                     </div>
-                                    <div className="read__more">
-                                        <p>Read More <BsArrowDown /></p>
+                                    </>
+                                    )}
+                                    <div className="read__more" onClick={() => toggleDescription('fiber')}>
+                                        <p>{isExpanded.fiber ? ( <>Read Less <BsArrowUp /> </>) : ( <>Read More <BsArrowDown /> </>)}</p>
                                     </div>
                                 </div>
                             </div>
@@ -134,8 +154,8 @@ export default function OurSolution() {
                                     <div className="hero__para mt-4">
                                         <p>CloudExtel brings next generation Fiber-To-The-Home (FTTH) technology that carries ultra high-speed connectivity right into your home for multi-faceted data and voice offerings. CloudExtel provides a single platform to bring services from multiple telecom operators & content providers</p>
                                     </div>
-                                    <div className="read__more">
-                                        <p>Read More <BsArrowDown /></p>
+                                    <div className="read__more" onClick={() => toggleDescription('ftth')}>
+                                        <p>{isExpanded.ftth? ( <>Read Less <BsArrowUp /> </>) : ( <>Read More <BsArrowDown /> </>)}</p>
                                     </div>
                                 </div>
                             </div>
@@ -151,8 +171,8 @@ export default function OurSolution() {
                                     <div className="hero__para mt-4">
                                         <p>Virtualized Networks are at the cutting edge of network evolution. They solve capacity and coverage problems in telecom networks which are the most challenging to address. This service offers end to end network solutions, which include the underlying passive network infrastructure along with the active technology layers on top, in a shared and scalable architecture.</p>
                                     </div>
-                                    <div className="read__more">
-                                        <p>Read More <BsArrowDown /></p>
+                                    <div className="read__more" onClick={() => toggleDescription('virtualized')}>
+                                        <p>{isExpanded.virtualized ? ( <>Read Less <BsArrowUp /> </>) : ( <>Read More <BsArrowDown /> </>)}</p>
                                     </div>
                                 </div>
                             </div>

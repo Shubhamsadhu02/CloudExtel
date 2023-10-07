@@ -256,9 +256,17 @@ textarea:focus {
     overflow-y: auto;
 }
 
-.contactUs__box {
+.contactUs__box,
+.success__message--box {
     background: #F5FAFE;
     padding: 35px;
+}
+
+.success__message--box {
+    height: 450px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .contactUs__inputs input {
@@ -388,6 +396,14 @@ textarea:focus {
     width: 100vw;
     height: 100%;
 
+}
+
+.networks .col-lg-8,
+.networks .col-lg-4 {
+    display: flex;
+    align-items: center;
+    padding: 120px 100px;
+    padding-left: 0;
 }
 
 .networks__container {
@@ -674,9 +690,11 @@ textarea:focus {
     font-style: normal;
     font-weight: 600;
     color: #1456A2;
+    cursor: pointer;
 }
 
-.hero__subHeader1 h3 {
+.hero__subHeader1 h3,
+.success-message p {
     color: var(--Black, #233852);
     font-size: 32px;
     font-style: normal;
@@ -923,4 +941,77 @@ textarea:focus {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+.success__message svg {
+    font-size: 50px;
+    color: #233852;
+}
+
+.career__name h3 {
+    color: var(--Black, #233852);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+.Career__container {
+    border-bottom: 1px solid rgba(114, 128, 144, 0.64);
+    padding: 55px 0;
+}
+
+.career__details h4 {
+    color: rgba(35, 56, 82, 0.64);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.career__details p {
+    color: #233852;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+.apply__btn button {
+    border: none;
+    border-radius: 48px;
+    background: var(--Primary, #1456A2);
+    padding: 16px 24px;
+    color: var(--White, #FFF);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+}
+
+.accordion-item {
+    border: none !important;
+}
+
+.accordion-header button {
+    color: var(--Primary, #1456A2) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    width: 200px;
+    padding-left: 0 !important;
+}
+
+.accordion-button:not(.collapsed){
+    background-color: #FFFFFF !important;
+}
+.accordion-button:not(.collapsed){
+    box-shadow: none !important;
+}
+
+.accordion-button::after{
+    background-image: none !important;
+}
+
+.accordion-button:focus{
+    box-shadow: none !important;
 }

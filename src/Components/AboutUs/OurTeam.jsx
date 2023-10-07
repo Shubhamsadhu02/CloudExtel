@@ -31,20 +31,6 @@ export default function OurTeam() {
             Designation: "CEO & Co-Founder",
             Linkedin: "",
             Description: `22+ years of experience in the Telecom, Internet & Technology space"`
-        },
-        {
-            Iamge: Kunal,
-            Name: "Kunal Bajajsasasa",
-            Designation: "CEO & Co-Founder",
-            Linkedin: "",
-            Description: `22+ years of experience in the Telecom, Internet & Technology space"`
-        },
-        {
-            Iamge: Kunal,
-            Name: "Kunal Bajajsasasa",
-            Designation: "CEO & Co-Founder",
-            Linkedin: "",
-            Description: `22+ years of experience in the Telecom, Internet & Technology space"`
         }
     ]
     return (

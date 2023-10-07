@@ -16,6 +16,7 @@ import Professional from "../../Images/Careers/development.png";
 import Inclusive from "../../Images/Careers/hand-shake.png";
 import Rcognization from "../../Images/Careers/reward.png";
 import { BiSearch } from 'react-icons/bi'
+import CareerContainer from './CareerContainer'
 
 export default function Career() {
   return (
@@ -228,11 +229,14 @@ export default function Career() {
               <p>At Cloudextel, we prioritize our employees' growth and well-being, fostering an environment where you can thrive both professionally and personally. Our core values are the foundation of our workplace culture</p>
             </div>
           </div>
-          <div className="career__search d-flex justify-content-center mt-5">
+          <div className="career__search d-flex justify-content-center my-5">
               <div className="career__inputs">
                 <input type="text" placeholder='Search by location, keyword or job title'/><BiSearch/>
               </div>
-            </div>
+          </div>
+
+          {/* Create career list here  */}
+          <CareerContainer name={"Manager - Fixed Asset & Inventory"} location={"Mumbai"} department={"Operations"} date={"24 Aug, 2023"} link={"https://www.google.com/"} description={"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi quisquam ad beatae possimus, illum soluta nulla consequuntur quos voluptatem doloremque incidunt doloribus commodi nobis minima unde magnam, dolore hic assumenda."}/>   
         </div>
       </section>
 
