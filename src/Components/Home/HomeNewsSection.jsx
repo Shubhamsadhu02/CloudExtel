@@ -1,6 +1,7 @@
 import React from 'react'
 import { BsArrowRight } from 'react-icons/bs'
 import News from '../../Images/Home/news.png';
+import { Link } from 'react-router-dom';
 
 export default function HomeNewsSection() {
   return (
@@ -44,7 +45,7 @@ export default function HomeNewsSection() {
                 </div>
               </div>
               <div className="view__btn">
-                <button type='button'>VIEW ALL <BsArrowRight /></button>
+                <Link to={"/news"}><button type='button'>VIEW ALL <BsArrowRight /></button></Link>
               </div>
             </div>
           </div>

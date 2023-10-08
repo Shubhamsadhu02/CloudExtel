@@ -203,7 +203,7 @@ export default function AboutUs() {
                             <h1>Our Team</h1>
                         </div>
                         <div className="mt-5">
-                        <OurTeam/>
+                            <OurTeam />
                         </div>
                     </div>
                 </div>
@@ -251,17 +251,22 @@ export default function AboutUs() {
                 <div className="container">
                     <div className="row" style={{ background: '#1456A2' }}>
                         <div className="col-sm-12 col-lg-6">
-                            <div className="hero__news--header2">
-                                <h4>Join us</h4>
-                            </div>
-                            <div className="hero__para--white">
-                                <p>Please reach out to us at <b>careers@cloudextel.com</b> forexciting opportunities to join our rapidly growing team</p>
-                            </div>
-                            <div className="learn__more--btn">
-                                <button type='button'>Learn More<BsArrowRight /></button>
+                            <div className="optic__details">
+                                <div className="hero__news--header2">
+                                    <h4>Join us</h4>
+                                </div>
+                                <div className="hero__para--white">
+                                    <p>Please reach out to us at <b>careers@cloudextel.com</b> forexciting opportunities to join our rapidly growing team</p>
+                                </div>
+                                <div className="learn__more--btn">
+                                    <button type='button'>Learn More<BsArrowRight /></button>
+                                </div>
                             </div>
                         </div>
-                        <div className="col-sm-12 col-lg-6" style={{ background: `url(${Union})`, backgroundSize: 'contain', backgroundPosition: 'right', backgroundRepeat: 'no-repeat' }}>
+                        <div className="col-sm-12 col-lg-6 px-0 d-flex justify-content-end">
+                            <div className="hero__image">
+                                <img src={Union} alt="Union" width={250} height={300} />
+                            </div>
                         </div>
                     </div>
                 </div>

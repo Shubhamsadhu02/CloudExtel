@@ -7,6 +7,8 @@ import AboutUs from "./Components/AboutUs/AboutUs";
 import ScrollToTop from "./Partials/ScrollToTop";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import Career from "./Components/Careers/Career";
+import News from "./Components/News/News";
+import NewsContainer from "./Components/News/NewsContainer";
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
         <Route path="/about-us" element={<AboutUs/>} />
         <Route path="/contact-us" element={<ContactUs/>} />
         <Route path="/careers" element={<Career/>} />
+        <Route path="/news" element={<News/>} />
+        <Route path="/news-container" element={<NewsContainer/>} />
       </Routes>
     </Router>
   );

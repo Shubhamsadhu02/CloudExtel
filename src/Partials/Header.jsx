@@ -41,7 +41,7 @@ export default function Header(props) {
         },
         {
             title: 'News',
-            path: '/blogs',
+            path: '/news',
             cName: 'nav-text'
         }
     ];

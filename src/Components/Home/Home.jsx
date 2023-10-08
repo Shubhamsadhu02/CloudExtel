@@ -20,7 +20,7 @@ import { HashLink } from 'react-router-hash-link';
 import CountUp from 'react-countup';
 
 export default function Home() {
-  
+
   const [startAnimation, setStartAnimation] = useState(false);
 
   useEffect(() => {
@@ -36,13 +36,13 @@ export default function Home() {
 
         if (sectionTop < windowHeight) {
           startCountUp();
-          window.removeEventListener('scroll', handleScroll); 
+          window.removeEventListener('scroll', handleScroll);
         }
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -58,7 +58,7 @@ export default function Home() {
             <h1>India’s First Full Stack Network as a Service (NaaS) Provider</h1>
           </div>
           <div className="hero__down">
-          <HashLink to={"/#network"} ><h4>Scroll Down <BsArrowDown /> </h4></HashLink>
+            <HashLink to={"/#network"} ><h4>Scroll Down <BsArrowDown /> </h4></HashLink>
           </div>
         </div>
       </section>
@@ -273,17 +273,22 @@ export default function Home() {
         <div className="container">
           <div className="row" style={{ background: '#F5FAFE' }}>
             <div className="col-sm-12 col-lg-6">
-              <div className="hero__news--Header">
-                <h4>Bombay Gas Ventures Expands Fiber Optic Network Coverage</h4>
-              </div>
-              <div className="hero__para--light">
-                <p>We are thrilled to announce the expansion of our fiber optic network coverage across multiple cities and regions</p>
-              </div>
-              <div className="hero__contact">
-                <Link to={'/contact-us'}>Contact us</Link><BsArrowRight />
+              <div className="optic__details">
+                <div className="hero__news--Header">
+                  <h4>Bombay Gas Ventures Expands Fiber Optic Network Coverage</h4>
+                </div>
+                <div className="hero__para--light">
+                  <p>We are thrilled to announce the expansion of our fiber optic network coverage across multiple cities and regions</p>
+                </div>
+                <div className="hero__contact">
+                  <Link to={'/contact-us'}>Contact us</Link><BsArrowRight />
+                </div>
               </div>
             </div>
-            <div className="col-sm-12 col-lg-6" style={{background: `url(${Optic})`, backgroundSize: 'contain', backgroundPosition: 'right', backgroundRepeat: 'no-repeat'}}>
+            <div className="col-sm-12 col-lg-6 px-0">
+              <div className="hero__image">
+                <img src={Optic} alt="Union" />
+              </div>
             </div>
           </div>
         </div>
