@@ -161,6 +161,11 @@ textarea:focus {
 }
 
 /* Footer css */
+.footer__top, 
+.our__subsidiaries--list{
+    display: flex;
+    align-items: baseline;
+}
 .location {
     display: flex;
     align-items: center;
@@ -197,10 +202,6 @@ textarea:focus {
     color: #FFFFFF;
 }
 
-.social-list ul {
-    padding-left: 0;
-}
-
 .social-list ul li {
     font-size: 1.5rem;
     color: #E2E2E2;
@@ -219,6 +220,35 @@ textarea:focus {
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
+    opacity: 0.4;
+}
+
+.our__subsidiaries p {
+    color: rgba(255, 255, 255, 0.64);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 45px;
+}
+
+.our__subsidiaries--header a{
+    display: flex;
+    width: 60%;
+}
+
+.our__subsidiaries--header h6 {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+}
+
+.our__subsidiaries--header svg
+{
+    color: #f1f1f1;
+    width: 25px;
+    height: 15px;
 }
 
 /* Contact Us CSS */
@@ -252,7 +282,7 @@ textarea:focus {
 }
 
 .team__descp {
-    height: 350px;
+    height: 450px;
     overflow-y: auto;
 }
 
@@ -402,7 +432,6 @@ textarea:focus {
 .networks .col-lg-4 {
     display: flex;
     align-items: center;
-    padding: 120px 100px;
     padding-left: 0;
 }
 
@@ -687,6 +716,7 @@ textarea:focus {
     font-weight: 600;
     color: #1456A2;
     cursor: pointer;
+    margin-bottom: 0;
 }
 
 .hero__subHeader1 h3,
@@ -1115,7 +1145,7 @@ textarea:focus {
 }
 
 .blog__top {
-    padding: 0 200px;
+    padding: 0 220px;
 }
 
 .blog__content .container {
@@ -1123,7 +1153,8 @@ textarea:focus {
     flex-direction: column;
     align-items: center;
     padding: 0 250px;
-    padding-bottom: 120px;
+    position: relative;
+    bottom: 130px;
 }
 
 .blog__details p {
@@ -1134,6 +1165,17 @@ textarea:focus {
     margin-top: 30px;
 }
 
-.optic__details{
+.optic__details {
     padding: 50px 100px 50px 50px;
+}
+
+.modal{
+    --bs-modal-width: 70% !important;
+}
+.modal-header{
+    border-bottom: 0 !important;
+}
+
+.modal-body{
+    padding: 1rem 3rem !important;
 }

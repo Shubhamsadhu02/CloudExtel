@@ -1,5 +1,6 @@
 import {BrowserRouter as Router,Route,Routes} from "react-router-dom";
 import './Styles/global.css';
+import './Styles/responsive.css';
 
 import Home from "./Components/Home/Home";
 import OurSolution from "./Components/OurSolutions/OurSolution";

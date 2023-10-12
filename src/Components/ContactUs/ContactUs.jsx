@@ -37,7 +37,7 @@ export default function ContactUs() {
                 body: JSON.stringify(formData),
             });
 
-            const responseData = await response.json()
+            const responseData = await response.json();
             if (response.ok && responseData.success) {
                 console.log('Form submitted successfully');
                 setFormData({

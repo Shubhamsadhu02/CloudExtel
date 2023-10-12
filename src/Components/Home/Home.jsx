@@ -67,7 +67,7 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-lg-8 background__overflow--Right">
-              <div className="row" style={{ rowGap: '4rem' }}>
+              <div className="row" style={{ rowGap: '4rem', padding: '120px 100px 120px 0' }}>
                 <div className="col-lg-6">
                   <div className="networks__container">
                     <div className="networks__container--image">
