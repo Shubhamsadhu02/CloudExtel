@@ -12,7 +12,7 @@ export default function HomeNewsSection() {
             <div className="hero__header">
               <h1>In News</h1>
             </div>
-            <div className="hero__para mt-4" style={{ width: '610px' }}>
+            <div className="hero__para mt-4" style={{ width: '500px' }}>
               <p>Stay updated with the latest news and developments from Bombay Gas Ventures Pvt. Ltd.</p>
             </div>
           </div>
@@ -21,7 +21,7 @@ export default function HomeNewsSection() {
             <div className="col-lg-6">
               <img src={News} alt="News" />
             </div>
-            <div className="col-lg-6" style={{paddingLeft: '80px'}}>
+            <div className="col-lg-6">
               <div className="latest">
                 <div className="hero__latest">
                   <p>Latest</p>

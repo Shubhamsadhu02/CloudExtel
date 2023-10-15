@@ -85,9 +85,9 @@ export default function AboutUs() {
                             </div>
                             <div className="hero__list mt-5">
                                 <ul>
-                                    <li><BsCheck2 /> <p>Enable our customers to deliver services to their end users at the most critical points of network stress</p></li>
-                                    <li><BsCheck2 /> <p>Scale as a neutral specialist offering full stack sharing to address points where self-deployment economics are not feasible</p></li>
-                                    <li><BsCheck2 /> <p>Drive adoption of heterogenous and multi-use networks based on principals & technologies from software and cloud platforms for combatting data consumption explosion and emerging 5G architecture</p></li>
+                                    <li><div className=""><BsCheck2 /></div> <div className="ms-2"><p>Enable our customers to deliver services to their end users at the most critical points of network stress</p></div></li>
+                                    <li><div className=""><BsCheck2 /></div> <div className="ms-2"><p>Scale as a neutral specialist offering full stack sharing to address points where self-deployment economics are not feasible</p></div></li>
+                                    <li><div className=""><BsCheck2 /></div> <div className="ms-2"><p>Drive adoption of heterogenous and multi-use networks based on principals & technologies from software and cloud platforms for combatting data consumption explosion and emerging 5G architecture</p></div></li>
                                 </ul>
                             </div>
                         </div>

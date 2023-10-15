@@ -48,7 +48,7 @@ export default function Header(props) {
 
     return (
         <>
-            <section style={{ position: 'absolute', width: '100%', padding: '35px 100px', zIndex: '1000' }}>
+            <section className='header'>
                 <div className="container">
                     <IconContext.Provider value={{ color: '#fff' }}>
                         <div className='navbar'>

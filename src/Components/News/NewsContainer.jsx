@@ -15,7 +15,7 @@ export default function NewsContainer() {
     return (
         <>
             <Header />
-            <section className='hero__blue' style={{ background: '#1456A2', padding: "177px 0px 200px 0px" }}>
+            <section className='hero__blue hero__blue--newsbg'>
                 <div className="container">
                     <div className="go-back" onClick={handleBack}>
                         <BsArrowLeft />

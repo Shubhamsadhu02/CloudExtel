@@ -91,13 +91,24 @@ export default function OurTeam() {
             Designation: "CEO & Co-Founder",
             Linkedin: "",
             Description: `22+ years of experience in the Telecom, Internet & Technology space"`
-        }
+        },
+        {
+            Image: Tajinde,
+            Name: "Tajinder Pal Singh Jaggisssssssssss",
+            Designation: "Senior Vice President - Wireless Operations",
+            Linkedin: "",
+            Description: `25 years of work experience in Wireless and Wireline Planning, Rollout, Operations, Automation, Transformation and Cost Optimization<br/><br/><br/>
+            Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/><br/><br/>
+            Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/>
+            `
+        },
     ]
     return (
         <>
             <Swiper
                 slidesPerView={'auto'}
                 spaceBetween={30}
+                loop={true}
                 modules={[Autoplay]}
                 autoplay={{
                     delay: 3500,
@@ -111,7 +122,7 @@ export default function OurTeam() {
                         return (<SwiperSlide key={index}>
                             <div className="team__container">
                                 <div className="row">
-                                    <div className="col-lg-5 d-flex align-items-center justify-content-center">
+                                    <div className="col-lg-5">
                                         <div className="team__image">
                                             <img src={item.Image} alt={item.Name} height={446} width={263} />
                                         </div>

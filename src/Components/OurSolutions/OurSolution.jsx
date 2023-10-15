@@ -78,7 +78,12 @@ export default function OurSolution() {
                         <li className={`tab ${activeTab === 'virtualized' ? 'active' : ''}`}
                             onClick={() => handleTabClick('virtualized')}>Virtualized Networks</li>
                     </ul>
-                    <div className="solution__tabs--container" id='cell'>
+                </div>
+            </section>
+
+            <section>
+                <div className="container">
+                <div className="solution__tabs--container" id='cell'>
                         <div className="row">
                             <div className="col-sm-12 col-lg-6">
                                 <div className="solution__image">
@@ -106,7 +111,7 @@ export default function OurSolution() {
                     </div>
                     <div className="solution__tabs--container" id='fiber'>
                         <div className="row">
-                            <div className="col-sm-12 col-lg-6">
+                            <div className="col-sm-12 col-lg-6 order-md-1 order-2">
                                 <div className="networks__content networks__content4 d-flex flex-column justify-content-center">
                                     <div className="hero__header">
                                         <h1>Fiber</h1>
@@ -131,7 +136,7 @@ export default function OurSolution() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-sm-12 col-lg-6">
+                            <div className="col-sm-12 col-lg-6 order-md-2 order-1">
                                 <div className="solution__image">
                                     <img src={Fiber} alt="Fiber" />
                                 </div>
@@ -163,7 +168,7 @@ export default function OurSolution() {
                     </div>
                     <div className="solution__tabs--container" id='virtualized'>
                         <div className="row">
-                            <div className="col-sm-12 col-lg-6 d-flex flex-column justify-content-center">
+                            <div className="col-sm-12 col-lg-6 d-flex flex-column justify-content-center order-md-1 order-2">
                                 <div className="networks__content networks__content4">
                                     <div className="hero__header">
                                         <h1>Virtualized Networks</h1>
@@ -176,7 +181,7 @@ export default function OurSolution() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-sm-12 col-lg-6">
+                            <div className="col-sm-12 col-lg-6 order-md-2 order-1">
                                 <div className="solution__image">
                                     <img src={Virtualized} alt="Virtualized Networks" />
                                 </div>

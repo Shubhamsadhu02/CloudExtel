@@ -47,6 +47,13 @@ textarea:focus {
 }
 
 /* Header and sidebar css */
+.header {
+    position: absolute;
+    width: 100%;
+    padding: 35px 100px;
+    z-Index: 1000;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -161,11 +168,12 @@ textarea:focus {
 }
 
 /* Footer css */
-.footer__top, 
-.our__subsidiaries--list{
+.footer__top,
+.our__subsidiaries--list {
     display: flex;
     align-items: baseline;
 }
+
 .location {
     display: flex;
     align-items: center;
@@ -231,7 +239,7 @@ textarea:focus {
     margin-top: 45px;
 }
 
-.our__subsidiaries--header a{
+.our__subsidiaries--header a {
     display: flex;
     width: 60%;
 }
@@ -244,11 +252,14 @@ textarea:focus {
     line-height: 130%;
 }
 
-.our__subsidiaries--header svg
-{
+.our__subsidiaries--header svg {
     color: #f1f1f1;
     width: 25px;
     height: 15px;
+}
+
+.footer__lists {
+    display: flex;
 }
 
 /* Contact Us CSS */
@@ -282,7 +293,7 @@ textarea:focus {
 }
 
 .team__descp {
-    height: 450px;
+    height: 320px;
     overflow-y: auto;
 }
 
@@ -441,6 +452,11 @@ textarea:focus {
     padding: 15px 45px;
 }
 
+.our__mission {
+    row-gap: 4rem;
+    padding: 120px 100px 120px 0;
+}
+
 .networks__container--header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.24);
     margin-bottom: 24px;
@@ -496,7 +512,7 @@ textarea:focus {
 }
 
 .networks__content2 {
-    padding: 120px 220px 120px 60px;
+    padding: 120px 120px 120px 60px;
 }
 
 .networks__content6 {
@@ -785,6 +801,7 @@ textarea:focus {
     right: 0;
     background-color: white;
     z-index: 100;
+    box-shadow: 0px 2px 14px #111;
 }
 
 .solution__image::after {
@@ -1077,6 +1094,11 @@ textarea:focus {
     font-weight: 600;
 }
 
+.hero__blue--newsbg {
+    background: #1456A2;
+    padding: 177px 0px 200px 0px;
+}
+
 .news__container {
     padding: 120px 0;
 }
@@ -1169,13 +1191,14 @@ textarea:focus {
     padding: 50px 100px 50px 50px;
 }
 
-.modal{
+.modal {
     --bs-modal-width: 70% !important;
 }
-.modal-header{
+
+.modal-header {
     border-bottom: 0 !important;
 }
 
-.modal-body{
+.modal-body {
     padding: 1rem 3rem !important;
 }

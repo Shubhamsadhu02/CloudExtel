@@ -1,3 +1,299 @@
-@media (max-width: 500px){
-    
+@media (max-width: 500px) {
+
+    .header,
+    .data,
+    .optic,
+    .joinUS,
+    .perks,
+    .contactUs,
+    .career {
+        padding: 20px 0;
+    }
+
+    .row {
+        margin-left: 0 !important;
+    }
+
+    .contact-nav,
+    .contact-nav__blue {
+        display: none;
+    }
+
+    .menu-bars,
+    .menu-bars__blue {
+        font-size: 1rem;
+        padding: 5px 12px;
+    }
+
+    .nav-menu {
+        width: 70%;
+        box-shadow: 5px 3px 39px rgb(18 81 159 / 20%);
+    }
+
+    .nav-text {
+        height: 70px;
+    }
+
+    .nav-text a,
+    .hero__header h1,
+    .career__name h3 {
+        font-size: 24px;
+    }
+
+    .footer__top {
+        display: flow-root;
+    }
+
+    .hero {
+        padding: 215px 0;
+        height: 710px;
+    }
+
+    .hero__heading {
+        text-align: center;
+    }
+
+    .hero__heading h1 {
+        font-size: 50px;
+    }
+
+    .networks__container--header h2,
+    .data__number h3,
+    .perks__header h3,
+    .hero__news--Header h4,
+    .hero__news--header2 h4,
+    .why__container--header h2,
+    .board__name h2,
+    .team__name h2,
+    .career__details h4,
+    .career__details p,
+    .news__blogHeader h3 {
+        font-size: 18px;
+    }
+
+    .networks__container--para p,
+    .hero__para p,
+    .hero__subHeader h4,
+    .hero__para--light p,
+    .why__container--para p,
+    .board__desgn p,
+    .team__desgn p,
+    .data__name p,
+    .hero__para--white p,
+    .tab,
+    .hero__list ul li p,
+    .perks__para p,
+    .contactUs__phone p,
+    .contactUs__location p,
+    .team__descp p,
+    .news__para p,
+    .news__blogPara p,
+    .news__blogDate p {
+        font-size: 14px;
+    }
+
+    .our__mission {
+        row-gap: 1rem;
+        padding: 55px 0px 55px 0;
+    }
+
+    .background__overflow--Right::after {
+        right: -20px;
+        width: 105vw;
+    }
+
+    .networks__container--image img,
+    .why__container--image img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .networks__content1 {
+        padding-top: 45px;
+        padding-left: 24px;
+    }
+
+    .networks__container {
+        padding: 15px 20px;
+    }
+
+    .networks__container--header {
+        margin-bottom: 12px;
+        padding: 20px 0;
+    }
+
+    .networks__content2,
+    .networks__content6 {
+        padding: 55px 0px 55px 20px;
+    }
+
+    .data ul,
+    .footer__lists,
+    .our__subsidiaries--list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        grid-auto-rows: minmax(60px, auto);
+    }
+
+    .our__subsidiaries--header:nth-child(1) {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    .data ul li {
+        padding: 0px 20px;
+        border-right: none;
+    }
+
+    .data ul li:nth-child(odd) {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .news,
+    .subsidiaries {
+        padding: 55px 0;
+    }
+
+    .view__btn button,
+    .learn__more--btn button,
+    .apply__btn button,
+    .read__more--btn button {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .optic__details {
+        padding: 35px 15px 40px 15px;
+    }
+
+    .social-list {
+        grid-column: 1 / 3;
+    }
+
+    .footer-list ul,
+    .data__list ul {
+        padding-left: 0;
+    }
+
+    .our__subsidiaries--header a {
+        width: 90%;
+    }
+
+    .hero__contact {
+        padding: 8px 12px;
+    }
+
+    .hero__blue--image {
+        display: none;
+    }
+
+    .tab {
+        padding: 12px 20px;
+    }
+
+    .networks__content4 {
+        padding: 25px 0px;
+    }
+
+    .solution__tabs--container,
+    .aboutUs__tabs--container {
+        padding: 50px 0;
+    }
+
+    .aboutUs__tabs,
+    .solution__tabs,
+    .tabs.sticky {
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .aboutUs__tabs::-webkit-scrollbar,
+    .solution__tabs::-webkit-scrollbar,
+    .tabs.sticky::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hero__list ul li svg {
+        font-size: 3rem;
+    }
+
+    .hero__list ul li p {
+        width: 300px;
+    }
+
+    .chooseUs__image img,
+    .team__image img {
+        height: 335px;
+    }
+
+    .whyUs__list .row .col-lg-4:nth-child(3n+2) {
+        border: none;
+    }
+
+    .whyus__container {
+        padding: 0;
+    }
+
+    .networks__content5 {
+        padding: 55px 0;
+
+    }
+
+    .modal-body {
+        padding: 1rem 1rem !important;
+    }
+
+    .swiper-slide {
+        width: 100% !important;
+    }
+
+    .perks .row .col-sm-12 {
+        padding-left: 30px;
+    }
+
+    .career__inputs {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .career__inputs svg {
+        width: 25px;
+        height: 20px;
+    }
+
+    .career__inputs input {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .contactUs .contact__position {
+        position: initial;
+        margin-top: 25px;
+    }
+
+    .news__header h1 {
+        font-size: 32px;
+    }
+
+    .hero__blue--newsbg {
+        padding: 100px 0;
+    }
+
+    .blog__top,
+    .blog__content .container {
+        padding: 18px;
+    }
+
+    .blog__image img {
+        height: 300px;
+    }
+
+    .contactUs__inputs input,
+    .contactUs__inputs textarea {
+        padding: 12px;
+    }
 }

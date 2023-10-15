@@ -33,7 +33,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className='d-flex'>
+            <div className='footer__lists'>
               <div className="footer-list">
                 <ul>
                   <li>

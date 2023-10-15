@@ -66,9 +66,9 @@ export default function Home() {
       <section className='networks' id='network'>
         <div className="container">
           <div className="row">
-            <div className="col-lg-8 background__overflow--Right">
-              <div className="row" style={{ rowGap: '4rem', padding: '120px 100px 120px 0' }}>
-                <div className="col-lg-6">
+            <div className="col-sm-12 col-lg-8 background__overflow--Right">
+              <div className="row our__mission">
+                <div className="col-sm-6 col-lg-6">
                   <div className="networks__container">
                     <div className="networks__container--image">
                       <img src={Cell} alt="Cell" />
@@ -81,7 +81,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-6">
+                <div className="col-sm-6 col-lg-6">
                   <div className="networks__container">
                     <div className="networks__container--image">
                       <img src={Fiber} alt="Fiber" />
@@ -95,7 +95,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="col-lg-6">
+                <div className="col-sm-6 col-lg-6">
                   <div className="networks__container">
                     <div className="networks__container--image">
                       <img src={FTTH} alt="FTTH" />
@@ -108,7 +108,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-6">
+                <div className="col-sm-6 col-lg-6">
                   <div className="networks__container">
                     <div className="networks__container--image">
                       <img src={Virtualize} alt="Virtualized" />
@@ -123,7 +123,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-sm-12 col-lg-4">
               <div className="networks__content networks__content1">
                 <div className="hero__header">
                   <h1>What<br /> we do</h1>
@@ -144,10 +144,10 @@ export default function Home() {
             <div className="col-lg-8">
               <div className="networks__content networks__content2">
                 <div className="hero__header">
-                  <h1>Our Story</h1>
+                  <h1>About CloudExtel</h1>
                 </div>
                 <div className="hero__para mt-4">
-                  <p>At Cloudextel, our journey began with a vision to transform the way businesses approach networking. We set out on a mission to empower organizations with seamless, scalable, and secure networking solutions.</p>
+                  <p>CloudExtel was incorporated with a vision to transform the way enterprises approach networking solutions. Our mission is to offer world-class solutions and empower businesses with seamless, secure, and tailor-made networking solutions.</p>
                 </div>
                 <div className="hero__subHeader mt-5">
                   <h4>The Spark of Innovation</h4>
@@ -156,7 +156,7 @@ export default function Home() {
                   <p>Our founders, seasoned veterans in the technology and networking industry, recognized the growing challenges faced by businesses in an ever-evolving digital landscape.</p>
                 </div>
                 <div className="next__sign mt-4">
-                  <Link to={'/our-solution'}><BsArrowRight /></Link>
+                  <Link to={'/about-us'}><BsArrowRight /></Link>
                 </div>
               </div>
             </div>
