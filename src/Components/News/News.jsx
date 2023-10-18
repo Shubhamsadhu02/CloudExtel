@@ -38,7 +38,7 @@ export default function News() {
                                 <p>We are thrilled to announce the expansion of our fiber optic network coverage across multiple cities and regions</p>
                             </div>
                             <div className="read__more--btn mt-4">
-                                <Link to={"/news-container"}><button type='button'>Read More <BsArrowRight /></button></Link>
+                                <Link to={"#"} ><button type='button'>Read More <BsArrowRight /></button></Link>
                             </div>
                         </div>
                     </div>
@@ -50,11 +50,7 @@ export default function News() {
                     <div className="hero__header text-center mb-5">
                         <h1>More News</h1>
                     </div>
-                    <div className="row">
-                        <div className="col-sm-12 col-lg-4">
-                        <NewdCards />
-                        </div>
-                    </div>
+                    <NewdCards />
                 </div>
             </section>
 

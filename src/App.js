@@ -10,10 +10,18 @@ import ContactUs from "./Components/ContactUs/ContactUs";
 import Career from "./Components/Careers/Career";
 import News from "./Components/News/News";
 import NewsContainer from "./Components/News/NewsContainer";
+import Login from "./Admin/Login";
 
+import Dashboard from "./Admin/Dashboard";
+import CreatePost from "./Admin/CreatePost";
+import MyState from "./Context/StateProvider";
+import { Toaster } from "react-hot-toast";
 
 function App() {
+
+  
   return (
+    <MyState>
     <Router>
       <ScrollToTop />
       <Routes>
@@ -23,9 +31,15 @@ function App() {
         <Route path="/contact-us" element={<ContactUs/>} />
         <Route path="/careers" element={<Career/>} />
         <Route path="/news" element={<News/>} />
-        <Route path="/news-container" element={<NewsContainer/>} />
+        <Route path="/news-container/:id/:title" element={<NewsContainer/>} />
+
+        <Route path="/admin" element={<Login/>} />
+        <Route path="/admin-dashboard" element={<Dashboard/>} />
+        <Route path="/create-post" element={<CreatePost/>} />
       </Routes>
+      <Toaster/>
     </Router>
+  </MyState>
   );
 }
 

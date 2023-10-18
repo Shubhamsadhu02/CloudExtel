@@ -2,12 +2,16 @@ import React from 'react'
 import Header from '../../Partials/Header'
 import Footer from '../../Partials/Footer'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
 import NewsBlog from '../../Images/News/newsBlog.png';
 import Kite from '../../Images/News/kite.png';
 
 export default function NewsContainer() {
+    const { id } = useParams();
+    const location = useLocation();
+    const { data } = location.state;
+
     const naviagte = useNavigate();
     const handleBack = () => {
         naviagte(-1);
@@ -22,10 +26,10 @@ export default function NewsContainer() {
                     </div>
                     <div className="blog__top mt-5">
                         <div className="news__date">
-                            <p>LATEST • Aug 23, 2023</p>
+                            <p>LATEST • {data.date}</p>
                         </div>
-                        <div className="news__header mt-4">
-                            <h1>Bombay Gas Ventures Expands Fiber Optic Network Coverage</h1>
+                        <div className="news__header mt-4 text-break">
+                            <h1>{data.blogs.title}</h1>
                         </div>
                     </div>
                 </div>
@@ -34,10 +38,11 @@ export default function NewsContainer() {
             <section className='blog__content'>
                 <div className="container">
                     <div className="blog__image">
-                        <img src={NewsBlog} alt="Blog" width={820} height={570} />
+                        <img src={data.thumbnail} alt="thumbnail" width={820} height={570} />
                     </div>
                     <div className="blog__details">
-                        <p>
+                        <p>{data.blogs.content}</p>
+                        {/* <p>
                             We are proud to announce Macquarie Capital, the advisory, capital markets and principal investment arm of Macquarie Group, has acquired a majority stake in CloudExtel.In India, the demand for mobile internet data has grown by 20 times since 2015.
                             <br />
                             <br />
@@ -45,7 +50,7 @@ export default function NewsContainer() {
                             <br />
                             <br />
                             CloudExtel sees these gaps as opportunities for growth. Our partnership with Macquarie Capital will allow us to scale our Network as a Service (NaaS)offerings significantly. Moreover, by combining their global best practices with our local expertise, we can create superior networks for telecom operators and their end-users.
-                        </p>
+                        </p> */}
                     </div>
                 </div>
             </section>

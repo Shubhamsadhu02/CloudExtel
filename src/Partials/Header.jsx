@@ -10,6 +10,7 @@ import LogoBlue from '../Images/logoBlue.png';
 
 export default function Header(props) {
     const isWhite = props.isWhite ?? true;
+    const isLogin = props.isLogin ?? false;
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
 
@@ -58,17 +59,25 @@ export default function Header(props) {
                                 </div>
                             </div>
                             <div className="navbar__left">
-                                <div className={isWhite ? 'contact-nav' : 'contact-nav__blue'}>
-                                    <Link to={'/contact-us'}>Contact us</Link><BsArrowRight />
-                                </div>
-                                <Link to='#' className={isWhite ? 'menu-bars' : 'menu-bars__blue'}>
-                                    <LiaGripLinesSolid onClick={showSidebar} />
-                                </Link>
+                                {isLogin ? "" : <>
+                                    <div className={isWhite ? 'contact-nav' : 'contact-nav__blue'}>
+                                        <Link to={'/contact-us'}>Contact us</Link><BsArrowRight />
+                                    </div>
+                                    <Link to='#' className={isWhite ? 'menu-bars' : 'menu-bars__blue'}>
+                                        <LiaGripLinesSolid onClick={showSidebar} />
+                                    </Link>
+                                </>
+                                    }
+                                {isLogin ?
+                                    <div className="logout__btn ms-3">
+                                        <button type='submit'>Log Out</button>
+                                    </div>
+                                    : ""}
                             </div>
                         </div>
                         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
                             <div className='navbar-toggle'>
-                                <Link to='#' className='menu-bars' onClick={showSidebar} style={{border: 'none'}}>
+                                <Link to='#' className='menu-bars' onClick={showSidebar} style={{ border: 'none' }}>
                                     <RxCross1 style={{ color: "white" }} />
                                 </Link>
                             </div>
