@@ -34,8 +34,8 @@ function App() {
         <Route path="/news-container/:id/:title" element={<NewsContainer/>} />
 
         <Route path="/admin" element={<Login/>} />
-        <Route path="/dashboard" element={  <Dashboard/> } />
-        <Route path="/create-post" element={<CreatePost/>} />
+        <Route path="/dashboard" element={ <ProtectedRouteForAdmin> <Dashboard/> </ProtectedRouteForAdmin>} />
+        <Route path="/create-post" element={<ProtectedRouteForAdmin> <CreatePost/> </ProtectedRouteForAdmin>} />
       </Routes>
       <Toaster/>
     </Router>
@@ -47,7 +47,7 @@ export default App;
 
 export const ProtectedRouteForAdmin = ({ children }) => {
   const admin = JSON.parse(localStorage.getItem('admin'))
-  if (admin?.user?.email === "shubhamsadhu02@gmail.com") {
+  if (admin?.email === "shubhamsadhu02@gmail.com") {
     return children
   }
   else {

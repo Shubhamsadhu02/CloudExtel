@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import { LiaGripLinesSolid } from 'react-icons/lia';
 import { RxCross1 } from 'react-icons/rx';
-import { BsArrowRight } from 'react-icons/bs'
+import { BsArrowRight } from 'react-icons/bs';
+import toast from "react-hot-toast";
 
 import Logo from '../Images/logo.png';
 import LogoBlue from '../Images/logoBlue.png';
@@ -47,6 +48,12 @@ export default function Header(props) {
         }
     ];
 
+    const logout = () => {
+        localStorage.clear();
+        toast.success('Logout Success');
+        <Navigate to={'/admin'} />
+    }
+
     return (
         <>
             <section className='header'>
@@ -70,7 +77,9 @@ export default function Header(props) {
                                     }
                                 {isLogin ?
                                     <div className="logout__btn ms-3">
+                                        <form onSubmit={logout}>
                                         <button type='submit'>Log Out</button>
+                                        </form>
                                     </div>
                                     : ""}
                             </div>

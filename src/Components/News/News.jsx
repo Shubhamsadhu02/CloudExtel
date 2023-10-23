@@ -4,9 +4,8 @@ import Footer from '../../Partials/Footer'
 import { useNavigate } from 'react-router-dom';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import Gas from '../../Images/News/gas.png';
-import NewdCards from './NewdCards';
+import NewsCards from './NewsCards';
 import { Link } from 'react-router-dom';
-import reducer from '../../Context/reducer';
 
 export default function News() {
     const naviagte = useNavigate();
@@ -56,7 +55,7 @@ export default function News() {
                     <div className="hero__header text-center mb-5">
                         <h1>More News</h1>
                     </div>
-                    <NewdCards />
+                    <NewsCards />
                 </div>
             </section>
 

@@ -40,7 +40,7 @@ export default function NewsContainer() {
                         <img src={data.thumbnail} alt="thumbnail" width={820} height={570} />
                     </div>
                     <div className="blog__details">
-                        <p>{data.blogs.content}</p>
+                        <p dangerouslySetInnerHTML={{ __html: data.content }}></p>
                         {/* <p>
                             We are proud to announce Macquarie Capital, the advisory, capital markets and principal investment arm of Macquarie Group, has acquired a majority stake in CloudExtel.In India, the demand for mobile internet data has grown by 20 times since 2015.
                             <br />

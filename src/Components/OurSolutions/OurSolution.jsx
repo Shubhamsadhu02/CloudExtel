@@ -83,7 +83,7 @@ export default function OurSolution() {
 
             <section>
                 <div className="container">
-                <div className="solution__tabs--container" id='cell'>
+                    <div className="solution__tabs--container" id='cell'>
                         <div className="row">
                             <div className="col-sm-12 col-lg-6">
                                 <div className="solution__image">
@@ -96,12 +96,28 @@ export default function OurSolution() {
                                         <h1>Small cells hosting</h1>
                                     </div>
                                     <div className="hero__para mt-4">
-                                        <p>Small Cells Hosting is a service which assists telecom operators in augmenting their 4G networks for data capacity offload, network quality improvement and enhanced customer experience in high traffic density locations in urban centers, or those towns where 4G signal density requires enhancement.</p>
-                                        {isExpanded.cell && (<>
-                                            <p>Small Cells, which are miniaturized base stations, are able to be installed and operated closer to where end consumers need improved 4G signals by being installed on the sites which we build, own and operate.</p>
-                                        </>
-                                        )}
+                                        <p>CloudExtel provides small-cell hosting services to aid telecom operators in expanding their networks by increasing data capacity offload to improve network quality. We ensure a high-quality customer experience in high-density locations such as urban centres or areas where network signal density requires bolstering. </p>
                                     </div>
+                                    {isExpanded.cell && (<>
+                                        <div className="hero__para mt-4">
+                                            <p>Small Cells are miniaturized base stations that aid in improving 4G signals. They are installed and operated on sites where the end-user needs improved network signals. </p>
+                                        </div>
+                                        <div className="hero__subHeader">
+                                            <h4>Our USP</h4>
+                                        </div>
+                                        <div className="hero__list--light">
+                                            <ul>
+                                                <li>India’s largest small cell host and preferred choice for Telecom companies</li>
+                                                <li>Operations in 21+ states and 180+ towns.</li>
+                                                <li>Management of small cell sites including Site Acquisition, Transmission Planning, Site Building and Operations.</li>
+                                                <li>Turnkey Small Cell solutions that are ready-to-install</li>
+                                                <li>2,000+ kilometres of aerial fibre deployed.</li>
+                                                <li>Quick Execution- 7 days from site approval to full implementation.</li>
+                                                <li>Our services are available in prime locations like Varanasi Ghats, Somnath Temple, Ajmer Dargah, Gateway of India, and Jallianwala Bagh.</li>
+                                            </ul>
+                                        </div>
+                                    </>
+                                    )}
                                     <div className="read__more" onClick={() => toggleDescription('cell')}>
                                         <p>{isExpanded.cell ? (<>Read Less <BsArrowUp /> </>) : (<>Read More <BsArrowDown /> </>)}</p>
                                     </div>
@@ -117,17 +133,39 @@ export default function OurSolution() {
                                         <h1>Fiber</h1>
                                     </div>
                                     <div className="hero__subHeader1 mt-4">
-                                        <h3>The Spark of Innovation</h3>
+                                        <h3>Underground Fiber</h3>
                                     </div>
                                     <div className="hero__para mt-4">
-                                        <p>Dark Fiber Leasing Services allow telecom operators with limitless scalability and network control at a fraction of the cost of self-building. Benefit from unparalleled security as each operator gets dedicated usage. </p>
+                                        <p>Optical Fiber is one of the most frequently applied and future-proof Black-haul technology that delivers high-speed network connectivity. We offer Fiber Leasing services to telecom operators to grant them full control of their network at cost-effective rates. Dark Fiber also provides high levels of security as it is bespoke and tailored to each telecom operator’s use. Our multi-tenanted and dense underground fiber optic network offers connectivity to the telecom operator’s endpoints. </p>
                                     </div>
                                     {isExpanded.fiber && (<>
-                                        <div className="hero__subHeader1 mt-4">
-                                            <h3>Overhead Fiber Connectivity </h3>
+                                        <div className="hero__subHeader">
+                                            <h4>Our USP</h4>
                                         </div>
-                                        <div className="hero__para mt-4">
-                                            <p>At CloudExtel, we tailor fiber connectivity solutions for Telecom operators. Whether linking high-capacity nodes in networks, powering Data Centers with DC-DC links, connecting businesses, or driving Smart City initiatives, we've got you covered</p>
+                                        <div className="hero__list--light">
+                                            <ul>
+                                                <li>We have deployed a network of more than 200+ kilometres of underground fiber cables across South Mumbai by using BGCL’s cast-iron pipelines. Fiber cables laid inside cast-iron pipelines under footpaths and bridges are robust and provide high security. We are also working on expanding our underground fiber network in other areas across India.</li>
+                                                <li>We build the underground fiber cable with high fiber counts (fiber pairs). With increasing demand due to growing digitization, we lease our underground fiber cables to our clients at affordable rates.</li>
+                                                <li>CloudExtel is the first and only provider of underground fiber cables with a high-density network in South Mumbai.</li>
+                                                <li>Our Fiber Optic services cater to SME clients, Data Center Connectivity, Enterprises, and an increasing demand for Tower Fiberisation.</li>
+                                                <li>We offer state-of-the-art SLAs and boast the highest tenancies in the industry.</li>
+                                                <li>Our clients include many tech giants including Airtel, Railtel, SIFY, Vodafone Idea, Tata Communications, PGCIL, and TTSL.</li>
+                                            </ul>
+                                        </div>
+                                        <div className="hero__subHeader1 mt-4">
+                                            <h3>Overhead Fiber Connectivity (OHFC)</h3>
+                                        </div>
+                                        <div className="hero__subHeader">
+                                            <h4>Our USP</h4>
+                                        </div>
+                                        <div className="hero__list--light">
+                                            <ul>
+                                                <li>Low latency and high-speed fiber links between data centres.</li>
+                                                <li>Last-mile connectivity to clients of telecom operators and internet service providers. </li>
+                                                <li>Over 1000+ kilometres of OHFC network installed in metropolitan cities like Mumbai and Pune. </li>
+                                                <li>Cost-effective rates and the fastest market time in the industry.</li>
+                                                <li>Clients include tech giants like Airtel, SIFY, and Vodafone Idea.</li>
+                                            </ul>
                                         </div>
                                     </>
                                     )}
@@ -157,8 +195,25 @@ export default function OurSolution() {
                                         <h1>Fiber to the home (FTTH)</h1>
                                     </div>
                                     <div className="hero__para mt-4">
-                                        <p>CloudExtel brings next generation Fiber-To-The-Home (FTTH) technology that carries ultra high-speed connectivity right into your home for multi-faceted data and voice offerings. CloudExtel provides a single platform to bring services from multiple telecom operators & content providers</p>
+                                        <p>CloudExtel brings ultra-high-speed connectivity to your doorstep through cutting-edge Fiber-to-the-home technology. We provide a single platform in commercial and residential areas to bring services from multiple telecom operators and internet service providers.</p>
                                     </div>
+                                    {isExpanded.ftth && (<>
+                                        <div className="hero__para mt-4">
+                                            <p>Leverage the benefits of increased network performance through our state-of-the-art FTTH solutions. We aim to provide higher speeds over long distances.</p>
+                                        </div>
+                                        <div className="hero__subHeader">
+                                            <h4>Our USP</h4>
+                                        </div>
+                                        <div className="hero__list--light">
+                                            <ul>
+                                                <li>End-to-end services for telecom operators and ISPs targeting homes and residential areas. We take care of the entire process from planning, building, and maintaining the equipment. </li>
+                                                <li>Our cluster-based topology ensures a lower cost per HP. </li>
+                                                <li>Expanding FTTH services to other metro and non-metro cities.</li>
+                                                <li>45,000+ Home Passed delivered.</li>
+                                                <li>Our clients include tech giants like Airtel and Tata Sky Broadband.</li>
+                                            </ul>
+                                        </div>
+                                    </>)}
                                     <div className="read__more" onClick={() => toggleDescription('ftth')}>
                                         <p>{isExpanded.ftth ? (<>Read Less <BsArrowUp /> </>) : (<>Read More <BsArrowDown /> </>)}</p>
                                     </div>
@@ -174,8 +229,14 @@ export default function OurSolution() {
                                         <h1>Virtualized Networks</h1>
                                     </div>
                                     <div className="hero__para mt-4">
-                                        <p>Virtualized Networks are at the cutting edge of network evolution. They solve capacity and coverage problems in telecom networks which are the most challenging to address. This service offers end to end network solutions, which include the underlying passive network infrastructure along with the active technology layers on top, in a shared and scalable architecture.</p>
+                                        <p>The telecom industry is growing rapidly and virtualized networks are at the forefront of innovation. We at CloudExtel help enterprises solve complex network capacity and coverage problems through our end-to-end virtualized network solutions. </p>
                                     </div>
+                                    {isExpanded.virtualized && (<>
+                                        <div className="hero__para mt-4">
+                                            <p>Our service offers reliable and robust networking solutions including the passive network infrastructure with active technology layers on top. We decouple the network services from the physical hardware, allowing them to function independently and making them perfect for any network device. </p>
+                                            <p>Our services simplify the efforts of network administrators, making it easier to modify policies, move workloads, and avoid complex and time-consuming configurations.</p>
+                                        </div>
+                                    </>)}
                                     <div className="read__more" onClick={() => toggleDescription('virtualized')}>
                                         <p>{isExpanded.virtualized ? (<>Read Less <BsArrowUp /> </>) : (<>Read More <BsArrowDown /> </>)}</p>
                                     </div>
@@ -194,15 +255,15 @@ export default function OurSolution() {
             <section className='optic'>
                 <div className="container">
                     <div className="row" style={{ background: '#1456A2' }}>
-                        <div className="col-sm-12 col-lg-6">
+                        <div className="col-sm-12 col-lg-6 d-flex align-items-center">
                             <div className="optic__details">
                                 <div className="hero__news--header2">
                                     <h4>Discover how we can transform your communication experience</h4>
                                 </div>
-                                <div className="hero__para--white">
+                                <div className="hero__para--white mt-4">
                                     <p>Take your connectivity to new heights. Connect, communicate, and thrive with Bombay Gas Ventures Pvt. Ltd.</p>
                                 </div>
-                                <div className="learn__more--btn">
+                                <div className="learn__more--btn mt-3">
                                     <button type='button'>Learn More<BsArrowRight /></button>
                                 </div>
                             </div>

@@ -757,7 +757,7 @@ textarea:focus {
     padding: 16px 24px;
     background: #FFF;
     border: none;
-
+    border-radius: 40px;
     color: var(--Black, #1A2635);
     font-size: 18px;
     font-style: normal;
@@ -1131,7 +1131,7 @@ textarea:focus {
 
 .news__blogPara p {
     color: var(--Black, #233852);
-    font-size: 18px;
+    font-size: 18px !important;
     font-style: normal;
     font-weight: 500;
     line-height: 1.2;
@@ -1210,7 +1210,7 @@ textarea:focus {
 
 /* Admin CSS */
 
-.login .container{
+.login .container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1224,19 +1224,23 @@ textarea:focus {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     width: 500px;
 }
+
 .login-container h2 {
     margin: 0;
     text-align: center;
 }
+
 .login-container form {
     display: flex;
     flex-direction: column;
 }
+
 .login-container label {
     margin: 10px 0;
     font-size: 18px;
     font-weight: 500;
 }
+
 .login-container button,
 .logout__btn button {
     background: #007BFF;
@@ -1248,7 +1252,7 @@ textarea:focus {
 }
 
 .admin__dashboard,
-.create__Blog{
+.create__Blog {
     padding-top: 150px;
     padding-bottom: 100px;
 }
@@ -1261,38 +1265,37 @@ textarea:focus {
     margin-bottom: 24px;
 }
 
-.blog__inputs textarea {
-    width: 100%;
-    height: 300px;
-    border: 1px solid #a9b5be;
-    resize: none;
-    margin-bottom: 24px;
-    padding: 24px;
-}
-
-.action__items p svg{
+.action__items p svg {
     font-size: 20px;
     margin: 0 4px;
     cursor: pointer;
 }
 
-.action__items p svg:hover{
+.action__items p svg:hover {
     color: #1456A2;
 }
 
-.action--delete svg:hover{
+.action--delete svg:hover {
     color: red !important;
 }
 
-.create__Blog .container{
+.create__Blog .container {
     background: #FFF;
     padding: 30px 20px;
     border-radius: 25px;
     box-shadow: 0px 2px 14px #111;
 }
 
-.blog__image--post{
+.blog__image--post {
     width: 500px;
     height: 350px;
     margin-bottom: 20px;
+}
+
+.hero__list--light ul li {
+    list-style: initial;
+    color: var(--Black, #233852);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
 }

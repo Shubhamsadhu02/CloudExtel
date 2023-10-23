@@ -25,7 +25,7 @@ export default function NewdCards() {
                                                 <h3>{item.blogs.title}</h3>
                                             </div>
                                             <div className="news__blogPara">
-                                                <p>{item.blogs.content}</p>
+                                                <p dangerouslySetInnerHTML={{ __html: item.content }}></p>
                                             </div>
                                             <div className="news__blogDate">
                                                 <p>{item.date}</p>
