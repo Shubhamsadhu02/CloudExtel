@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import newsImage from '../../Images/News/news.png';
 import { BsArrowRight } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import reducer from '../../Context/reducer';

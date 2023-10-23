@@ -4,37 +4,25 @@ import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import { firestoreDB } from '../firebase.config';
 
 export default function StateProvider(props) {
-    //* search state
-    const [searchkey, setSearchkey] = useState('');
-
-    //* loading state
-    const [loading, setloading] = useState(false);
-
-    //* getAllBlog State 
     const [getAllBlog, setGetAllBlog] = useState([]);
 
-    //* getAllBlogs Function
     function getAllBlogs() {
-        setloading(true);
         try {
             const q = query(
                 collection(firestoreDB, "BlogPost"),
-                orderBy('time')
+                orderBy('time', 'desc')
             );
             const data = onSnapshot(q, (QuerySnapshot) => {
                 let blogArray = [];
                 QuerySnapshot.forEach((doc) => {
                     blogArray.push({ ...doc.data(), id: doc.id });
                 });
-
                 setGetAllBlog(blogArray)
-                console.log(blogArray)
-                setloading(false)
+                // console.log(blogArray)
             });
             return () => data;
         } catch (error) {
             console.log(error)
-            setloading(false)
         }
     }
 
@@ -43,10 +31,6 @@ export default function StateProvider(props) {
     }, []);
     return (
         <Reducer.Provider value={{
-            searchkey,
-            setSearchkey,
-            loading,
-            setloading,
             getAllBlog
         }}>
             {props.children}

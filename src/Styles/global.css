@@ -1247,13 +1247,6 @@ textarea:focus {
     cursor: pointer;
 }
 
-.google__login button{
-    background: none;
-    border: 1px solid #1456A2;
-    color: #1456A2;
-    margin: 10px 0;
-}
-
 .admin__dashboard,
 .create__Blog{
     padding-top: 150px;

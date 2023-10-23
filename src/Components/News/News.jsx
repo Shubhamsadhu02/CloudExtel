@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Header from '../../Partials/Header'
 import Footer from '../../Partials/Footer'
 import { useNavigate } from 'react-router-dom';
@@ -6,12 +6,18 @@ import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import Gas from '../../Images/News/gas.png';
 import NewdCards from './NewdCards';
 import { Link } from 'react-router-dom';
+import reducer from '../../Context/reducer';
 
 export default function News() {
     const naviagte = useNavigate();
     const handleBack = () => {
         naviagte(-1);
     };
+
+    // const context = useContext(reducer);
+    // const { getAllBlog } = context;
+    // const sortedData = getAllBlog.slice().sort((a, b) => b.time - a.time);
+    // const latestItem = sortedData[0];
     return (
         <>
             <Header />
@@ -29,7 +35,7 @@ export default function News() {
                         </div>
                         <div className="col-sm-12 col-lg-6 d-flex flex-column justify-content-center">
                             <div className="news__date">
-                                <p>LATEST • Aug 23, 2023</p>
+                                <p>LATEST • </p>
                             </div>
                             <div className="news__header mt-4">
                                 <h1>Bombay Gas Ventures Expands Fiber Optic Network Coverage</h1>

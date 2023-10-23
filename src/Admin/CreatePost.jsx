@@ -45,7 +45,7 @@ export default function CreatePost() {
                         )
                     })
                     clearData();
-                    navigate('/admin-dashboard')
+                    navigate('/dashboard')
                     toast.success('Post Added Successfully');
                 } catch (error) {
                     toast.error(error)

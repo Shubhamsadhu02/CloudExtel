@@ -4,7 +4,6 @@ import Footer from '../../Partials/Footer'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
-import NewsBlog from '../../Images/News/newsBlog.png';
 import Kite from '../../Images/News/kite.png';
 
 export default function NewsContainer() {

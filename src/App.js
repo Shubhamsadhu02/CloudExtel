@@ -1,4 +1,4 @@
-import {BrowserRouter as Router,Route,Routes} from "react-router-dom";
+import {BrowserRouter as Router,Route,Routes, Navigate} from "react-router-dom";
 import './Styles/global.css';
 import './Styles/responsive.css';
 
@@ -34,7 +34,7 @@ function App() {
         <Route path="/news-container/:id/:title" element={<NewsContainer/>} />
 
         <Route path="/admin" element={<Login/>} />
-        <Route path="/admin-dashboard" element={<Dashboard/>} />
+        <Route path="/dashboard" element={  <Dashboard/> } />
         <Route path="/create-post" element={<CreatePost/>} />
       </Routes>
       <Toaster/>
@@ -44,3 +44,13 @@ function App() {
 }
 
 export default App;
+
+export const ProtectedRouteForAdmin = ({ children }) => {
+  const admin = JSON.parse(localStorage.getItem('admin'))
+  if (admin?.user?.email === "shubhamsadhu02@gmail.com") {
+    return children
+  }
+  else {
+    return <Navigate to={'/admin'} />
+  }
+}

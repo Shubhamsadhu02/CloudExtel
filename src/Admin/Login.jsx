@@ -1,38 +1,58 @@
-import React from 'react'
-import { FcGoogle } from 'react-icons/fc'
+import React, { useState, useContext } from 'react'
 import Header from '../Partials/Header'
+import { useNavigate } from 'react-router-dom';
+import toast from "react-hot-toast";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase.config";
 
 export default function Login() {
+    const navigate = useNavigate();
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    //* Login Function
+    const login = async () => {
+        if(!email || !password) {
+            return toast.error("Fill all required fields")
+        }
+        try {
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            const result = userCredential.user;
+            console.log(result);
+            toast.success('Login Success');
+            localStorage.setItem('admin', JSON.stringify(result));
+            navigate('/dashboard');
+        } catch (error) {
+            toast.error('Login Failed');
+            console.log(error);
+        }
+    }
     return (
         <>
-        <Header isWhite={false} />
+            <Header isWhite={false} />
             <section className='login vh-100' >
                 <div className="container">
                     <div className="login-container">
-                        <h2>Login</h2>
+                        <h2>Admin Login</h2>
                         <form>
                             <div className="contactUs__inputs">
-                                <label for="username">Username</label>
-                                <input type="text" id="username" name="username" placeholder="Enter your username" required />
+                                <label for="email">Email Id</label>
+                                <input type="email" placeholder="Enter your email" 
+                                name="email"
+                                value={email}
+                                onChange={(e)=>setEmail(e.target.value)} required />
                             </div>
                             <div className="contactUs__inputs">
                                 <label for="password">Password</label>
-                                <input type="password" id="password" name="password" placeholder="Enter your password" required />
+                                <input type="password" placeholder="Enter your password" 
+                                name='password'
+                                value={password}
+                                onChange={(e)=>setPassword(e.target.value)} required />
                             </div>
 
-                            <button type="submit">Login</button>
+                            <button onClick={login}>Login</button>
                         </form>
-
-                        <hr />
-
-                        <div className="text-center mt-4">
-                            <h4>Login with Google</h4>
-                            <div className="google__login">
-                                <button >
-                                    <FcGoogle size={30} className='mr-2' /> Login with Goggle
-                                </button>
-                            </div>
-                            </div>
                     </div>
                 </div>
             </section>
