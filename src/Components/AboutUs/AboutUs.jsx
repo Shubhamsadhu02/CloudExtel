@@ -55,7 +55,7 @@ export default function AboutUs() {
         <>
             <Header />
 
-            <TopSection title={"India's Pioneer in Network as a Service Solutions"} image={AboutImg} height={'600px'} />
+            <TopSection title={"Pioneer in Network as a Service Solutions"} image={AboutImg} height={'600px'} />
 
             <section className='aboutUs__tabs'>
                 <div className="container">

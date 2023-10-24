@@ -64,7 +64,7 @@ export default function OurSolution() {
         <>
             <Header />
 
-            <TopSection title={"Innovative telecom Solutions"} image={Solutionhead} height={'520px'} />
+            <TopSection title={"Cutting-edge Telecom Solutions"} image={Solutionhead} height={'520px'} />
 
             <section className='solution__tabs'>
                 <div className="container">

@@ -7,6 +7,7 @@ import { Autoplay } from 'swiper/modules';
 
 import Kunal from '../../Images/AboutUs/OurTeam/Kunal.png';
 import Tajinde from '../../Images/AboutUs/OurTeam/Tajinde.png';
+import { BiLogoLinkedin } from 'react-icons/bi';
 
 function TeamDescription({ data }) {
     const [showMore, setShowMore] = useState(false);
@@ -39,8 +40,11 @@ function TeamDescription({ data }) {
                 <Modal.Body>
                     <div className="row">
                         <div className="col-lg-5">
-                            <div className="team__image">
+                            <div className="team__image position-relative overflow-hidden">
                                 <img src={data.image} alt={data.name} />
+                                <div className="team__linkedin">
+                                    <a href={data.linkedin} target='__blank'><BiLogoLinkedin /></a>
+                                </div>
                             </div>
                         </div>
                         <div className="col-lg-7">
@@ -123,8 +127,11 @@ export default function OurTeam() {
                             <div className="team__container">
                                 <div className="row">
                                     <div className="col-lg-5">
-                                        <div className="team__image">
-                                            <img src={item.Image} alt={item.Name} height={446} width={263} />
+                                        <div className="team__image position-relative overflow-hidden">
+                                            <img src={item.Image} alt={item.Name} />
+                                            <div className="team__linkedin">
+                                                <a href={item.Linkedin} target='__blank'><BiLogoLinkedin /></a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="col-lg-7">
@@ -135,7 +142,7 @@ export default function OurTeam() {
                                             <p>{item.Designation}</p>
                                         </div>
                                         <div className="team__descp mt-5">
-                                            <TeamDescription data={{ image: item.Image, name: item.Name, designation:item.Designation, description: item.Description }} />
+                                            <TeamDescription data={{ image: item.Image, linkedin:item.Linkedin, name: item.Name, designation: item.Designation, description: item.Description }} />
                                         </div>
                                     </div>
                                 </div>
