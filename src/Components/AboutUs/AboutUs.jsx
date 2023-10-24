@@ -81,13 +81,13 @@ export default function AboutUs() {
                     <div className="aboutUs__tabs--container" >
                         <div className="networks__content">
                             <div className="hero__header text-center">
-                                <h1>Principles That Guide Our Business</h1>
+                                <h1>Our Guiding Principles</h1>
                             </div>
                             <div className="hero__list mt-5">
                                 <ul>
-                                    <li><div className=""><BsCheck2 /></div> <div className="ms-2"><p>Enable our customers to deliver services to their end users at the most critical points of network stress</p></div></li>
-                                    <li><div className=""><BsCheck2 /></div> <div className="ms-2"><p>Scale as a neutral specialist offering full stack sharing to address points where self-deployment economics are not feasible</p></div></li>
-                                    <li><div className=""><BsCheck2 /></div> <div className="ms-2"><p>Drive adoption of heterogenous and multi-use networks based on principals & technologies from software and cloud platforms for combatting data consumption explosion and emerging 5G architecture</p></div></li>
+                                    <li><div className="tick"><BsCheck2 /></div> <div className="ms-2"><p>We strive to enable our clients and help them deliver world-class networking services to their end users to facilitate the growth of telecom services in India.</p></div></li>
+                                    <li><div className="tick"><BsCheck2 /></div> <div className="ms-2"><p>Grow as a full-stack NaaS provider and help deploy emerging technologies that deliver the most efficient networking services.</p></div></li>
+                                    <li><div className="tick"><BsCheck2 /></div> <div className="ms-2"><p>Facilitate the expansion of heterogeneous and multi-use networks to address the challenges of data consumption explosion and emerging technological architecture.</p></div></li>
                                 </ul>
                             </div>
                         </div>
@@ -100,10 +100,10 @@ export default function AboutUs() {
                     <div className="aboutUs__tabs--container" >
                         <div className="networks__content networks__content3">
                             <div className="hero__header">
-                                <h1>What Choose us</h1>
+                                <h1>Why CloudExtel?</h1>
                             </div>
                             <div className="hero__para mt-4" style={{ width: '610px' }}>
-                                <p>CloudExtel’s focus on excellence, customer centricity & innovation have led us to build processes that are highly scalable and deliver the best services to our customers</p>
+                                <p>We are driven by the aim of providing tailor-made network solutions that are highly scalable and ensure the utmost client satisfaction.</p>
                             </div>
                         </div>
                         <div className="chooseUs__image text-center mt-4">
@@ -120,7 +120,7 @@ export default function AboutUs() {
                                             <h2>Customer Centric</h2>
                                         </div>
                                         <div className="why__container--para">
-                                            <p>Identify customers’ challenge areas in network expansion & QoS</p>
+                                            <p>Identify the client’s pain points and design bespoke quality solutions that guarantee satisfaction.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -133,7 +133,7 @@ export default function AboutUs() {
                                             <h2>Innovative</h2>
                                         </div>
                                         <div className="why__container--para">
-                                            <p>Develop and launch new services, leading to new opportunities</p>
+                                            <p>Stay up to date with emerging industry trends and facilitate the development of new services.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -146,7 +146,7 @@ export default function AboutUs() {
                                             <h2>Process & System</h2>
                                         </div>
                                         <div className="why__container--para">
-                                            <p>Refine best practices & systems to replicate and scale in other geographies</p>
+                                            <p>Follow guidelines and polish the best practices to grow in several other geographies. </p>
                                         </div>
                                     </div>
                                 </div>
@@ -160,7 +160,7 @@ export default function AboutUs() {
                                             <h2>Scalability</h2>
                                         </div>
                                         <div className="why__container--para">
-                                            <p>In each geography, leverage operational setup for additional new services</p>
+                                            <p>We leverage operational practices in each geography to provide additional new services to our clients.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -173,7 +173,7 @@ export default function AboutUs() {
                                             <h2>Profatability</h2>
                                         </div>
                                         <div className="why__container--para">
-                                            <p>profitable growth through service synergy, optimizing costs across diverse businesses</p>
+                                            <p>Ensure profitable growth by providing cost-effective networking solutions across various business verticals.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -186,7 +186,7 @@ export default function AboutUs() {
                                             <h2>Commitment to excellence</h2>
                                         </div>
                                         <div className="why__container--para">
-                                            <p>Committed to excellence, we redefine networking with exceptional NaaS solutions</p>
+                                            <p>We leverage advanced skills and expertise to redefine networking and NaaS solutions.</p>
                                         </div>
                                     </div>
                                 </div>

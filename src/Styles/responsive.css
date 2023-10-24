@@ -40,8 +40,9 @@
         font-size: 24px;
     }
 
-    .footer__top {
-        display: flow-root;
+    .footer__top .container,
+    .footer__bottom .container {
+        display: grid;
     }
 
     .hero {

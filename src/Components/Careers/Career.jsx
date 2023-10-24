@@ -26,7 +26,7 @@ export default function Career() {
       <section className='career__TopSection'>
         <div className="container">
           <div className="hero__heading text-center">
-            <h1 style={{ color: '#233852' }}>Join Our Team and Shape the Future of Networking</h1>
+            <h1 style={{ color: '#233852' }}>Revolutionalize the Networking Industry With Us</h1>
           </div>
           <div className="View_opportunities text-center">
             <HashLink to={"#career"} ><h4>View Opportunities <BsArrowDown /> </h4></HashLink>
@@ -65,7 +65,7 @@ export default function Career() {
                 <h3>Competitive Compensation</h3>
               </div>
               <div className="perks__para">
-                <p>We believe in rewarding your hard work and dedication with competitive compensation packages that reflect your expertise and contribution</p>
+                <p>We value hard work and ensure competitive compensation that reflects your skills and expertise.</p>
               </div>
             </div>
             <div className="col-sm-12 col-lg-4">
@@ -76,7 +76,7 @@ export default function Career() {
                 <h3>Health & Wellness</h3>
               </div>
               <div className="perks__para">
-                <p>Your well-being matters. We offer health insurance plans, wellness programs, and access to fitness facilities to ensure you stay healthy and motivated</p>
+                <p>At CloudExtel, we prioritise employee health and wellness. We offer health insurance plans, wellness programs, and access to our state-of-the-art fitness facility to our employees to ensure they are of sound body and mind. </p>
               </div>
             </div>
             <div className="col-sm-12 col-lg-4">
@@ -87,7 +87,7 @@ export default function Career() {
                 <h3>Flexible Work Arrangements</h3>
               </div>
               <div className="perks__para">
-                <p>Embracing work-life balance, our flexible arrangements support your professional commitments and personal well-being</p>
+                <p>We believe an employee does their best work with a healthy work-life balance. Our flexible working hours support your professional and personal well-being.</p>
               </div>
             </div>
 
@@ -99,7 +99,7 @@ export default function Career() {
                 <h3>Professional Development</h3>
               </div>
               <div className="perks__para">
-                <p>Continuous learning is encouraged. We provide opportunities for skill enhancement, training, workshops, and attending industry events to help you stay ahead</p>
+                <p>Innovation and Learning are key to an individual’s development. At CloudExtel, we provide opportunities for skill enhancement, training, and workshops to help you upscale and drive the growth of our employees.</p>
               </div>
             </div>
             <div className="col-sm-12 col-lg-4">
@@ -110,7 +110,7 @@ export default function Career() {
                 <h3>Inclusive Environment</h3>
               </div>
               <div className="perks__para">
-                <p>Diversity is our strength. Our inclusive workplace ensures that everyone feels valued, respected, and has equal opportunities to thrive</p>
+                <p>We believe in Unity in Diversity. Our inclusive environment makes everyone feel welcome and respected. We reject biasedness and strive to provide equal opportunities to everyone.</p>
               </div>
             </div>
             <div className="col-sm-12 col-lg-4">
@@ -121,7 +121,7 @@ export default function Career() {
                 <h3>Recognition & Rewards</h3>
               </div>
               <div className="perks__para">
-                <p>Your efforts don't go unnoticed. Outstanding performance is recognized through various reward programs, both monetary and non-monetary</p>
+                <p>Our employees make the organisation and their efforts never go unnoticed. We recognize employee hard work and performance through various reward programs, both monetary and non-monetary.</p>
               </div>
             </div>
           </div>
@@ -134,29 +134,29 @@ export default function Career() {
             <div className="col-lg-7">
               <div className="networks__content networks__content6">
                 <div className="hero__header">
-                  <h1>Fuelling Growth and Success</h1>
+                  <h1>Leveraging Innovation and Delivering Excellence</h1>
                 </div>
                 <div className="hero__subHeader1 mt-4">
                   <h3>Collaboration</h3>
                 </div>
                 <div className="hero__para mt-4">
-                  <p>We encourage open communication and collaboration, believing that diverse perspectives lead to groundbreaking solutions. Teamwork is at the heart of everything we do</p>
+                  <p>We ensure transparent communication and collaboration to ensure a healthy exchange of ideas that drive innovation. We believe teamwork prevails where an individual fails. </p>
                 </div>
                 <div className="hero__subHeader1 mt-4">
                   <h3>Innovation</h3>
                 </div>
                 <div className="hero__para mt-4">
-                  <p>We thrive on innovation, empowering our employees to explore new ideas, challenge conventions, and pioneer advancements in networking technology</p>
+                  <p>Innovation is the Heart of Development. We motivate our employees to explore new challenges and conventions and pioneer the growth of the networking industry.</p>
                 </div>
                 <div className="hero__subHeader1 mt-4">
-                  <h3>Learning & Development</h3>
+                  <h3>Upscaling & Development</h3>
                 </div>
                 <div className="hero__para mt-4">
-                  <p>We invest in our team's growth by providing opportunities for skill enhancement, professional development, and staying up-to-date with industry trends</p>
+                  <p>At CloudExtel, we ensure skill-building and encourage our team’s growth by providing skill enhancement opportunities, training programs, and workshops.</p>
                 </div>
-                <div className="View_opportunities">
+                {/* <div className="View_opportunities">
                   <HashLink to={"#career"} ><h4>View Opportunities <BsArrowDown /> </h4></HashLink>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-lg-5 fuelling__image background__overflow--Left">

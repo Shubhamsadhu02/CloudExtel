@@ -9,28 +9,14 @@ import { BsArrowUpRight } from 'react-icons/bs';
 export default function Footer() {
   return (
     <>
-      <footer style={{ background: "#1A2635", padding: "70px 35px 20px" }}>
-        <div className="container">
-          <div className="footer__top">
+      <footer>
+        <section className="footer__top">
+          <div className="container">
             <div className="logo__div">
               <Link to={"/"}><img src={Logo} alt='CloudExtel Logo' height={31} width={150} /></Link>
               <div className="location">
                 <FaMapMarkerAlt />
                 <p>The Ruby, 11th Floor, AWFIS, Dadar (West), Mumbai, Maharashtra - 400028</p>
-              </div>
-              <div className="our__subsidiaries">
-                <p>Our Subsidiaries</p>
-                <div className='our__subsidiaries--list'>
-                  <div className="our__subsidiaries--header">
-                    <Link><h6>Bombay Gas Company Proprietary Private Limited</h6><BsArrowUpRight /></Link>
-                  </div>
-                  <div className="our__subsidiaries--header">
-                    <Link><h6>Orange wave Networks</h6><BsArrowUpRight /></Link>
-                  </div>
-                  <div className="our__subsidiaries--header">
-                    <Link><h6>Netfra Solutions</h6><BsArrowUpRight /></Link>
-                  </div>
-                </div>
               </div>
             </div>
             <div className='footer__lists'>
@@ -70,12 +56,28 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="footer__bottom">
-            <div className="copyright text-center mt-5">
+        </section>
+        <section className="footer__bottom">
+          <div className="container">
+            <div className="copyright order-md-1 order-2">
               <p>© {new Date().getFullYear()} Bombay Gas Ventures Pvt. Ltd. All rights reserved.</p>
             </div>
+            <div className="our__subsidiaries order-md-2 order-1">
+              {/* <p>Our Subsidiaries</p> */}
+              <div className='our__subsidiaries--list'>
+                <div className="our__subsidiaries--header">
+                  <Link><h6>Bombay Gas Company Proprietary Private Limited</h6><BsArrowUpRight /></Link>
+                </div>
+                <div className="our__subsidiaries--header">
+                  <Link><h6>Orange wave Networks</h6><BsArrowUpRight /></Link>
+                </div>
+                <div className="our__subsidiaries--header">
+                  <Link><h6>Netfra Solutions</h6><BsArrowUpRight /></Link>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </footer>
 
     </>

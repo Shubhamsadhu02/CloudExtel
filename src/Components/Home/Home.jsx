@@ -77,7 +77,7 @@ export default function Home() {
                       <h2>Small Cell Hosting</h2>
                     </div>
                     <div className="networks__container--para">
-                      <p>Turnkey execution & management of Small Cell Sites along with connectivity</p>
+                      <p>Ready-to-use implementation and management of Small Cell Sites.</p>
                     </div>
                   </div>
                 </div>
@@ -90,7 +90,7 @@ export default function Home() {
                       <h2>Fiber</h2>
                     </div>
                     <div className="networks__container--para">
-                      <p>Leasing of Dark Fiber to Telcos/ISP’s on lease model with secured long-term</p>
+                      <p>We lease our fiber optic network to telecom operators and Internet Service Providers with secured long-term tenures.</p>
                     </div>
                   </div>
                 </div>
@@ -104,7 +104,7 @@ export default function Home() {
                       <h2>FTTH</h2>
                     </div>
                     <div className="networks__container--para">
-                      <p>End to end passive offering (plan, build & maintain) for Telco’s/ISP’s targeting</p>
+                      <p>High-speed internet connectivity at your doorstep. Planning, maintaining, and building FTTH networks for Telecom and ISPs.</p>
                     </div>
                   </div>
                 </div>
@@ -117,7 +117,7 @@ export default function Home() {
                       <h2>Virtualized Networks</h2>
                     </div>
                     <div className="networks__container--para">
-                      <p>Virtualized Networks are at the cutting edge of network evolution. They solve capacity</p>
+                      <p>State-of-the-art technology to address and resolve capacity and coverage problems.</p>
                     </div>
                   </div>
                 </div>
@@ -126,11 +126,11 @@ export default function Home() {
             <div className="col-sm-12 col-lg-4">
               <div className="networks__content networks__content1">
                 <div className="hero__header">
-                  <h1>What<br /> we do</h1>
+                  <h1>Our Mission</h1>
                 </div>
                 <div className="hero__para mt-4">
-                  <p>We own & operate networks that address critical points of network stress, leverage sharing and adopt emerging heterogenous network technologies</p>
-                  <p>We have built a strong foundation basis the scaling of our Infrastructure as a Service business currently focused on Passive Infrastructure</p>
+                  <p>We aim to enable a connected
+world and address the challenges that emerge from the growth of data consumption in India. As a leading NaaS provider, we offer the wireless infrastructure required to build a connected world and aim to bring connectivity closer to the public by addressing critical points of network stress and adopting emerging heterogeneous network technologies.</p>
                 </div>
               </div>
             </div>
