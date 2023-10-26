@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Header from '../../Partials/Header'
 import Footer from '../../Partials/Footer'
 import { useNavigate } from 'react-router-dom';

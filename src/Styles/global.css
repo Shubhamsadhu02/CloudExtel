@@ -1016,7 +1016,6 @@ textarea:focus {
 }
 
 .Career__container {
-    border-bottom: 1px solid rgba(114, 128, 144, 0.64);
     padding: 55px 0;
 }
 
@@ -1294,6 +1293,11 @@ textarea:focus {
     color: red !important;
 }
 
+.action-view a{
+    text-decoration: none;
+    color: #111;
+}
+
 .create__Blog .container {
     background: #FFF;
     padding: 30px 20px;
@@ -1339,4 +1343,24 @@ textarea:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.pagination{
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.pagination .active{
+    color: #1456A2;
+    background: #D4E2ED;
+}
+
+.pagination li{
+    border: 1px solid #D4E2ED;
+    padding: 10px 20px;
+}
+
+.pagination li a{
+    text-decoration: none !important;
+    color: #1456A2;
 }

@@ -18,7 +18,10 @@ $message1 = "Dear " . $fname . ",\n\n"
   . "Email: " . $cmail . "\n"
   . "Phone Number: " . $contactNo . "\n"
   . "Message: " . $message . "\n\n\n"
-  . "Thank you for using our service. We look forward to see you soon.";
+  . "Thank you for using our service. We look forward to see you soon." . "\n"
+  . "Note: This is a system-generated email. Please don't reply to this email." . "\n\n"
+  . "Thanks & Regards" . "\n"
+  . "Cloud Extel";
 
 $message2 = $fname . "has submitted a inquiry." . "\n"
   . "Submitted information:" . "\n"
