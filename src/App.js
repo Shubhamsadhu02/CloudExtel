@@ -17,6 +17,8 @@ import CreatePost from "./Admin/CreatePost";
 import MyState from "./Context/StateProvider";
 import { Toaster } from "react-hot-toast";
 import CreateCareer from "./Admin/CreateCareer";
+import EditPost from "./Admin/EditPost";
+import EditCareer from "./Admin/EditCareer";
 
 function App() {
 
@@ -37,7 +39,9 @@ function App() {
         <Route path="/admin" element={<Login/>} />
         <Route path="/dashboard" element={ <ProtectedRouteForAdmin> <Dashboard/> </ProtectedRouteForAdmin>} />
         <Route path="/create-post" element={<ProtectedRouteForAdmin> <CreatePost/> </ProtectedRouteForAdmin>} />
-        <Route path="/create-career" element={ <CreateCareer/>} />
+        <Route path="/create-career" element={<ProtectedRouteForAdmin> <CreateCareer/> </ProtectedRouteForAdmin>} />
+        <Route path="/edit-post/:id/:title" element={<ProtectedRouteForAdmin> <EditPost/> </ProtectedRouteForAdmin>} />
+        <Route path="/edit-career/:id/:title" element={<ProtectedRouteForAdmin> <EditCareer/> </ProtectedRouteForAdmin>} />
       </Routes>
       <Toaster/>
     </Router>

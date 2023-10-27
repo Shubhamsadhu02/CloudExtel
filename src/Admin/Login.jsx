@@ -23,6 +23,7 @@ export default function Login() {
             localStorage.setItem('admin', JSON.stringify(result));
             navigate('/dashboard');
         } catch (error) {
+            toast.error("Login Failed")
             console.log(error);
         }
       };

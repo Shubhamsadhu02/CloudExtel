@@ -34,6 +34,7 @@ export default function StateProvider(props) {
             getAllBlogs()
             toast.success("Blogs deleted successfully")
         } catch (error) {
+            toast.error("Blogs can't deleted")
             console.log(error)
         }
     }

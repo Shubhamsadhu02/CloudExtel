@@ -15,6 +15,7 @@ import Union from '../../Images/AboutUs/Union.png';
 import { BsArrowRight, BsCheck2 } from 'react-icons/bs';
 import OurBoard from './OurBoard';
 import OurTeam from './OurTeam';
+import { Link } from 'react-router-dom';
 
 export default function AboutUs() {
     const [activeTab, setActiveTab] = useState('aboutUs');
@@ -256,10 +257,10 @@ export default function AboutUs() {
                                     <h4>Join us</h4>
                                 </div>
                                 <div className="hero__para--white">
-                                    <p>Please reach out to us at <b>careers@cloudextel.com</b> forexciting opportunities to join our rapidly growing team</p>
+                                    <p>Please reach out to us at <b>careers@cloudextel.com</b> for exciting opportunities to join our rapidly growing team</p>
                                 </div>
                                 <div className="learn__more--btn">
-                                    <button type='button'>Learn More<BsArrowRight /></button>
+                                    <Link to={'/contact-us'}><button type='button'>Learn More<BsArrowRight /></button></Link>
                                 </div>
                             </div>
                         </div>

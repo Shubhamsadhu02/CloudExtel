@@ -77,6 +77,9 @@ export default function CreatePost() {
             <Header isWhite={false} isLogin={true} />
             <section className='create__Blog' style={{ background: "rgb(245, 250, 254)" }}>
                 <div className="container">
+                    <div className="admin__header text-center mb-4">
+                        <h2>Create Blog Post</h2>
+                    </div>
                     {loading ?
                         <div className='d-flex justify-conter-center'>
                             <Circles
@@ -113,7 +116,7 @@ export default function CreatePost() {
 
                                     <JoditEditor
                                         ref={editor}
-                                        value={blogs.content}
+                                        value={content}
                                         tabIndex={1}
                                         onBlur={newContent => setContent(newContent)}
                                         onChange={newContent => { }}

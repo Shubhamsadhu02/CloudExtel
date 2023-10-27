@@ -1,13 +1,13 @@
-import React, { useState, useRef } from 'react'
-import { Timestamp, addDoc, collection } from 'firebase/firestore';
+import React, { useState, useRef, useEffect } from 'react'
+import { Timestamp, doc, setDoc } from 'firebase/firestore';
 import toast from 'react-hot-toast';
 import { firestoreDB } from '../firebase.config';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Header from '../Partials/Header';
 import JoditEditor from 'jodit-react';
 import { Circles } from 'react-loader-spinner';
 
-export default function CreateCareer() {
+export default function EditCareer() {
     const navigate = useNavigate();
     const editor = useRef(null);
     const [jobs, setjobs] = useState({
@@ -18,58 +18,57 @@ export default function CreateCareer() {
     });
     const [content, setContent] = useState('');
     const [loading, setLoading] = useState(false);
+    const { id } = useParams();
+    const location = useLocation();
+    const { data } = location.state;
+
+    useEffect(() => {
+        if (data) {
+            setjobs(data.jobs);
+            setContent(data.content);
+        }
+    }, [data]);
 
     const isValidURL = (url) => {
         const pattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/;
         return pattern.test(url);
     }
 
-    const addPost = async () => {
+    const updateCareer = async () => {
         if (!jobs.title || !jobs.location || !jobs.department || !jobs.applyLink || !content) {
             toast.error('Please Fill All Fields');
-            console.log('Please Fill All Fields');
-        }
-        else if (!isValidURL(jobs.applyLink)) {
+        }else if (!isValidURL(jobs.applyLink)) {
             toast.error('Please enter a valid URL for the Apply Link');
-        }
-        else {
+        } else {
             setLoading(true);
-            uploadCareer();
+            updateData();
         }
     }
 
-    const uploadCareer = () => {
-        if (!jobs.title || !jobs.location || !jobs.department || !jobs.applyLink || !content) return;
-        const productRef = collection(firestoreDB, "CareerPost");
-        try {
-            addDoc(productRef, {
-                jobs,
-                content: content,
-                time: Timestamp.now(),
-                date: new Date().toLocaleString(
-                    "en-US",
-                    {
-                        month: "short",
-                        day: "2-digit",
-                        year: "numeric",
-                    }
-                )
-            })
-            clearData();
-            navigate('/dashboard')
-            toast.success('Post Added Successfully');
-        } catch (error) {
-            toast.error(error)
-            console.log(error)
+    const updateData = async () => {
+        if (!jobs.title || !jobs.location || !jobs.department || !jobs.applyLink || !content) {
+            setLoading(false);
+            return;
         }
-        finally {
+        const postRef = doc(firestoreDB, "CareerPost", id);
+        try {
+            await setDoc(postRef, {
+                jobs,
+                content,
+                time: Timestamp.now(),
+                date: new Date().toLocaleString("en-US", {
+                    month: "short",
+                    day: "2-digit",
+                    year: "numeric",
+                }),
+            }, { merge: true });
+            navigate('/dashboard');
+            toast.success('Post Updated Successfully');
+        } catch (error) {
+            toast.error(error.message);
+        } finally {
             setLoading(false);
         }
-    }
-
-    const clearData = () => {
-        setjobs("");
-        setContent("");
     }
 
     return (
@@ -78,7 +77,7 @@ export default function CreateCareer() {
             <section className='create__Blog' style={{ background: "rgb(245, 250, 254)" }}>
                 <div className="container">
                     <div className="admin__header text-center mb-4">
-                        <h2>Create Career</h2>
+                        <h2>Edit Career</h2>
                     </div>
                     {loading ?
                         <div className='d-flex justify-conter-center'>
@@ -119,7 +118,7 @@ export default function CreateCareer() {
                                 </div>
 
                                 <div className="create__btn mt-5">
-                                    <button type='submit' onClick={addPost} disabled={loading}>Save</button>
+                                    <button type='submit' onClick={updateCareer} disabled={loading}>Save</button>
                                 </div>
                             </div>
                         </>

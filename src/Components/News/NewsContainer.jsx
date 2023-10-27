@@ -18,7 +18,7 @@ export default function NewsContainer() {
     return (
         <>
             <Header />
-            <section className='hero__blue hero__blue--newsbg'>
+            <section className='hero__blue hero__blue--newsbg' key={id}>
                 <div className="container">
                     <div className="go-back" onClick={handleBack}>
                         <BsArrowLeft />

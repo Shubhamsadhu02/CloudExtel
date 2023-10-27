@@ -90,7 +90,7 @@ export default function Dashboard() {
                               <div className="action__items d-flex">
                                 <p className='action--delete' title='Delete' onClick={() => deleteBlogs(item.id)}><MdDelete /></p>
                                 <p className='action-view' title='View'><Link to={`/news-container/${item.id}/${item.blogs.title}`} state={{ data: item }}><AiFillEye /></Link></p>
-                                <p className='action-edit' title='Edit'><LiaEdit /></p>
+                                <p className='action-edit' title='Edit'><Link to={`/edit-post/${item.id}/${item.blogs.title}`} state={{ data: item }}><LiaEdit /></Link></p>
                               </div>
                             </td>
                           </tr>
@@ -139,7 +139,7 @@ export default function Dashboard() {
                               <div className="action__items d-flex">
                                 <p className='action--delete' title='Delete' onClick={() => deleteCareers(item.id)}><MdDelete /></p>
                                 <p className='action-view' title='View' onClick={() => openModal(item)}><AiFillEye /></p>
-                                <p className='action-edit' title='Edit'><LiaEdit /></p>
+                                <p className='action-edit' title='Edit'><Link to={`/edit-career/${item.id}/${item.jobs.title}`} state={{ data: item }}><LiaEdit /></Link></p>
                               </div>
                             </td>
                           </tr>
