@@ -948,6 +948,10 @@ textarea:focus {
     padding: 120px 100px;
 }
 
+.perks .hero__header{
+    margin-bottom: 100px;
+}
+
 .perks__header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.24);
     padding: 24px 0;

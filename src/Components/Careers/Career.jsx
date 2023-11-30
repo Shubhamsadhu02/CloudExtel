@@ -55,6 +55,9 @@ export default function Career() {
 
       <section className="perks">
         <div className="container">
+          <div className="hero__header">
+            <h1 style={{ color: '#FFF' }}>We Prioritise Employee <br />Satisfaction</h1>
+          </div>
           <div className="row" style={{ rowGap: "40px" }}>
             <div className="col-sm-12 col-lg-4">
               <div className="perks__image">
@@ -83,7 +86,7 @@ export default function Career() {
                 <img src={Flexible} alt="Flexible" />
               </div>
               <div className="perks__header">
-                <h3>Flexible Work Arrangements</h3>
+                <h3>Flexible Hours</h3>
               </div>
               <div className="perks__para">
                 <p>We believe an employee does their best work with a healthy work-life balance. Our flexible working hours support your professional and personal well-being.</p>
@@ -224,13 +227,14 @@ export default function Career() {
             <div className="hero__header">
               <h1>Career Opportunities</h1>
             </div>
-            <div className="hero__para mt-4" style={{ width: '610px' }}>
-              <p>At Cloudextel, we prioritize our employees' growth and well-being, fostering an environment where you can thrive both professionally and personally. Our core values are the foundation of our workplace culture</p>
+            <div className="hero__para mt-4" style={{ width: '660px' }}>
+              <p>Employees are the heart and soul of an organisation. Want to contribute to the
+                ever-changing networking landscape? Reach out to us. </p>
             </div>
           </div>
 
           {/* Create career list here  */}
-          <CareerContainer />   
+          <CareerContainer />
         </div>
       </section>
 

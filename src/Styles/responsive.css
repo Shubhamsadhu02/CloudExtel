@@ -297,4 +297,8 @@
     .contactUs__inputs textarea {
         padding: 12px;
     }
+
+    .perks .hero__header{
+        margin-bottom: 50px;
+    }
 }

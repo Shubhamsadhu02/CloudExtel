@@ -54,8 +54,8 @@ export default function Home() {
       <section className='hero' style={{ backgroundImage: `url(${HeroBg})` }}>
         <div className="overlay"></div>
         <div className="container">
-          <div className="hero__heading">
-            <h1>India’s First Full Stack Network as a Service (NaaS) Provider</h1>
+          <div className="hero__heading text-center">
+            <h1>India’s Leading Network as a Service (NaaS) Provider</h1>
           </div>
           <div className="hero__down">
             <HashLink to={"/#network"} ><h4>Scroll Down <BsArrowDown /> </h4></HashLink>

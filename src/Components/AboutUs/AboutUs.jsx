@@ -229,16 +229,16 @@ export default function AboutUs() {
                         <div className="col-lg-8">
                             <div className="networks__content networks__content5">
                                 <div className="hero__header">
-                                    <h1>Our Heritage</h1>
+                                    <h1>Our Journey</h1>
                                 </div>
                                 <div className="hero__subHeader1 mt-4">
-                                    <h3>A reputed business house</h3>
+                                    <h3>Evolution of CloudExtel</h3>
                                 </div>
                                 <div className="hero__para mt-4">
-                                    <p>The growth of <b>telecom</b> and high demand for high-speed internet connectivity post the launch of 3G data services in India, provided an opportunity for <b>BGCL</b> to leverage its gas pipeline infrastructure to deploy <b>Fibre Optic cables</b> inside the cast-iron pipes.</p>
-                                    <p>CloudExtel, started operations in 2014 as a <b>dark fiber</b> leasing company in South Mumbai, however, has rapidly grown to be India’s first full stack <b>Network as a Service (NaaS)</b> company with presence in over <b>21 States</b> and Union Territories & <b>400+ cities</b> and <b>towns</b>.</p>
-                                    <p>CloudExtel has marquee customers such as <b>Airtel, Vodafone Idea, Tata Communications, Tata Sky, RailTel, Power Grid Corporation of India,</b> and strategic partnerships with leading global tech companies.</p>
-                                    <p>CloudExtel has experienced management team with a <b>100+ years</b> of combined experience and track record for successful delivery.</p>
+                                    <p>Founded in 2014 as a Dark Fiber leasing company in South Mumbai, CloudExtel has witnessed rapid growth as India’s first full-stack Network as a Service(NaaS) provider with a solid presence in over <b>21 states</b> and <b>400+ cities</b> across India.</p>
+                                    <p>After the launch of 3G services, the rapid expansion of the telecom industry and the demand for high-speed internet connectivity opened new avenues for <b>BGCL</b> to install its gas pipeline infrastructure to deploy Fiber optic cables inside cast-iron pipelines. CloudExtel was at the forefront of that project and undertook the task with utmost precision and expertise.</p>
+                                    <p>We have worked with marquee clients including <b> Airtel, Vodafone Idea, Tata Communications, Tata Sky, RailTel, and Power Grid Corporation of India </b> and have developed strategic partnerships with leading tech giants and industry experts worldwide.</p>
+                                    <p>We possess an experienced and dedicated management team with over <b> 100+ years </b> of combined experience and a proven track record of excellence and client satisfaction.</p>
                                 </div>
                             </div>
                         </div>
@@ -248,7 +248,7 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            <section className='optic' id='joinUs'>
+            <section className='optic' id='joinUs' style={{background: '#F5FAFE'}}>
                 <div className="container">
                     <div className="row" style={{ background: '#1456A2' }}>
                         <div className="col-sm-12 col-lg-6">
