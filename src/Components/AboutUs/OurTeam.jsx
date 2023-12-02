@@ -1,12 +1,18 @@
 import React, { useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 import { Modal } from 'react-bootstrap';
 
 import "swiper/css";
-import { Autoplay } from 'swiper/modules';
+// import { Autoplay } from 'swiper/modules';
 
 import Kunal from '../../Images/AboutUs/OurTeam/Kunal.png';
-import Tajinde from '../../Images/AboutUs/OurTeam/Tajinde.png';
+import KunalImg from '../../Images/AboutUs/OurTeam/KunalImg.png';
+import Deepak from '../../Images/AboutUs/OurTeam/Deepak.png';
+import Balkishan from '../../Images/AboutUs/OurTeam/Balakishan.png';
+import Rashmin from '../../Images/AboutUs/OurTeam/Rashmin.png';
+import Yash from '../../Images/AboutUs/OurTeam/Yash.png';
+import Shashank from '../../Images/AboutUs/OurTeam/ShaShank.png';
+
 import { BiLogoLinkedin } from 'react-icons/bi';
 
 function TeamDescription({ data }) {
@@ -24,15 +30,10 @@ function TeamDescription({ data }) {
     };
 
     return (
-        <div className="team__descp">
-            {visibleParagraphs.map((paragraph, index) => (
-                <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
-            ))}
-            {paragraphs.length > 2 && !showMore && (
-                <div className="read__more">
-                    <p onClick={openModal} >Read More</p>
-                </div>
-            )}
+        <div>
+            <div className="read__more">
+                <p onClick={openModal} >Read More</p>
+            </div>
 
             <Modal show={showModal} onHide={closeModal}>
                 <Modal.Header closeButton>
@@ -72,6 +73,7 @@ export default function OurTeam() {
     const ourTeamData = [
         {
             Image: Kunal,
+            Image1: KunalImg,
             Name: "Kunal Bajaj",
             Designation: "CEO & Co-Founder",
             Linkedin: "",
@@ -80,9 +82,9 @@ export default function OurTeam() {
             Education – University of Pennsylvania (Wharton & Engineering Schools); Graduated Honors with Bachelors in Computer Science, Masters in Telecommunications & Networking, Management & Finance Bachelors`
         },
         {
-            Image: Tajinde,
-            Name: "Tajinder Pal Singh Jaggis",
-            Designation: "Senior Vice President - Wireless Operations",
+            Image: Deepak,
+            Name: "Mr. Deepak Saxena",
+            Designation: "Senior Vice President - Wireless Op.",
             Linkedin: "",
             Description: `25 years of work experience in Wireless and Wireline Planning, Rollout, Operations, Automation, Transformation and Cost Optimization<br/><br/><br/>
             Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/><br/><br/>
@@ -90,26 +92,74 @@ export default function OurTeam() {
             `
         },
         {
-            Image: Kunal,
-            Name: "Kunal Bajajsasasa",
-            Designation: "CEO & Co-Founder",
-            Linkedin: "",
-            Description: `22+ years of experience in the Telecom, Internet & Technology space"`
-        },
-        {
-            Image: Tajinde,
-            Name: "Tajinder Pal Singh Jaggisssssssssss",
-            Designation: "Senior Vice President - Wireless Operations",
+            Image: Balkishan,
+            Name: "Mr. Balkishan Chandak",
+            Designation: "Chief Financial Officer",
             Linkedin: "",
             Description: `25 years of work experience in Wireless and Wireline Planning, Rollout, Operations, Automation, Transformation and Cost Optimization<br/><br/><br/>
             Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/><br/><br/>
             Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/>
             `
         },
+        {
+            Image: Rashmin,
+            Name: "Mr. Rashmin Vyawahare",
+            Designation: "VP - Strategy and BIS",
+            Linkedin: "",
+            Description: `25 years of work experience in Wireless and Wireline Planning, Rollout, Operations, Automation, Transformation and Cost Optimization<br/><br/><br/>
+            Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/><br/><br/>
+            Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/>
+            `
+        },
+        {
+            Image: Yash,
+            Name: "Mr. Yash Upadhyay",
+            Designation: "VP - Network Planning and Technology",
+            Linkedin: "",
+            Description: `25 years of work experience in Wireless and Wireline Planning, Rollout, Operations, Automation, Transformation and Cost Optimization<br/><br/><br/>
+            Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/><br/><br/>
+            Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/>
+            `
+        },
+        {
+            Image: Shashank,
+            Name: "Mr. Shashank Goenka",
+            Designation: "VP - Buisness Development & Sales",
+            Linkedin: "",
+            Description: `25 years of work experience in Wireless and Wireline Planning, Rollout, Operations, Automation, Transformation and Cost Optimization<br/><br/><br/>
+            Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/><br/><br/>
+            Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/>
+            `
+        }
     ]
     return (
         <>
-            <Swiper
+            <div className="row" style={{rowGap: "25px"}}>
+                {
+                    ourTeamData.map((item, index) => {
+                        return (<>
+                            <div className="col-sm-12 col-lg-4">
+                                <div className="team__container">
+                                    <div className="team__image">
+                                        <img src={item.Image} alt={item.Name} height={263} width={263} />
+                                    </div>
+                                    <div className="team__name">
+                                        <h2>{item.Name}</h2>
+                                    </div>
+                                    <div className="team__desgn">
+                                        <p>{item.Designation}</p>
+                                    </div>
+                                    <div className="">
+                                        <TeamDescription data={{ image: item.Image1, linkedin: item.Linkedin, name: item.Name, designation: item.Designation, description: item.Description }} />
+                                    </div>
+                                </div>
+                            </div>
+                        </>
+                        )
+                    })
+                }
+            </div>
+            {/* <Swiper
                 slidesPerView={'auto'}
                 spaceBetween={30}
                 loop={true}
@@ -150,7 +200,7 @@ export default function OurTeam() {
                         </SwiperSlide>)
                     })
                 }
-            </Swiper>
+            </Swiper> */}
         </>
     )
 }

@@ -885,6 +885,13 @@ textarea:focus {
     padding: 15px;
 }
 
+.team__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .board__desgn p {
     height: 70px;
     width: 90%;
