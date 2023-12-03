@@ -307,7 +307,7 @@ textarea:focus {
 }
 
 .team__descp {
-    height: 320px;
+    /* height: 320px; */
     overflow-y: auto;
 }
 

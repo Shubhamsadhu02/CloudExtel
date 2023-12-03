@@ -6,12 +6,17 @@ import "swiper/css";
 // import { Autoplay } from 'swiper/modules';
 
 import Kunal from '../../Images/AboutUs/OurTeam/Kunal.png';
-import KunalImg from '../../Images/AboutUs/OurTeam/KunalImg.png';
 import Deepak from '../../Images/AboutUs/OurTeam/Deepak.png';
 import Balkishan from '../../Images/AboutUs/OurTeam/Balakishan.png';
 import Rashmin from '../../Images/AboutUs/OurTeam/Rashmin.png';
 import Yash from '../../Images/AboutUs/OurTeam/Yash.png';
 import Shashank from '../../Images/AboutUs/OurTeam/ShaShank.png';
+import KunalImg from '../../Images/AboutUs/OurTeam/Kunal-Bajaj.png';
+import DeepakImg from '../../Images/AboutUs/OurTeam/Deepak-Saxena.png';
+import BalkishanImg from '../../Images/AboutUs/OurTeam/Balkishan-Chandak.png';
+import RashminImg from '../../Images/AboutUs/OurTeam/Rashmin-Vyawahare.png';
+import YashImg from '../../Images/AboutUs/OurTeam/Yash-Upadhay.png';
+import ShashankImg from '../../Images/AboutUs/OurTeam/Shashank-Goenka.png';
 
 import { BiLogoLinkedin } from 'react-icons/bi';
 
@@ -41,11 +46,11 @@ function TeamDescription({ data }) {
                 <Modal.Body>
                     <div className="row">
                         <div className="col-lg-5">
-                            <div className="team__image position-relative overflow-hidden">
+                            <div className="team__image position-relative overflow-hidden mt-4">
                                 <img src={data.image} alt={data.name} />
-                                <div className="team__linkedin">
+                                {/* <div className="team__linkedin">
                                     <a href={data.linkedin} target='__blank'><BiLogoLinkedin /></a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className="col-lg-7">
@@ -79,57 +84,57 @@ export default function OurTeam() {
             Linkedin: "",
             Description: `22+ years of experience in the Telecom, Internet & Technology space <br/><br/><br/>
             Versatile background: Founded AM-acquired company, Partner at Analysys Mason, TRAI Advisor, McKinsey & Jio experience, 3-time startup contributor<br/><br/><br/>
-            Education – University of Pennsylvania (Wharton & Engineering Schools); Graduated Honors with Bachelors in Computer Science, Masters in Telecommunications & Networking, Management & Finance Bachelors`
+            Education – University of Pennsylvania (Wharton & Engineering Schools); Graduated Honors with Bachelors in Computer Science, Masters in Telecommunications & Networking, Management & Finance Bachelors.`
         },
         {
             Image: Deepak,
+            Image1: DeepakImg,
             Name: "Mr. Deepak Saxena",
             Designation: "Senior Vice President - Wireless Op.",
             Linkedin: "",
-            Description: `25 years of work experience in Wireless and Wireline Planning, Rollout, Operations, Automation, Transformation and Cost Optimization<br/><br/><br/>
-            Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/><br/><br/>
-            Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/>
-            `
+            Description: `Over 28 Years of experience and thought leadership in Transport Networks, especially optical communications systems with leadership stints across large Indian operators. In the most recent roles at Idea and then Vodafone Idea, engineered the optical and IP transport network for 4G/Enterprise from conceptualization to operationalization for Pan India Network. Headed the automation process of networks in building integrated NOC and initiated the movement to NFV platform. Managed Planning, Project and Operations in rolling out Pan India Optical Fiber Network.<br/><br/><br/>
+            Past Experience – Started career in Indian Telecomm services (ITS) from Department of Telecom (DoT), and in past worked in Bharat Sanchar Nigam Limited (BSNL), Reliance Infocomm, Idea Cellular Ltd and Vodafone Idea Ltd.<br/><br/><br/>
+            Educational Qualifications – Bachelor’s Degree in Electronics and Communication and MBA in Marketing, certified business course from IIM Kolkata and Stanford University.`
         },
         {
             Image: Balkishan,
+            Image1: BalkishanImg,
             Name: "Mr. Balkishan Chandak",
             Designation: "Chief Financial Officer",
             Linkedin: "",
-            Description: `25 years of work experience in Wireless and Wireline Planning, Rollout, Operations, Automation, Transformation and Cost Optimization<br/><br/><br/>
-            Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/><br/><br/>
-            Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/>
-            `
+            Description: `23+ years experience in Corporate Finance, Strategic Planning, Financial Analysis, System Development, Supply Chain, Legal & Secretarial<br/><br/><br/>
+            Past Experience – Founder of SMART CFO Services, Country CFO & CS in ARAMARK India. Worked in various capacities in Future Group (Retail), Shoppers Stop (Retail), Goldshield International (Pharma), Coca Cola India (FMCG & Mfg.) and HINDALCO (Mfg.)<br/><br/><br/>
+            Education – Chartered Accountant, Company Secretary, B. Com (H)`
         },
         {
             Image: Rashmin,
+            Image1: RashminImg,
             Name: "Mr. Rashmin Vyawahare",
             Designation: "VP - Strategy and BIS",
             Linkedin: "",
-            Description: `25 years of work experience in Wireless and Wireline Planning, Rollout, Operations, Automation, Transformation and Cost Optimization<br/><br/><br/>
-            Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/><br/><br/>
-            Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/>
-            `
+            Description: `17+ years of experience in business strategy, product management and VC investments<br/><br/><br/>
+            Past Experience - Jio, Aircel, Reliance Capital, Cambridge Broadband Networks and Tata Communications<br/><br/><br/>
+            Education - Post Graduate Diploma in Wireless Telecommunications from Humber College, Toronto, Canada; University of Mumbai (Electronics)`
         },
         {
             Image: Yash,
+            Image1: YashImg,
             Name: "Mr. Yash Upadhyay",
             Designation: "VP - Network Planning and Technology",
             Linkedin: "",
-            Description: `25 years of work experience in Wireless and Wireline Planning, Rollout, Operations, Automation, Transformation and Cost Optimization<br/><br/><br/>
-            Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/><br/><br/>
-            Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/>
-            `
+            Description: `21 years of work experience in Planning, Rollout, NOC Operations, Network Transformation<br/><br/><br/>
+            Past Experience – Ericsson as Expert Solution Architect, Regional Head in Tata Docomo for Planning and RAN Network Operation<br/><br/><br/>
+            Education – Bachelor’s of Technology degree from JRN University`
         },
         {
             Image: Shashank,
+            Image1: ShashankImg,
             Name: "Mr. Shashank Goenka",
             Designation: "VP - Buisness Development & Sales",
             Linkedin: "",
-            Description: `25 years of work experience in Wireless and Wireline Planning, Rollout, Operations, Automation, Transformation and Cost Optimization<br/><br/><br/>
-            Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/><br/><br/>
-            Past Experience – Bharti Airtel, Circle CTO for Tata Docomo and Director-Fiber, Infra and Enterprise in Ericsson India Ericsson India<br/>
-            `
+            Description: `13+ years of experience in Key Account Management, Strategic Alliance, Sales & Marketing, Product Management, Business Planning & Strategy<br/><br/><br/>
+            Past Experience - Jio, Sterlite, Reliance Globalcom<br/><br/><br/>
+            Education - MBA in International Business & Marketing from ITM (Mumbai), EDHEC (France) and ESSCA (Hungary)`
         }
     ]
     return (
