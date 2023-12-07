@@ -27,9 +27,9 @@ export default function Career() {
           <div className="hero__heading text-center">
             <h1 style={{ color: '#233852' }}>Revolutionalize the Networking Industry With Us</h1>
           </div>
-          <div className="View_opportunities text-center">
+          {/* <div className="View_opportunities text-center">
             <HashLink to={"#career"} ><h4>View Opportunities <BsArrowDown /> </h4></HashLink>
-          </div>
+          </div> */}
 
           <div class="imgae__grid">
             <div class="grid-item">
