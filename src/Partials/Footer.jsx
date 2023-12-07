@@ -51,7 +51,7 @@ export default function Footer() {
                   <li><BiLogoFacebook style={{ color: "#fff" }} /></li>
                   <li><BiLogoTwitter style={{ color: "#fff" }} /></li>
                   <li><BiLogoInstagram style={{ color: "#fff" }} /></li>
-                  <li><BiLogoLinkedin style={{ color: "#fff" }} /></li>
+                  <li><a href='https://www.linkedin.com/company/cloudextel/' target='__blank' rel="noopener noreferrer"><BiLogoLinkedin style={{ color: "#fff" }} /></a></li>
                 </ul>
               </div>
             </div>

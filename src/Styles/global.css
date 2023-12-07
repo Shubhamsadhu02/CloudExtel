@@ -175,16 +175,16 @@ textarea:focus {
     justify-content: space-between;
 }
 
-.footer__bottom .container{
+.footer__bottom .container {
     align-items: center;
 }
 
-.footer__top{
+.footer__top {
     background: #1A2635;
     padding: 70px 35px 20px;
 }
 
-.footer__bottom{
+.footer__bottom {
     background: #1456A2;
     padding: 20px 35px;
 }
@@ -885,11 +885,13 @@ textarea:focus {
     padding: 15px;
 }
 
-.team__container{
+.team__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 370px;
+    height: 471px;
 }
 
 .board__desgn p {
@@ -955,7 +957,7 @@ textarea:focus {
     padding: 120px 100px;
 }
 
-.perks .hero__header{
+.perks .hero__header {
     margin-bottom: 100px;
 }
 
@@ -1304,7 +1306,7 @@ textarea:focus {
 }
 
 .action-view a,
-.action-edit a{
+.action-edit a {
     text-decoration: none;
     color: #111;
 }
@@ -1330,7 +1332,7 @@ textarea:focus {
     font-weight: 500;
 }
 
-.team__linkedin{
+.team__linkedin {
     background: #1456A2;
     padding: 20px;
     border-radius: 50%;
@@ -1345,7 +1347,7 @@ textarea:focus {
     z-index: 1000;
 }
 
-.team__linkedin a{
+.team__linkedin a {
     border-radius: 50%;
     padding: 10px;
     background: #FAFAFA;
@@ -1356,27 +1358,27 @@ textarea:focus {
     align-items: center;
 }
 
-.pagination{
+.pagination {
     margin-top: 30px;
     justify-content: center;
 }
 
-.pagination .active{
+.pagination .active {
     color: #1456A2;
     background: #D4E2ED;
 }
 
-.pagination li{
+.pagination li {
     border: 1px solid #D4E2ED;
     padding: 10px 20px;
 }
 
-.pagination li a{
+.pagination li a {
     text-decoration: none !important;
     color: #1456A2;
 }
 
 .career__name,
-.career__details{
+.career__details {
     word-break: break-all;
 }
