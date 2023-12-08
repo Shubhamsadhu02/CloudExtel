@@ -45,7 +45,7 @@ function TeamDescription({ data }) {
                             <div className="team__image position-relative overflow-hidden mt-4">
                                 <img src={data.image} alt={data.name} />
                                 {/* <div className="team__linkedin">
-                                    <a href={data.linkedin} target='__blank'><BiLogoLinkedin /></a>
+                                    <a href={data.linkedin} target='__blank' rel="noopener noreferrer"><BiLogoLinkedin /></a>
                                 </div> */}
                             </div>
                         </div>
@@ -77,7 +77,7 @@ export default function OurTeam() {
             Image: Kunal,
             Name: "Kunal Bajaj",
             Designation: "CEO & Co-Founder",
-            Linkedin: "",
+            Linkedin: "https://www.linkedin.com/in/bajajkunal/",
             Description: `22+ years of experience in the Telecom, Internet & Technology space <br/><br/>
             Versatile background: Founded AM-acquired company, Partner at Analysys Mason, TRAI Advisor, McKinsey & Jio experience, 3-time startup contributor<br/><br/>
             Education – University of Pennsylvania (Wharton & Engineering Schools); Graduated Honors with Bachelors in Computer Science, Masters in Telecommunications & Networking, Management & Finance Bachelors.`
@@ -86,7 +86,7 @@ export default function OurTeam() {
             Image: Deepak,
             Name: "Mr. Deepak Saxena",
             Designation: "Senior Vice President - Wireless Op.",
-            Linkedin: "",
+            Linkedin: "https://www.linkedin.com/in/deepak-saxena-a949072/",
             Description: `Over 28 Years of experience and thought leadership in Transport Networks, especially optical communications systems with leadership stints across large Indian operators. In the most recent roles at Idea and then Vodafone Idea, engineered the optical and IP transport network for 4G/Enterprise from conceptualization to operationalization for Pan India Network. Headed the automation process of networks in building integrated NOC and initiated the movement to NFV platform. Managed Planning, Project and Operations in rolling out Pan India Optical Fiber Network.<br/><br/>
             Past Experience – Started career in Indian Telecomm services (ITS) from Department of Telecom (DoT), and in past worked in Bharat Sanchar Nigam Limited (BSNL), Reliance Infocomm, Idea Cellular Ltd and Vodafone Idea Ltd.<br/><br/>
             Educational Qualifications – Bachelor’s Degree in Electronics and Communication and MBA in Marketing, certified business course from IIM Kolkata and Stanford University.`
@@ -95,7 +95,7 @@ export default function OurTeam() {
             Image: Balkishan,
             Name: "Mr. Balkishan Chandak",
             Designation: "Chief Financial Officer",
-            Linkedin: "",
+            Linkedin: "https://www.linkedin.com/in/balkishanchandak/",
             Description: `23+ years experience in Corporate Finance, Strategic Planning, Financial Analysis, System Development, Supply Chain, Legal & Secretarial<br/><br/>
             Past Experience – Founder of SMART CFO Services, Country CFO & CS in ARAMARK India. Worked in various capacities in Future Group (Retail), Shoppers Stop (Retail), Goldshield International (Pharma), Coca Cola India (FMCG & Mfg.) and HINDALCO (Mfg.)<br/><br/>
             Education – Chartered Accountant, Company Secretary, B. Com (H)`
@@ -104,7 +104,7 @@ export default function OurTeam() {
             Image: Rashmin,
             Name: "Mr. Rashmin Vyawahare",
             Designation: "VP - Strategy and BIS",
-            Linkedin: "",
+            Linkedin: "https://www.linkedin.com/in/rashmin1980/",
             Description: `17+ years of experience in business strategy, product management and VC investments<br/><br/>
             Past Experience - Jio, Aircel, Reliance Capital, Cambridge Broadband Networks and Tata Communications<br/><br/>
             Education - Post Graduate Diploma in Wireless Telecommunications from Humber College, Toronto, Canada; University of Mumbai (Electronics)`
@@ -113,7 +113,7 @@ export default function OurTeam() {
             Image: Yash,
             Name: "Mr. Yash Upadhyay",
             Designation: "VP - Network Planning and Technology",
-            Linkedin: "",
+            Linkedin: "https://www.linkedin.com/in/yash-upadhyay-3b6247159/",
             Description: `21 years of work experience in Planning, Rollout, NOC Operations, Network Transformation<br/><br/>
             Past Experience – Ericsson as Expert Solution Architect, Regional Head in Tata Docomo for Planning and RAN Network Operation<br/><br/>
             Education – Bachelor’s of Technology degree from JRN University`
@@ -122,7 +122,7 @@ export default function OurTeam() {
             Image: Shashank,
             Name: "Mr. Shashank Goenka",
             Designation: "VP - Buisness Development & Sales",
-            Linkedin: "",
+            Linkedin: "https://www.linkedin.com/in/shashank-goenka-94037914/",
             Description: `13+ years of experience in Key Account Management, Strategic Alliance, Sales & Marketing, Product Management, Business Planning & Strategy<br/><br/>
             Past Experience - Jio, Sterlite, Reliance Globalcom<br/><br/>
             Education - MBA in International Business & Marketing from ITM (Mumbai), EDHEC (France) and ESSCA (Hungary)`
@@ -132,7 +132,9 @@ export default function OurTeam() {
             Name: "Shubha S. Karra",
             Designation: "Vice President - General Counsel and Head of Risk",
             Linkedin: "",
-            Description: ``
+            Description: `We are delighted to welcome Shubha S. Karra as Vice President - General Counsel and Head of Risk.<br/><br/>
+            She will be a part of the core leadership team of CloudExtel and will head Legal, Regulatory, Compliance and Risk. Shubha is a corporate lawyer with 15 years of corporate advisory experience in premier Indian law firms and conglomerates.<br/><br/>
+            Prior to that she was working in Aditya Birla Group as GM- Legal handling strategic acquisitions and other legal issues in telecom, viscose staple fibre, chemicals and microfinance businesses of the group. Apart from that she has advised clients in IT, hospitality and infrastructure (roads) sectors in the past during her stint in law firms.`
         },
         {
             Image: Kunmoon,

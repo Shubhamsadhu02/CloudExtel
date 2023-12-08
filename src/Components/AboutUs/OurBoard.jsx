@@ -68,7 +68,7 @@ export default function OurBoard() {
             Image: Ashish,
             Name: "Ashish Jalan",
             Designation: "4th Generation entrepreneur",
-            Linkedin: "",
+            Linkedin: "https://www.linkedin.com/in/ashishsjalan/",
             Description: `4th Generation entrepreneur <br/><br/>
             Set up leading process automation co based out of Calcutta <br/><br/>
             Acquired and runs an Electrical businesses in Chennai and in the UK <br/><br/>
@@ -100,7 +100,7 @@ export default function OurBoard() {
             Image: Kunal,
             Name: "Kunal Bajaj",
             Designation: "CEO & Co-Founder",
-            Linkedin: "",
+            Linkedin: "https://www.linkedin.com/in/bajajkunal/",
             Description: `22+ years of experience in the Telecom, Internet & Technology space <br/><br/>
             Versatile background: Founded AM-acquired company, Partner at Analysys Mason, TRAI Advisor, McKinsey & Jio experience, 3-time startup contributor<br/><br/>
             Education – University of Pennsylvania (Wharton & Engineering Schools); Graduated Honors with Bachelors in Computer Science, Masters in Telecommunications & Networking, Management & Finance Bachelors.`
@@ -109,7 +109,7 @@ export default function OurBoard() {
             Image: Maheep,
             Name: "Maheep Jain",
             Designation: "Promoter",
-            Linkedin: "",
+            Linkedin: "https://www.linkedin.com/in/maheepjain/",
             Description: `Maheep has over 16 years of experience in minority, build-out and buy-out investments across infrastructure sectors, with a strong focus on energy transition. Maheep joined Macquarie Capital in 2022 as Managing Director, Infrastructure & Energy Capital in India. He has been responsible for the full lifecycle of deals from origination and execution to portfolio management with cumulative equity investments of ~ $1bn.<br/><br/>
             Maheep has Led several marquee investments, viz. $140m in Ayana Power, $85m in Greencell Mobility along with co-leading an acquisition of a 70% stake in Globeleq, the largest IPP in Africa, in a $530m equity deal. He has also served as a board member of several companies.<br/><br/>
             Prior to joining Macquarie Capital, Maheep was an MD at EverSource Capital (US$750m energy transition fund in India) where he invested across renewable, e-mobility and resource efficiency sectors. Prior to EverSource, he was an investment director with CDC Group in London where he led transactions across emerging markets. Maheep started his career with Bechtel Corporation in Houston where he worked on large oil and gas infrastructure projects globally.<br/><br/>
@@ -119,7 +119,7 @@ export default function OurBoard() {
             Image: Naveen,
             Name: "Naveen Chopra",
             Designation: "30+ years of work experience in Telecom & FMCG",
-            Linkedin: "",
+            Linkedin: "https://www.linkedin.com/in/naveen-chopra/",
             Description: `30+ years of work experience in Telecom & FMCG<br/><br/>
             Joined Hutch/ Vodafone in 2004 as CMO and then was the Business Head of the largest circle (Mumbai) while also overseeing Rajasthan; post Vodafone acquisition of Hutch was instrumental in establishing VF's Enterprise Business in India - drove it to become a US$ 1Bn business in 5 years<br/><br/>
             Was COO of the company for 2 years till the company announced its merger with Idea in 2017<br/><br/>
@@ -132,7 +132,8 @@ export default function OurBoard() {
             Name: "Richard",
             Designation: "",
             Linkedin: "",
-            Description: ""
+            Description: `Richard is a Partner at Advencap, an early-stage digital infrastructure investment firm, broadly operating out of the UK. Having come from 14 years of investment banking in South Africa and the UK, Richard led various transactions in the telecom and IT sectors.<br/><br/>
+            Richard is an Alumni of Harvard Business School, a Chartered Accountant and CFA.`
         },
         {
             Image: Niel,
@@ -177,7 +178,7 @@ export default function OurBoard() {
                                     </div> */}
                                     <div className="d-flex justify-content-between align-items-center mt-5">
                                         <div className="board__linkdln">
-                                            <Link to={item.Linkedin} target='__blank'><BiLogoLinkedin /></Link>
+                                            <Link to={item.Linkedin} target='__blank' rel="noopener noreferrer"><BiLogoLinkedin /></Link>
                                         </div>
                                         {/* <div className="read__more">
                                             <p onClick={() => openModal(item)}>Read More</p>
