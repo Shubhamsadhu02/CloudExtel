@@ -119,6 +119,38 @@ export default function IndiaMap() {
                         <circle id="Ellipse 11" stroke-width="0" opacity="0.4" cx="194" cy="568" r="16" fill="#1456A2" />
                         <circle id="Ellipse 12" stroke-width="0" cx="194" cy="568" r="10" fill="#1456A2" />
                     </g>
+                    <g name='Uttar Pradesh'>
+                        <circle id="Ellipse 11" stroke-width="0" opacity="0.4" cx="420" cy="372" r="16" fill="#FF9124" />
+                        <circle id="Ellipse 12" stroke-width="0" cx="420" cy="372" r="10" fill="#FF9124" />
+                        <circle id="Ellipse 11" stroke-width="0" opacity="0.4" cx="511" cy="477" r="16" fill="#FF9124" />
+                        <circle id="Ellipse 12" stroke-width="0" cx="511" cy="477" r="10" fill="#FF9124" />
+                        <circle id="Ellipse 11" stroke-width="0" opacity="0.4" cx="366" cy="405"  r="16" fill="#1456A2" />
+                        <circle id="Ellipse 12" stroke-width="0" cx="366" cy="405"  r="10" fill="#1456A2" />
+                    </g>
+                    <g name='Bihar'>
+                        <circle id="Ellipse 11" stroke-width="0" opacity="0.4" cx="585" cy="460"  r="16" fill="#1456A2" />
+                        <circle id="Ellipse 12" stroke-width="0" cx="585" cy="460"  r="10" fill="#1456A2" />
+                    </g>
+                    <g name='Assam'>
+                        <circle id="Ellipse 11" stroke-width="0" opacity="0.4" cx="866" cy="448"  r="16" fill="#FF9124" />
+                        <circle id="Ellipse 12" stroke-width="0" cx="866" cy="448"  r="10" fill="#FF9124" />
+                    </g> 
+                    <g name='Meghalaya'>
+                        <circle id="Ellipse 11" stroke-width="0" opacity="0.4" cx="750" cy="452"  r="16" fill="#FF9124" />
+                        <circle id="Ellipse 12" stroke-width="0" cx="750" cy="452"  r="10" fill="#FF9124" />
+                        <circle id="Ellipse 11" stroke-width="0" opacity="0.4" cx="809" cy="445"  r="16" fill="#1456A2" />
+                        <circle id="Ellipse 12" stroke-width="0" cx="809" cy="445"  r="10" fill="#1456A2" />
+                    </g> 
+                    <g name='West Bengal'>
+                        <circle id="Ellipse 11" stroke-width="0" opacity="0.4" cx="665" cy="580"  r="16" fill="#1456A2" />
+                        <circle id="Ellipse 12" stroke-width="0" cx="665" cy="580"  r="10" fill="#1456A2" />
+                    </g> 
+                    <g name='Jharkhand'>
+                        <circle id="Ellipse 11" stroke-width="0" opacity="0.4" cx="597" cy="582"  r="16" fill="#FF9124" />
+                        <circle id="Ellipse 12" stroke-width="0" cx="597" cy="582"  r="10" fill="#FF9124" />
+                        <circle id="Ellipse 11" stroke-width="0" opacity="0.4" cx="638" cy="524"  r="16" fill="#FF9124" />
+                        <circle id="Ellipse 12" stroke-width="0" cx="638" cy="524"  r="10" fill="#FF9124" />
+                    </g>
                 </g>
             </svg>
         </div>
