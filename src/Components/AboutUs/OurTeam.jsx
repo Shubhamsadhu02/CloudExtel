@@ -131,7 +131,7 @@ export default function OurTeam() {
             Image: Shubha,
             Name: "Shubha S. Karra",
             Designation: "Vice President - General Counsel and Head of Risk",
-            Linkedin: "",
+            Linkedin: "https://www.linkedin.com/in/shubha-karra/",
             Description: `We are delighted to welcome Shubha S. Karra as Vice President - General Counsel and Head of Risk.<br/><br/>
             She will be a part of the core leadership team of CloudExtel and will head Legal, Regulatory, Compliance and Risk. Shubha is a corporate lawyer with 15 years of corporate advisory experience in premier Indian law firms and conglomerates.<br/><br/>
             Prior to that she was working in Aditya Birla Group as GM- Legal handling strategic acquisitions and other legal issues in telecom, viscose staple fibre, chemicals and microfinance businesses of the group. Apart from that she has advised clients in IT, hospitality and infrastructure (roads) sectors in the past during her stint in law firms.`
@@ -140,7 +140,7 @@ export default function OurTeam() {
             Image: Kunmoon,
             Name: "Kunmoon Panda",
             Designation: "Assistant Vice President – HR Head ",
-            Linkedin: "",
+            Linkedin: "https://www.linkedin.com/in/kunmoon-panda-8b5a1418/",
             Description: `She has joined us in the position of Assistant Vice President – HR Head based in Mumbai.<br/><br/>
             Kunmoon comes with over 17 years of experience in the various Industries and her last assignment was with Axis Bank as HR Business Partner for Corporate Centre.<br/><br/>
             We are excited to have her on board and we know she will be a valuable asset to the team.<br/><br/>

@@ -1385,3 +1385,43 @@ textarea:focus {
 .career__details {
     word-break: break-all;
 }
+
+.indiaMap{
+    background: #F5FAFE;
+    padding: 100px 0;
+    position: relative;
+}
+
+.map__details{
+    width: 505px;
+    position: absolute;
+    bottom: 150px;
+    right: 100px;
+}
+
+.map__points{
+    padding-left: 0;
+}
+
+.map__points li{
+    display: flex;
+    align-items: center;
+}
+
+.map__points li p{
+    margin-bottom: 0;
+    margin-left: 15px;
+}
+
+.map{
+    fill: #ADF0F5;
+    stroke: #FFF;
+    stroke-width: 0.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.map path:hover{
+    stroke-width: 2;
+    stroke: #17adf3;
+}

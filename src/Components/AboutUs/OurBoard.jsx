@@ -80,7 +80,7 @@ export default function OurBoard() {
             Image: Brandon,
             Name: "Brandon Prater",
             Designation: "8 years of experience in financing and investing",
-            Linkedin: "",
+            Linkedin: "https://www.linkedin.com/in/brandon-prater-0541063/",
             Description: `Brandon has over 28 years of experience in financing and investing in infrastructure, primarily in the European energy and telecom sector. Brandon is an advisor to Macquarie Capital. Previously he was the Co-Head of Partners Group Infrastructure where he helped grow the business into a USD 10bn AUM global investment platform. He chaired the Infrastructure Investment Committee and represented Infrastructure on the Global Investment Committee.<br/><br/>
             Prior to that, Brandon was an Investment Director and member of the investment committee at Infracapital inaugural fund. While at Infracapital he worked with the team successfully invest GBP 900m, focusing on the European telecom and energy sectors. Prior to Infracapital Brandon was a Senior Investment Officer for the AIG-backed USD 550m Emerging Europe Infrastructure Fund, where he focused on the energy, materials and telecom sectors.<br/><br/>
             In addition to equity investment, Brandon’s earlier career experience includes project finance and overseas development/assistance.<br/><br/>
@@ -90,7 +90,7 @@ export default function OurBoard() {
             Image: Ivan,
             Name: "Ivan Verughese",
             Designation: "Head of Infrastructure & Energy Capital Asia Pacific",
-            Linkedin: "",
+            Linkedin: "https://www.linkedin.com/in/ivan-varughese-91634b20/",
             Description: `Ivan Varughese is the Head of Infrastructure & Energy Capital, Asia Pacific and Senior Managing Director, Infrastructure and Energy Capital Macquarie Capital. Ivan joined Macquarie Capital in 2006 as part of the Australian infrastructure team and led the Infrastructure & Energy Group in Australia and New Zealand from 2017. In 2020, he moved to Singapore to be the Head of the Green Investment Group, Asia Pacific.<br/><br/>
             At Macquarie Capital, Ivan has been involved in several transactions in a financial advisory capacity such as the sale of their Australian renewables portfolio, ANZ Terminals on the acquisition of Graincorp’s bulk liquid terminals, UniSuper on its potential acquisition in Hobart Airport, MIRA-led consortium on its winning bid for the long term lease of Endeavour Energy from the State of NSW for proceeds of $7.6 billion (2017) and many more.<br/><br/>
             His experience extends across both principal investing and financial advisory. Ivan was appointed to his current role in April 2022. Infrastructure & Energy Capital (IEC) is one of Macquarie Capital’s principal investment businesses and is focused on economic and social infrastructure, digital infrastructure, as well as energy transition infrastructure.<br/><br/>

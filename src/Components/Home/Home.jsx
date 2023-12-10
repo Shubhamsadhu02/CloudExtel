@@ -18,6 +18,7 @@ import HomeNewsSection from './HomeNewsSection';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import CountUp from 'react-countup';
+import IndiaMap from './IndiaMap';
 
 export default function Home() {
 
@@ -130,7 +131,7 @@ export default function Home() {
                 </div>
                 <div className="hero__para mt-4">
                   <p>We aim to enable a connected
-world and address the challenges that emerge from the growth of data consumption in India. As a leading NaaS provider, we offer the wireless infrastructure required to build a connected world and aim to bring connectivity closer to the public by addressing critical points of network stress and adopting emerging heterogeneous network technologies.</p>
+                    world and address the challenges that emerge from the growth of data consumption in India. As a leading NaaS provider, we offer the wireless infrastructure required to build a connected world and aim to bring connectivity closer to the public by addressing critical points of network stress and adopting emerging heterogeneous network technologies.</p>
                 </div>
               </div>
             </div>
@@ -215,10 +216,51 @@ world and address the challenges that emerge from the growth of data consumption
         </div>
       </section>
 
-      <section style={{ background: '#F5FAFE' }}>
+      <section className='indiaMap'>
         <div className="container">
           <div className="India">
-            <img src={India} alt="India Map" />
+            {/* <img src={India} alt="India Map" /> */}
+            <IndiaMap />
+          </div>
+          <div className="map__details">
+            <div className="hero__header">
+              <h1>We’re <br /> all over India</h1>
+            </div>
+            <div className="hero__para">
+              <p>We have built a strong foundation basis the scaling of our Infrastructure as a Service business currently focused on Passive Infrastructure</p>
+            </div>
+            <ul className='map__points'>
+              <li>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <circle id="Ellipse 12" cx="16" cy="16" r="10" fill="#FF9124" />
+                  </g>
+                </svg>
+                <div className="hero__para">
+                  <p>Network Presence</p>
+                </div>
+              </li>
+              <li>
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <circle id="Ellipse 12" cx="16" cy="16" r="10" fill="#ADF0F5" />
+                  </g>
+                </svg>
+                <div className="hero__para">
+                  <p>State presence</p>
+                </div>
+              </li>
+              <li>
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <circle id="Ellipse 12" cx="16" cy="16" r="10" fill="#1456A2" />
+                  </g>
+                </svg>
+                <div className="hero__para">
+                  <p>Offices</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
