@@ -46,19 +46,19 @@ export default function OurSolution() {
         };
     }, []);
 
-    const [isExpanded, setIsExpanded] = useState({
-        cell: false,
-        fiber: false,
-        ftth: false,
-        virtualized: false,
-    });
+    // const [isExpanded, setIsExpanded] = useState({
+    //     cell: false,
+    //     fiber: false,
+    //     ftth: false,
+    //     virtualized: false,
+    // });
 
-    const toggleDescription = (tabId) => {
-        setIsExpanded((prevState) => ({
-            ...prevState,
-            [tabId]: !prevState[tabId],
-        }));
-    };
+    // const toggleDescription = (tabId) => {
+    //     setIsExpanded((prevState) => ({
+    //         ...prevState,
+    //         [tabId]: !prevState[tabId],
+    //     }));
+    // };
 
     return (
         <>
@@ -98,7 +98,7 @@ export default function OurSolution() {
                                     <div className="hero__para mt-4">
                                         <p>CloudExtel provides small-cell hosting services to aid telecom operators in expanding their networks by increasing data capacity offload to improve network quality. We ensure a high-quality customer experience in high-density locations such as urban centres or areas where network signal density requires bolstering. </p>
                                     </div>
-                                    {isExpanded.cell && (<>
+                                    {/* {isExpanded.cell && (<> */}
                                         <div className="hero__para mt-4">
                                             <p>Small Cells are miniaturized base stations that aid in improving 4G signals. They are installed and operated on sites where the end-user needs improved network signals. </p>
                                         </div>
@@ -116,11 +116,10 @@ export default function OurSolution() {
                                                 <li>Our services are available in prime locations like Varanasi Ghats, Somnath Temple, Ajmer Dargah, Gateway of India, and Jallianwala Bagh.</li>
                                             </ul>
                                         </div>
-                                    </>
-                                    )}
-                                    <div className="read__more" onClick={() => toggleDescription('cell')}>
+                                    {/* </>)} */}
+                                    {/* <div className="read__more" onClick={() => toggleDescription('cell')}>
                                         <p>{isExpanded.cell ? (<>Read Less <BsArrowUp /> </>) : (<>Read More <BsArrowDown /> </>)}</p>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -138,7 +137,7 @@ export default function OurSolution() {
                                     <div className="hero__para mt-4">
                                         <p>Optical Fiber is one of the most frequently applied and future-proof Black-haul technology that delivers high-speed network connectivity. We offer Fiber Leasing services to telecom operators to grant them full control of their network at cost-effective rates. Dark Fiber also provides high levels of security as it is bespoke and tailored to each telecom operator’s use. Our multi-tenanted and dense underground fiber optic network offers connectivity to the telecom operator’s endpoints. </p>
                                     </div>
-                                    {isExpanded.fiber && (<>
+                                    {/* {isExpanded.fiber && (<> */}
                                         <div className="hero__subHeader">
                                             <h4>Our USP</h4>
                                         </div>
@@ -167,11 +166,10 @@ export default function OurSolution() {
                                                 <li>Clients include tech giants like Airtel, SIFY, and Vodafone Idea.</li>
                                             </ul>
                                         </div>
-                                    </>
-                                    )}
-                                    <div className="read__more" onClick={() => toggleDescription('fiber')}>
+                                    {/* </>)} */}
+                                    {/* <div className="read__more" onClick={() => toggleDescription('fiber')}>
                                         <p>{isExpanded.fiber ? (<>Read Less <BsArrowUp /> </>) : (<>Read More <BsArrowDown /> </>)}</p>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                             <div className="col-sm-12 col-lg-6 order-md-2 order-1">
@@ -197,7 +195,7 @@ export default function OurSolution() {
                                     <div className="hero__para mt-4">
                                         <p>CloudExtel brings ultra-high-speed connectivity to your doorstep through cutting-edge Fiber-to-the-home technology. We provide a single platform in commercial and residential areas to bring services from multiple telecom operators and internet service providers.</p>
                                     </div>
-                                    {isExpanded.ftth && (<>
+                                    {/* {isExpanded.ftth && (<> */}
                                         <div className="hero__para mt-4">
                                             <p>Leverage the benefits of increased network performance through our state-of-the-art FTTH solutions. We aim to provide higher speeds over long distances.</p>
                                         </div>
@@ -213,10 +211,10 @@ export default function OurSolution() {
                                                 <li>Our clients include tech giants like Airtel and Tata Sky Broadband.</li>
                                             </ul>
                                         </div>
-                                    </>)}
-                                    <div className="read__more" onClick={() => toggleDescription('ftth')}>
+                                    {/* </>)} */}
+                                    {/* <div className="read__more" onClick={() => toggleDescription('ftth')}>
                                         <p>{isExpanded.ftth ? (<>Read Less <BsArrowUp /> </>) : (<>Read More <BsArrowDown /> </>)}</p>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -231,15 +229,15 @@ export default function OurSolution() {
                                     <div className="hero__para mt-4">
                                         <p>The telecom industry is growing rapidly and virtualized networks are at the forefront of innovation. We at CloudExtel help enterprises solve complex network capacity and coverage problems through our end-to-end virtualized network solutions. </p>
                                     </div>
-                                    {isExpanded.virtualized && (<>
+                                    {/* {isExpanded.virtualized && (<> */}
                                         <div className="hero__para mt-4">
                                             <p>Our service offers reliable and robust networking solutions including the passive network infrastructure with active technology layers on top. We decouple the network services from the physical hardware, allowing them to function independently and making them perfect for any network device. </p>
                                             <p>Our services simplify the efforts of network administrators, making it easier to modify policies, move workloads, and avoid complex and time-consuming configurations.</p>
                                         </div>
-                                    </>)}
-                                    <div className="read__more" onClick={() => toggleDescription('virtualized')}>
+                                    {/* </>)} */}
+                                    {/* <div className="read__more" onClick={() => toggleDescription('virtualized')}>
                                         <p>{isExpanded.virtualized ? (<>Read Less <BsArrowUp /> </>) : (<>Read More <BsArrowDown /> </>)}</p>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                             <div className="col-sm-12 col-lg-6 order-md-2 order-1">

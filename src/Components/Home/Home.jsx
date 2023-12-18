@@ -268,7 +268,7 @@ export default function Home() {
       {/* news trending */}
       <HomeNewsSection />
 
-      <section className='subsidiaries'>
+      {/* <section className='subsidiaries'>
         <div className="container position-relative">
           <div className="networks__content">
             <div className="hero__header text-center">
@@ -309,7 +309,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className='optic'>
         <div className="container">
