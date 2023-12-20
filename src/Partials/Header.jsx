@@ -62,7 +62,7 @@ export default function Header(props) {
                         <div className='navbar'>
                             <div className="navbar__right">
                                 <div className="logo">
-                                    <a href="/" className="navbar-brand"><img src={isWhite ? Logo : LogoBlue} alt='CloudExtel Logo' height="31" width="150" /></a>
+                                    <a href="/" className="navbar-brand"><img src={isWhite ? Logo : LogoBlue} alt='CloudExtel Logo' /></a>
                                 </div>
                             </div>
                             <div className="navbar__left">

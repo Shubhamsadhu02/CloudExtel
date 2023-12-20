@@ -8,46 +8,46 @@ import Cell from '../../Images/Home/cell.png';
 import Fiber from '../../Images/Home/fiber.png';
 import FTTH from '../../Images/Home/ftth.png';
 import Virtualize from '../../Images/Home/virtualized.png';
-import India from '../../Images/Home/India.png';
-import Gas from '../../Images/Home/gas.png';
-import Netfra from '../../Images/Home/netfra.png';
-import Orange from '../../Images/Home/orange.png';
+// import India from '../../Images/Home/India.png';
+// import Gas from '../../Images/Home/gas.png';
+// import Netfra from '../../Images/Home/netfra.png';
+// import Orange from '../../Images/Home/orange.png';
 import Optic from '../../Images/Home/optic.png';
 
 import HomeNewsSection from './HomeNewsSection';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import CountUp from 'react-countup';
+// import CountUp from 'react-countup';
 import IndiaMap from './IndiaMap';
 
 export default function Home() {
 
-  const [startAnimation, setStartAnimation] = useState(false);
+  // const [startAnimation, setStartAnimation] = useState(false);
 
-  useEffect(() => {
-    const startCountUp = () => {
-      setStartAnimation(true);
-    };
+  // useEffect(() => {
+  //   const startCountUp = () => {
+  //     setStartAnimation(true);
+  //   };
 
-    const handleScroll = () => {
-      const section = document.querySelector('.data');
-      if (section) {
-        const sectionTop = section.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
+  //   const handleScroll = () => {
+  //     const section = document.querySelector('.data');
+  //     if (section) {
+  //       const sectionTop = section.getBoundingClientRect().top;
+  //       const windowHeight = window.innerHeight;
 
-        if (sectionTop < windowHeight) {
-          startCountUp();
-          window.removeEventListener('scroll', handleScroll);
-        }
-      }
-    };
+  //       if (sectionTop < windowHeight) {
+  //         startCountUp();
+  //         window.removeEventListener('scroll', handleScroll);
+  //       }
+  //     }
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
   return (
     <>
@@ -173,42 +173,47 @@ export default function Home() {
             <ul>
               <li>
                 <div className="data__number">
-                  <h3>{startAnimation ? (<CountUp end={5600} duration={2} />) : ('0')}&nbsp;KMs+</h3>
+                  {/* <h3>{startAnimation ? (<CountUp end={5600} duration={2} />) : ('0')}&nbsp;KMs+</h3> */}
+                  <h3>5,205</h3>
                 </div>
                 <div className="data__name">
-                  <p>Fiber Laid</p>
+                  <p>SC Cites</p>
                 </div>
               </li>
               <li>
                 <div className="data__number">
-                  <h3>{startAnimation ? (<CountUp end={4700} duration={2} />) : ('0')}&nbsp;+</h3>
+                  {/* <h3>{startAnimation ? (<CountUp end={4700} duration={2} />) : ('0')}&nbsp;+</h3> */}
+                  <h3>177,491</h3>
                 </div>
                 <div className="data__name">
-                  <p>Small Cells Sites</p>
+                  <p>HP</p>
                 </div>
               </li>
               <li>
                 <div className="data__number">
-                  <h3>{startAnimation ? (<CountUp end={427} duration={2} />) : ('0')}&nbsp;+</h3>
+                  {/* <h3>{startAnimation ? (<CountUp end={427} duration={2} />) : ('0')}&nbsp;+</h3> */}
+                  <h3>8,000+</h3>
                 </div>
                 <div className="data__name">
-                  <p>Cities / Towns across <br /> 30 states & UTs</p>
+                  <p>Total Fiber laid</p>
                 </div>
               </li>
               <li>
                 <div className="data__number">
-                  <h3>{startAnimation ? (<CountUp end={1900} duration={2} />) : ('0')}&nbsp;+</h3>
+                  {/* <h3>{startAnimation ? (<CountUp end={1900} duration={2} />) : ('0')}&nbsp;+</h3> */}
+                  <h3>1,900+</h3>
                 </div>
                 <div className="data__name">
-                  <p>Societies</p>
+                  <p>No. of Societies</p>
                 </div>
               </li>
               <li>
                 <div className="data__number">
-                  <h3>{startAnimation ? (<CountUp end={1.35} decimals={2} duration={2} />) : ('0')}&nbsp;lac+</h3>
+                  {/* <h3>{startAnimation ? (<CountUp end={1.35} decimals={2} duration={2} />) : ('0')}&nbsp;lac+</h3> */}
+                  <h3>340+</h3>
                 </div>
                 <div className="data__name">
-                  <p>Home Passed</p>
+                  <p>No of cities</p>
                 </div>
               </li>
             </ul>

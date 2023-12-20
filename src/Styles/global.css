@@ -167,6 +167,11 @@ textarea:focus {
     align-items: center;
 }
 
+.logo{
+    height: 45px;
+    width: 220px;
+}
+
 /* Footer css */
 .footer__top .container,
 .footer__bottom .container,
@@ -307,7 +312,7 @@ textarea:focus {
 }
 
 .team__descp {
-    /* height: 320px; */
+    height: 400px;
     overflow-y: auto;
 }
 
@@ -578,16 +583,19 @@ textarea:focus {
 
 .data ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .data ul li {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 55px 70px;
+}
+
+.data__list1 ul li{
     padding: 55px 45px;
 }
 
@@ -819,20 +827,6 @@ textarea:focus {
     box-shadow: 0px 2px 14px #111;
 }
 
-.solution__tabs--container {
-    position: relative;
-}
-
-.sticky-image {
-    position: sticky;
-    top: 20px;
-}
-
-.scrollable-content {
-    overflow-y: auto;
-    /* Add other styles for scrollable content */
-}
-
 .solution__image::after {
     background: url('../Images/Solutions/solutionhead.png');
     background-size: contain;
@@ -978,6 +972,10 @@ textarea:focus {
 .perks__header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.24);
     padding: 24px 0;
+}
+
+.perks__container{
+    width: 360px;
 }
 
 .perks__header h3 {
@@ -1186,7 +1184,7 @@ textarea:focus {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-height: 2.4em;
+    max-height: 3.4em;
     margin-top: 15px;
 }
 
@@ -1438,8 +1436,35 @@ textarea:focus {
 }
 
 .map path:hover {
-    stroke-width: 2;
-    stroke: #17adf3;
+    /* stroke-width: 2;
+    stroke: #17adf3; */
+    fill: #68edf6;
+}
+
+.map .Madhya{
+    fill: #5CE1EB;
+}
+
+.map .Madhya:hover{
+    fill: #1cdcea;
+}
+
+.map .Chhattisgarh,
+.map .Manipur,
+.map .Mizoram,
+.map .Tripura,
+.map .Ladakh,
+.map .Arunachal{
+    fill: #E3F1FC;
+}
+
+.map .Chhattisgarh:hover,
+.map .Manipur:hover,
+.map .Mizoram:hover,
+.map .Tripura:hover,
+.map .Ladakh:hover,
+.map .Arunachal:hover{
+    fill: #E3F1FC;
 }
 
 .map path[title]:hover::after {

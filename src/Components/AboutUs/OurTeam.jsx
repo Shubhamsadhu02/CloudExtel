@@ -14,7 +14,7 @@ import Shashank from '../../Images/AboutUs/OurTeam/Shashank.png';
 import Shubha from '../../Images/AboutUs/OurTeam/Shubha.png';
 import Kunmoon from '../../Images/AboutUs/OurTeam/Kunmoon.png';
 
-// import { BiLogoLinkedin } from 'react-icons/bi';
+import { BiLogoLinkedin } from 'react-icons/bi';
 
 function TeamDescription({ data }) {
     // const [showMore, setShowMore] = useState(false);
@@ -36,17 +36,17 @@ function TeamDescription({ data }) {
                 <p onClick={openModal} >Read More</p>
             </div>
 
-            <Modal show={showModal} onHide={closeModal}>
+            <Modal show={showModal} onHide={closeModal} className='d-flex justify-content-center align-items-center'>
                 <Modal.Header closeButton>
                 </Modal.Header>
                 <Modal.Body>
                     <div className="row">
                         <div className="col-lg-5">
-                            <div className="team__image position-relative overflow-hidden mt-4">
+                            <div className="team__image position-relative overflow-hidden mt-4 d-flex justify-content-end">
                                 <img src={data.image} alt={data.name} />
-                                {/* <div className="team__linkedin">
+                                <div className="team__linkedin">
                                     <a href={data.linkedin} target='__blank' rel="noopener noreferrer"><BiLogoLinkedin /></a>
-                                </div> */}
+                                </div>
                             </div>
                         </div>
                         <div className="col-lg-7">

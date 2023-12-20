@@ -29,7 +29,7 @@ function TeamDescription({ data }) {
                 <p onClick={openModal} >Read More</p>
             </div>
 
-            <Modal show={showModal} onHide={closeModal}>
+            <Modal show={showModal} onHide={closeModal} className='d-flex justify-content-center align-items-center'>
                 <Modal.Header closeButton>
                 </Modal.Header>
                 <Modal.Body>
@@ -50,9 +50,7 @@ function TeamDescription({ data }) {
                                 <p>{data.designation}</p>
                             </div> */}
                             <div className="team__descp mt-5">
-                                
-                                    <p dangerouslySetInnerHTML={{ __html: data.description }} />
-                               
+                                <p dangerouslySetInnerHTML={{ __html: data.description }} />
                             </div>
                         </div>
                     </div>

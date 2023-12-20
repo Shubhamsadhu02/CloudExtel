@@ -60,70 +60,82 @@ export default function Career() {
           </div>
           <div className="row" style={{ rowGap: "40px" }}>
             <div className="col-sm-12 col-lg-4">
-              <div className="perks__image">
-                <img src={Competitive} alt="Competitive" />
-              </div>
-              <div className="perks__header">
-                <h3>Competitive Compensation</h3>
-              </div>
-              <div className="perks__para">
-                <p>We value hard work and ensure competitive compensation that reflects your skills and expertise.</p>
-              </div>
-            </div>
-            <div className="col-sm-12 col-lg-4">
-              <div className="perks__image">
-                <img src={Health} alt="Health" />
-              </div>
-              <div className="perks__header">
-                <h3>Health & Wellness</h3>
-              </div>
-              <div className="perks__para">
-                <p>At CloudExtel, we prioritise employee health and wellness. We offer health insurance plans, wellness programs, and access to our state-of-the-art fitness facility to our employees to ensure they are of sound body and mind. </p>
+              <div className="perks__container">
+                <div className="perks__image">
+                  <img src={Competitive} alt="Competitive" />
+                </div>
+                <div className="perks__header">
+                  <h3>Competitive Compensation</h3>
+                </div>
+                <div className="perks__para">
+                  <p>We value hard work and ensure competitive compensation that reflects your skills and expertise.</p>
+                </div>
               </div>
             </div>
             <div className="col-sm-12 col-lg-4">
-              <div className="perks__image">
-                <img src={Flexible} alt="Flexible" />
+              <div className="perks__container">
+                <div className="perks__image">
+                  <img src={Health} alt="Health" />
+                </div>
+                <div className="perks__header">
+                  <h3>Health & Wellness</h3>
+                </div>
+                <div className="perks__para">
+                  <p>At CloudExtel, we prioritise employee health and wellness. We offer health insurance plans, wellness programs, and access to our state-of-the-art fitness facility to our employees to ensure they are of sound body and mind. </p>
+                </div>
               </div>
-              <div className="perks__header">
-                <h3>Flexible Hours</h3>
-              </div>
-              <div className="perks__para">
-                <p>We believe an employee does their best work with a healthy work-life balance. Our flexible working hours support your professional and personal well-being.</p>
+            </div>
+            <div className="col-sm-12 col-lg-4">
+              <div className="perks__container">
+                <div className="perks__image">
+                  <img src={Flexible} alt="Flexible" />
+                </div>
+                <div className="perks__header">
+                  <h3>Flexible Hours</h3>
+                </div>
+                <div className="perks__para">
+                  <p>We believe an employee does their best work with a healthy work-life balance. Our flexible working hours support your professional and personal well-being.</p>
+                </div>
               </div>
             </div>
 
             <div className="col-sm-12 col-lg-4">
-              <div className="perks__image">
-                <img src={Professional} alt="Professional" />
-              </div>
-              <div className="perks__header">
-                <h3>Professional Development</h3>
-              </div>
-              <div className="perks__para">
-                <p>Innovation and Learning are key to an individual’s development. At CloudExtel, we provide opportunities for skill enhancement, training, and workshops to help you upscale and drive the growth of our employees.</p>
-              </div>
-            </div>
-            <div className="col-sm-12 col-lg-4">
-              <div className="perks__image">
-                <img src={Inclusive} alt="Inclusive" />
-              </div>
-              <div className="perks__header">
-                <h3>Inclusive Environment</h3>
-              </div>
-              <div className="perks__para">
-                <p>We believe in Unity in Diversity. Our inclusive environment makes everyone feel welcome and respected. We reject biasedness and strive to provide equal opportunities to everyone.</p>
+              <div className="perks__container">
+                <div className="perks__image">
+                  <img src={Professional} alt="Professional" />
+                </div>
+                <div className="perks__header">
+                  <h3>Professional Development</h3>
+                </div>
+                <div className="perks__para">
+                  <p>Innovation and Learning are key to an individual’s development. At CloudExtel, we provide opportunities for skill enhancement, training, and workshops to help you upscale and drive the growth of our employees.</p>
+                </div>
               </div>
             </div>
             <div className="col-sm-12 col-lg-4">
-              <div className="perks__image">
-                <img src={Rcognization} alt="Reward" />
+              <div className="perks__container">
+                <div className="perks__image">
+                  <img src={Inclusive} alt="Inclusive" />
+                </div>
+                <div className="perks__header">
+                  <h3>Inclusive Environment</h3>
+                </div>
+                <div className="perks__para">
+                  <p>We believe in Unity in Diversity. Our inclusive environment makes everyone feel welcome and respected. We reject biasedness and strive to provide equal opportunities to everyone.</p>
+                </div>
               </div>
-              <div className="perks__header">
-                <h3>Recognition & Rewards</h3>
-              </div>
-              <div className="perks__para">
-                <p>Our employees make the organisation and their efforts never go unnoticed. We recognize employee hard work and performance through various reward programs, both monetary and non-monetary.</p>
+            </div>
+            <div className="col-sm-12 col-lg-4">
+              <div className="perks__container">
+                <div className="perks__image">
+                  <img src={Rcognization} alt="Reward" />
+                </div>
+                <div className="perks__header">
+                  <h3>Recognition & Rewards</h3>
+                </div>
+                <div className="perks__para">
+                  <p>Our employees make the organisation and their efforts never go unnoticed. We recognize employee hard work and performance through various reward programs, both monetary and non-monetary.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -173,7 +185,7 @@ export default function Career() {
             <div className="hero__header hero__header--white text-center">
               <h1>Our locations</h1>
             </div>
-            <div className="data__list">
+            <div className="data__list data__list1">
               <ul>
                 <li>
                   <div className="data__number">

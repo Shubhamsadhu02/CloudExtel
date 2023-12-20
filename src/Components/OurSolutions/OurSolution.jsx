@@ -24,7 +24,7 @@ export default function OurSolution() {
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
             window.scrollTo({
-                top: targetElement.offsetTop,
+                top: targetElement.offsetTop - 100,
                 behavior: 'smooth',
             });
         }
@@ -33,12 +33,29 @@ export default function OurSolution() {
     const handleScroll = () => {
         const solutionTabs = document.querySelector('.solution__tabs');
         if (solutionTabs) {
-            const solutionTabsRect = solutionTabs.getBoundingClientRect();
             const scrollY = window.scrollY;
-            setIsTabsSticky(scrollY >= 500 && scrollY > solutionTabsRect.top);
+    
+            // Get the end positions of each section
+            const cellSectionEnd = document.getElementById('cell').offsetTop + document.getElementById('cell').offsetHeight;
+            const fiberSectionEnd = document.getElementById('fiber').offsetTop + document.getElementById('fiber').offsetHeight;
+            const ftthSectionEnd = document.getElementById('ftth').offsetTop + document.getElementById('ftth').offsetHeight;
+            const virtualizedSectionEnd = document.getElementById('virtualized').offsetTop + document.getElementById('virtualized').offsetHeight;
+    
+            if (scrollY >= 0 && scrollY < cellSectionEnd-200) {
+                setActiveTab('cell');
+            } else if (scrollY >= cellSectionEnd-30 && scrollY < fiberSectionEnd-200) {
+                setActiveTab('fiber');
+            } else if (scrollY >= fiberSectionEnd-30 && scrollY < ftthSectionEnd-200) {
+                setActiveTab('ftth');
+            } else if (scrollY >= ftthSectionEnd-30 && scrollY < virtualizedSectionEnd) {
+                setActiveTab('virtualized');
+            }
+    
+            // Update isTabsSticky based on your requirements
+            setIsTabsSticky(scrollY >= 500); // You may adjust this condition for sticky behavior
         }
     };
-
+    
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
@@ -86,7 +103,7 @@ export default function OurSolution() {
                     <div className="solution__tabs--container" id='cell'>
                         <div className="row">
                             <div className="col-sm-12 col-lg-6">
-                                <div className="solution__image">
+                                <div  className="solution__image">
                                     <img src={Cell} alt="Small Cell Hosting" />
                                 </div>
                             </div>

@@ -40,6 +40,11 @@
         font-size: 24px;
     }
 
+    .logo{
+        height: 31px;
+        width: 160px;
+    }
+
     .footer__top .container,
     .footer__bottom .container {
         display: grid;

@@ -30,7 +30,7 @@ export default function AboutUs() {
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
             window.scrollTo({
-                top: targetElement.offsetTop,
+                top: targetElement.offsetTop - 100,
                 behavior: 'smooth',
             });
         }
@@ -41,6 +41,29 @@ export default function AboutUs() {
         if (aboutUsTabs) {
             const aboutUsTabsRect = aboutUsTabs.getBoundingClientRect();
             const scrollY = window.scrollY;
+
+            // Get the end positions of each section
+            const aboutUsSectionEnd = document.getElementById('aboutUs').offsetTop + document.getElementById('aboutUs').offsetHeight;
+            const whyUsSectionEnd = document.getElementById('whyUs').offsetTop + document.getElementById('whyUs').offsetHeight;
+            const ourTeamSectionEnd = document.getElementById('ourTeam').offsetTop + document.getElementById('ourTeam').offsetHeight;
+            const ourBoardSectionEnd = document.getElementById('ourBoard').offsetTop + document.getElementById('ourBoard').offsetHeight;
+            const ourHertiageSectionEnd = document.getElementById('ourHeritage').offsetTop + document.getElementById('ourHeritage').offsetHeight;
+            const joinUsSectionEnd = document.getElementById('joinUs').offsetTop + document.getElementById('joinUs').offsetHeight;
+    
+            if (scrollY >= 0 && scrollY < aboutUsSectionEnd-200) {
+                setActiveTab('aboutUs');
+            } else if (scrollY >= aboutUsSectionEnd-20 && scrollY < whyUsSectionEnd-200) {
+                setActiveTab('whyUs');
+            } else if (scrollY >= whyUsSectionEnd-20 && scrollY < ourTeamSectionEnd-200) {
+                setActiveTab('ourTeam');
+            } else if (scrollY >= ourTeamSectionEnd-20 && scrollY < ourBoardSectionEnd-200) {
+                setActiveTab('ourBoard');
+            } else if (scrollY >= ourBoardSectionEnd-20 && scrollY < ourHertiageSectionEnd-200) {
+                setActiveTab('ourHeritage');
+            } else if (scrollY >= ourHertiageSectionEnd-20 && scrollY < joinUsSectionEnd) {
+                setActiveTab('joinUs');
+            }
+    
             setIsTabsSticky(scrollY >= 700 && scrollY > aboutUsTabsRect.top);
         }
     };

@@ -66,13 +66,13 @@ export default function Footer() {
               {/* <p>Our Subsidiaries</p> */}
               <div className='our__subsidiaries--list'>
                 <div className="our__subsidiaries--header">
-                  <Link><h6>Bombay Gas Company Proprietary Private Limited</h6><BsArrowUpRight /></Link>
+                  <Link to={'https://bgcppl.in/'} target='__blank' rel="noopener noreferrer"><h6>Bombay Gas Company Proprietary Private Limited</h6><BsArrowUpRight /></Link>
                 </div>
                 <div className="our__subsidiaries--header">
-                  <Link><h6>Orange wave Networks</h6><BsArrowUpRight /></Link>
+                  <Link to={'#'} target='__blank' rel="noopener noreferrer"><h6>Orange wave Networks</h6><BsArrowUpRight /></Link>
                 </div>
                 <div className="our__subsidiaries--header">
-                  <Link><h6>Netfra Solutions</h6><BsArrowUpRight /></Link>
+                  <Link to={'https://netfra.in/'} target='__blank' rel="noopener noreferrer"><h6>Netfra Solutions</h6><BsArrowUpRight /></Link>
                 </div>
               </div>
             </div>
