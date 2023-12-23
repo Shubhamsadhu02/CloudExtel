@@ -64,18 +64,18 @@ export default function ContactUs() {
         <>
             <Header />
 
-            <TopSection title={'Get in Touch with us'} height={'520px'} />
+            <TopSection height={'520px'} />
 
             <section className='contactUs'>
                 <div className="container">
                     <div className="row position-relative">
-                        <div className="col-sm-12 col-lg-6">
+                        <div className="col-sm-12 col-lg-6 contact__position">
                             <div className="contactUs__content">
                                 <div className="hero__header">
-                                    <h1>Contact us</h1>
+                                    <h1 style={{color: "#FFF"}}>Contact us</h1>
                                 </div>
                                 <div className="hero__para mt-4">
-                                    <p>Feel free to reach out to us at Cloudextel for any inquiries, collaborations, or assistance. Our dedicated team is here to provide expert guidance and solutions tailored to your networking needs. Whether you're looking to enhance your connectivity, explore Network-as-a-Service options, or discuss partnership opportunities, we're just a message away</p>
+                                    <p style={{color: "#FFF"}}>Feel free to reach out to us at Cloudextel for any inquiries, collaborations, or assistance. Our dedicated team is here to provide expert guidance and solutions tailored to your networking needs. Whether you're looking to enhance your connectivity, explore Network-as-a-Service options, or discuss partnership opportunities, we're just a message away</p>
                                 </div>
                                 <div className="contactUs__phone mt-4">
                                     <IoIosCall />
@@ -88,7 +88,7 @@ export default function ContactUs() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-sm-12 col-lg-6 contact__position">
+                        <div className="col-sm-12 col-lg-6 contact__form--position">
                         {isSubmitted ? (
                             <div className="success__message--box">
                                 <div className="success__message text-center">

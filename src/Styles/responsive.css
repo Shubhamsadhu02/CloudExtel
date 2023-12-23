@@ -5,7 +5,6 @@
     .optic,
     .joinUS,
     .perks,
-    .contactUs,
     .career {
         padding: 30px 0;
     }
@@ -277,10 +276,20 @@
     }
 
     .contactUs .contact__position {
-        position: initial;
-        margin-top: 25px;
+        position: absolute;
+        top: -212px;
+        left: 16px;
     }
 
+    .contactUs .contact__form--position {
+        position: initial;
+        margin-top: 120px;
+    }
+
+    .contactUs {
+        height: 120vh;
+    }
+    
     .news__header h1 {
         font-size: 32px;
     }
