@@ -374,15 +374,9 @@ textarea:focus {
     line-height: 130%;
 }
 
-.contactUs .contact__position{
-    position: absolute;
-    top: -245px;
-    left: 45px;
-}
-
 .contactUs .contact__form--position {
     position: absolute;
-    top: -360px;
+    top: -340px;
     right: -60px;
 }
 
@@ -1447,7 +1441,7 @@ textarea:focus {
     /* stroke-width: 2;
     stroke: #17adf3; */
     fill: #5CE1EB;
-}
+}contact__position
 
 .map .Chhattisgarh,
 .map .Manipur,

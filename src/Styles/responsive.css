@@ -275,19 +275,18 @@
         font-size: 14px;
     }
 
-    .contactUs .contact__position {
-        position: absolute;
-        top: -212px;
-        left: 16px;
+    .ContactUs__top{
+        height: 315px !important;
     }
 
     .contactUs .contact__form--position {
         position: initial;
-        margin-top: 120px;
+        margin-top: 25px;
     }
 
     .contactUs {
-        height: 120vh;
+        height: auto;
+        padding-bottom: 25px;
     }
     
     .news__header h1 {

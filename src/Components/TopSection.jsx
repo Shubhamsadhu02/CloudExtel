@@ -2,7 +2,7 @@ import React from 'react'
 import { BsArrowLeft } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 
-export default function TopSection({ title, image, height }) {
+export default function TopSection({ title, image, height, className }) {
     const naviagte = useNavigate();
     const handleBack = () => {
         naviagte(-1);
@@ -10,7 +10,7 @@ export default function TopSection({ title, image, height }) {
 
     return (
         <>
-            <section className='hero__blue' style={{ background: '#1456A2', height: `${height}`, position: 'relative' }}>
+            <section className={`hero__blue ${className}`} style={{ background: '#1456A2', height: `${height}`, position: 'relative' }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-12 col-lg-7">
