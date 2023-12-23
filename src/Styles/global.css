@@ -1446,15 +1446,7 @@ textarea:focus {
 .map path:hover {
     /* stroke-width: 2;
     stroke: #17adf3; */
-    fill: #68edf6;
-}
-
-.map .Madhya{
     fill: #5CE1EB;
-}
-
-.map .Madhya:hover{
-    fill: #09cddb;
 }
 
 .map .Chhattisgarh,
