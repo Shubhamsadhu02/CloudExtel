@@ -829,19 +829,6 @@ textarea:focus {
     box-shadow: 0px 2px 14px #111;
 }
 
-.solution__image::after {
-    background: url('../Images/Solutions/solutionhead.png');
-    background-size: contain;
-    background-position: initial;
-    background-repeat: no-repeat;
-}
-
-.about__image::after {
-    background: url('../Images/AboutUs/about.png');
-    background-size: contain;
-    background-position: initial;
-}
-
 .aboutUs__tabs--container {
     padding: 100px 0;
 }
