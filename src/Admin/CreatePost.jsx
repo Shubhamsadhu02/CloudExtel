@@ -126,6 +126,7 @@ export default function CreatePost() {
 
                                 <div className="create__btn mt-5">
                                     <button type='submit' onClick={addPost} disabled={loading}>Save</button>
+                                    <button type='submit' className='mx-5' onClick={() => { navigate('/dashboard') }} >Back</button>
                                 </div>
                             </div>
                         </>

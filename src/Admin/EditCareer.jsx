@@ -119,6 +119,7 @@ export default function EditCareer() {
 
                                 <div className="create__btn mt-5">
                                     <button type='submit' onClick={updateCareer} disabled={loading}>Save</button>
+                                    <button type='submit' className='mx-5' onClick={() => { navigate('/dashboard') }} >Cancel</button>
                                 </div>
                             </div>
                         </>

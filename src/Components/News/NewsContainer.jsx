@@ -23,7 +23,7 @@ export default function NewsContainer() {
                     <div className="go-back" onClick={handleBack}>
                         <BsArrowLeft />
                     </div>
-                    <div className="blog__top mt-5">
+                    <div className="blog__top mt-4">
                         <div className="news__date">
                             <p>LATEST • {data.date}</p>
                         </div>

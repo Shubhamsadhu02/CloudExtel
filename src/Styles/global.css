@@ -1054,7 +1054,8 @@ textarea:focus {
 }
 
 .apply__btn button,
-.create__btn button {
+.create__btn button,
+.back__btn button {
     border: none;
     border-radius: 48px;
     background: var(--Primary, #1456A2);
@@ -1210,7 +1211,7 @@ textarea:focus {
     flex-direction: column;
     padding: 0 250px;
     position: relative;
-    bottom: 130px;
+    bottom: 160px;
 }
 
 .blog__details p {
@@ -1428,7 +1429,7 @@ textarea:focus {
     /* stroke-width: 2;
     stroke: #17adf3; */
     fill: #5CE1EB;
-}contact__position
+}
 
 .map .Chhattisgarh,
 .map .Manipur,

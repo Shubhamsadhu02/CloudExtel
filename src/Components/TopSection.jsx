@@ -3,9 +3,9 @@ import { BsArrowLeft } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 
 export default function TopSection({ title, image, height, className }) {
-    const naviagte = useNavigate();
+    const navigate = useNavigate();
     const handleBack = () => {
-        naviagte(-1);
+        navigate(-1);
     };
 
     return (

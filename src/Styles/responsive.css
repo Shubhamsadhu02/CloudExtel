@@ -325,4 +325,12 @@
     .map__details{
         position: static;
     }
+
+    .tab-content{
+        overflow-y: auto;
+    }
+
+    .apply__btn button, .create__btn button, .back__btn button{
+        padding: 8px 12px;
+    }
 }
