@@ -12,6 +12,8 @@ import Scalability from '../../Images/AboutUs/resize.png';
 import Profatability from '../../Images/AboutUs/funds.png';
 import Commitment from '../../Images/AboutUs/hand-shake.png';
 import Union from '../../Images/AboutUs/Union.png';
+import CloudInfographicVideo from '../../Images/AboutUs/Cloud_Infographic.webm';
+
 import { BsArrowRight, BsCheck2 } from 'react-icons/bs';
 import OurBoard from './OurBoard';
 import OurTeam from './OurTeam';
@@ -49,21 +51,21 @@ export default function AboutUs() {
             const ourBoardSectionEnd = document.getElementById('ourBoard').offsetTop + document.getElementById('ourBoard').offsetHeight;
             const ourHertiageSectionEnd = document.getElementById('ourHeritage').offsetTop + document.getElementById('ourHeritage').offsetHeight;
             const joinUsSectionEnd = document.getElementById('joinUs').offsetTop + document.getElementById('joinUs').offsetHeight;
-    
-            if (scrollY >= 0 && scrollY < aboutUsSectionEnd-200) {
+
+            if (scrollY >= 0 && scrollY < aboutUsSectionEnd - 200) {
                 setActiveTab('aboutUs');
-            } else if (scrollY >= aboutUsSectionEnd-20 && scrollY < whyUsSectionEnd-200) {
+            } else if (scrollY >= aboutUsSectionEnd - 20 && scrollY < whyUsSectionEnd - 200) {
                 setActiveTab('whyUs');
-            } else if (scrollY >= whyUsSectionEnd-20 && scrollY < ourTeamSectionEnd-200) {
+            } else if (scrollY >= whyUsSectionEnd - 20 && scrollY < ourTeamSectionEnd - 200) {
                 setActiveTab('ourTeam');
-            } else if (scrollY >= ourTeamSectionEnd-20 && scrollY < ourBoardSectionEnd-200) {
+            } else if (scrollY >= ourTeamSectionEnd - 20 && scrollY < ourBoardSectionEnd - 200) {
                 setActiveTab('ourBoard');
-            } else if (scrollY >= ourBoardSectionEnd-20 && scrollY < ourHertiageSectionEnd-200) {
+            } else if (scrollY >= ourBoardSectionEnd - 20 && scrollY < ourHertiageSectionEnd - 200) {
                 setActiveTab('ourHeritage');
-            } else if (scrollY >= ourHertiageSectionEnd-20 && scrollY < joinUsSectionEnd) {
+            } else if (scrollY >= ourHertiageSectionEnd - 20 && scrollY < joinUsSectionEnd) {
                 setActiveTab('joinUs');
             }
-    
+
             setIsTabsSticky(scrollY >= 700 && scrollY > aboutUsTabsRect.top);
         }
     };
@@ -131,7 +133,10 @@ export default function AboutUs() {
                             </div>
                         </div>
                         <div className="chooseUs__image text-center mt-4">
-                            <img src={Choose} alt="Why choose us" width={757} height={660} />
+                            {/* <img src={Choose} alt="Why choose us" width={757} height={660} /> */}
+                            <video autoPlay loop muted playsInline>
+                                <source src={CloudInfographicVideo} type='video/webm' />
+                            </video>
                         </div>
                         <div className="whyUs__list mt-5">
                             <div className="row" style={{ rowGap: '3rem' }}>
@@ -271,7 +276,7 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            <section className='optic' id='joinUs' style={{background: '#F5FAFE'}}>
+            <section className='optic' id='joinUs' style={{ background: '#F5FAFE' }}>
                 <div className="container">
                     <div className="row" style={{ background: '#1456A2' }}>
                         <div className="col-sm-12 col-lg-6">

@@ -13,6 +13,14 @@ import Yash from '../../Images/AboutUs/OurTeam/Yash.png';
 import Shashank from '../../Images/AboutUs/OurTeam/Shashank.png';
 import Shubha from '../../Images/AboutUs/OurTeam/Shubha.png';
 import Kunmoon from '../../Images/AboutUs/OurTeam/Kunmoon.png';
+import KunalIMG from '../../Images/AboutUs/OurTeam/Kunal Bajaj.png';
+import DeepakIMG from '../../Images/AboutUs/OurTeam/Deepak Saxena.png';
+import BalkishanIMG from '../../Images/AboutUs/OurTeam/Balkishan Chandak.png';
+import RashminIMG from '../../Images/AboutUs/OurTeam/Rashmin Vyawahare.png';
+import YashIMG from '../../Images/AboutUs/OurTeam/Yash Upadhyay.png';
+import ShashankIMG from '../../Images/AboutUs/OurTeam/Shashank Goenka.png';
+import ShubhaIMG from '../../Images/AboutUs/OurTeam/Subha S.png';
+import KunmoonIMG from '../../Images/AboutUs/OurTeam/Kunmoon Panda.png';
 
 import { BiLogoLinkedin } from 'react-icons/bi';
 
@@ -57,7 +65,12 @@ function TeamDescription({ data }) {
                                 <p>{data.designation}</p>
                             </div>
                             <div className="team__descp mt-5">
-                                <p dangerouslySetInnerHTML={{ __html: data.description }} />
+                                <ul>
+                                    {data.description.split('<br/><br/>').map((item, index) => (
+                                        <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                                    ))}
+                                </ul>
+                                {/* <p dangerouslySetInnerHTML={{ __html: data.description }} /> */}
                                 {/* {paragraphs.map((paragraph, index) => (
                                     <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
                                 ))} */}
@@ -75,6 +88,7 @@ export default function OurTeam() {
     const ourTeamData = [
         {
             Image: Kunal,
+            ImageModal: KunalIMG,
             Name: "Kunal Bajaj",
             Designation: "CEO & Co-Founder",
             Linkedin: "https://www.linkedin.com/in/bajajkunal/",
@@ -84,6 +98,7 @@ export default function OurTeam() {
         },
         {
             Image: Deepak,
+            ImageModal: DeepakIMG,
             Name: "Mr. Deepak Saxena",
             Designation: "Senior Vice President - Wireless Op.",
             Linkedin: "https://www.linkedin.com/in/deepak-saxena-a949072/",
@@ -93,6 +108,7 @@ export default function OurTeam() {
         },
         {
             Image: Balkishan,
+            ImageModal: BalkishanIMG,
             Name: "Mr. Balkishan Chandak",
             Designation: "Chief Financial Officer",
             Linkedin: "https://www.linkedin.com/in/balkishanchandak/",
@@ -102,6 +118,7 @@ export default function OurTeam() {
         },
         {
             Image: Rashmin,
+            ImageModal: RashminIMG,
             Name: "Mr. Rashmin Vyawahare",
             Designation: "VP - Strategy and BIS",
             Linkedin: "https://www.linkedin.com/in/rashmin1980/",
@@ -111,6 +128,7 @@ export default function OurTeam() {
         },
         {
             Image: Yash,
+            ImageModal: YashIMG,
             Name: "Mr. Yash Upadhyay",
             Designation: "VP - Network Planning and Technology",
             Linkedin: "https://www.linkedin.com/in/yash-upadhyay-3b6247159/",
@@ -120,6 +138,7 @@ export default function OurTeam() {
         },
         {
             Image: Shashank,
+            ImageModal: ShashankIMG,
             Name: "Mr. Shashank Goenka",
             Designation: "VP - Buisness Development & Sales",
             Linkedin: "https://www.linkedin.com/in/shashank-goenka-94037914/",
@@ -129,6 +148,7 @@ export default function OurTeam() {
         },
         {
             Image: Shubha,
+            ImageModal: ShubhaIMG,
             Name: "Shubha S. Karra",
             Designation: "Vice President - General Counsel and Head of Risk",
             Linkedin: "https://www.linkedin.com/in/shubha-karra/",
@@ -138,6 +158,7 @@ export default function OurTeam() {
         },
         {
             Image: Kunmoon,
+            ImageModal: KunmoonIMG,
             Name: "Kunmoon Panda",
             Designation: "Assistant Vice President – HR Head ",
             Linkedin: "https://www.linkedin.com/in/kunmoon-panda-8b5a1418/",
@@ -166,7 +187,7 @@ export default function OurTeam() {
                                         <p>{item.Designation}</p>
                                     </div>
                                     <div className="">
-                                        <TeamDescription data={{ image: item.Image, linkedin: item.Linkedin, name: item.Name, designation: item.Designation, description: item.Description }} />
+                                        <TeamDescription data={{ image: item.ImageModal, linkedin: item.Linkedin, name: item.Name, designation: item.Designation, description: item.Description }} />
                                     </div>
                                 </div>
                             </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Modal } from 'react-bootstrap';
+import { BiLogoLinkedin } from 'react-icons/bi';
 
 import Ashish from '../../Images/AboutUs/OurBorad/Ashish.png';
 import Brandon from '../../Images/AboutUs/OurBorad/Brandon.png';
@@ -10,7 +11,14 @@ import Maheep from '../../Images/AboutUs/OurBorad/Maheep.png';
 import Naveen from '../../Images/AboutUs/OurBorad/Naveen.png';
 import Richard from '../../Images/AboutUs/OurBorad/Richard.png';
 import Niel from '../../Images/AboutUs/OurBorad/Niel.png';
-import { BiLogoLinkedin } from 'react-icons/bi';
+import AshishIMG from '../../Images/AboutUs/OurBorad/AshishIMG.png';
+import BrandonIMG from '../../Images/AboutUs/OurBorad/Brandon PraterIMG.png';
+import IvanIMG from '../../Images/AboutUs/OurBorad/Ivan VerugheseIMG.png';
+import KunalIMG from '../../Images/AboutUs/OurBorad/Kunal BajajIMG.png';
+import MaheepIMG from '../../Images/AboutUs/OurBorad/Mahip JainIMG.png';
+import NaveenIMG from '../../Images/AboutUs/OurBorad/Naveen ChopraIMG.png';
+import RichardIMG from '../../Images/AboutUs/OurBorad/RichardIMG.png';
+import NielIMG from '../../Images/AboutUs/OurBorad/Niel SchoemanIMG.png';
 
 function TeamDescription({ data }) {
     const [showModal, setShowModal] = useState(false);
@@ -50,7 +58,12 @@ function TeamDescription({ data }) {
                                 <p>{data.designation}</p>
                             </div> */}
                             <div className="team__descp mt-5">
-                                <p dangerouslySetInnerHTML={{ __html: data.description }} />
+                                {/* <p dangerouslySetInnerHTML={{ __html: data.description }} /> */}
+                                <ul>
+                                    {data.description.split('<br/><br/>').map((item, index) => (
+                                        <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                                    ))}
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -64,6 +77,7 @@ export default function OurBoard() {
     const ourBoardTeam = [
         {
             Image: Ashish,
+            ImageModal: AshishIMG,
             Name: "Ashish Jalan",
             Designation: "4th Generation entrepreneur",
             Linkedin: "https://www.linkedin.com/in/ashishsjalan/",
@@ -76,6 +90,7 @@ export default function OurBoard() {
         },
         {
             Image: Brandon,
+            ImageModal: BrandonIMG,
             Name: "Brandon Prater",
             Designation: "8 years of experience in financing and investing",
             Linkedin: "https://www.linkedin.com/in/brandon-prater-0541063/",
@@ -86,6 +101,7 @@ export default function OurBoard() {
         },
         {
             Image: Ivan,
+            ImageModal: IvanIMG,
             Name: "Ivan Verughese",
             Designation: "Head of Infrastructure & Energy Capital Asia Pacific",
             Linkedin: "https://www.linkedin.com/in/ivan-varughese-91634b20/",
@@ -96,6 +112,7 @@ export default function OurBoard() {
         },
         {
             Image: Kunal,
+            ImageModal: KunalIMG,
             Name: "Kunal Bajaj",
             Designation: "CEO & Co-Founder",
             Linkedin: "https://www.linkedin.com/in/bajajkunal/",
@@ -105,6 +122,7 @@ export default function OurBoard() {
         },
         {
             Image: Maheep,
+            ImageModal: MaheepIMG,
             Name: "Maheep Jain",
             Designation: "Promoter",
             Linkedin: "https://www.linkedin.com/in/maheepjain/",
@@ -115,6 +133,7 @@ export default function OurBoard() {
         },
         {
             Image: Naveen,
+            ImageModal: NaveenIMG,
             Name: "Naveen Chopra",
             Designation: "30+ years of work experience in Telecom & FMCG",
             Linkedin: "https://www.linkedin.com/in/naveen-chopra/",
@@ -127,6 +146,7 @@ export default function OurBoard() {
         },
         {
             Image: Richard,
+            ImageModal: RichardIMG,
             Name: "Richard",
             Designation: "",
             Linkedin: "",
@@ -135,6 +155,7 @@ export default function OurBoard() {
         },
         {
             Image: Niel,
+            ImageModal: NielIMG,
             Name: "Niel Schoeman",
             Designation: "",
             Linkedin: "",
@@ -181,7 +202,7 @@ export default function OurBoard() {
                                         {/* <div className="read__more">
                                             <p onClick={() => openModal(item)}>Read More</p>
                                         </div> */}
-                                        <TeamDescription data={{ image: item.Image, linkedin: item.Linkedin, name: item.Name, designation: item.Designation, description: item.Description }} />
+                                        <TeamDescription data={{ image: item.ImageModal, linkedin: item.Linkedin, name: item.Name, designation: item.Designation, description: item.Description }} />
                                     </div>
                                 </div>
                             </div>

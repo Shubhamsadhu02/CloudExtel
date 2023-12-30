@@ -208,12 +208,12 @@ textarea:focus {
 
 .location p {
     color: rgba(255, 255, 255, 0.64);
-    font-size: 9px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
     margin-bottom: 0;
-    width: 196px;
+    width: 298px;
 }
 
 .footer-list ul li {
@@ -228,6 +228,7 @@ textarea:focus {
     font-weight: 600;
     line-height: 130%;
     color: #FFFFFF;
+    opacity: 0.64;
 }
 
 .social-list ul li {
@@ -314,9 +315,18 @@ textarea:focus {
 }
 
 .team__descp {
-    height: 400px;
+    height: 470px;
     overflow-y: auto;
 }
+
+.team__descp ul li{
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--Black, #233852);
+    list-style: disc;
+} 
 
 .contactUs__box,
 .success__message--box {
@@ -558,6 +568,15 @@ textarea:focus {
     line-height: 130%;
     color: var(--Black, #233852);
     opacity: 0.64;
+}
+
+.hero__para--light p{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 4.4em;
 }
 
 .next__sign a {
@@ -1116,6 +1135,13 @@ textarea:focus {
     font-style: normal;
     font-weight: 500;
     opacity: 0.64;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 4.4em;
 }
 
 .read__more--btn button {
@@ -1144,6 +1170,7 @@ textarea:focus {
     padding: 32px;
     overflow: hidden;
     height: 470px;
+    width: 360px;
 }
 
 .news__blogHeader h3 {

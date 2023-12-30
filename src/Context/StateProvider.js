@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Reducer from './reducer';
-import { collection, deleteDoc, doc, onSnapshot, orderBy, query } from 'firebase/firestore';
-import { firestoreDB } from '../firebase.config';
+import { collection, deleteDoc, doc, getDoc, onSnapshot, orderBy, query } from 'firebase/firestore';
+import { firestoreDB, storage } from '../firebase.config';
 import toast from 'react-hot-toast';
+import { deleteObject, ref } from 'firebase/storage';
 
 export default function StateProvider(props) {
     const [getAllBlog, setGetAllBlog] = useState([]);
@@ -30,14 +31,26 @@ export default function StateProvider(props) {
 
     const deleteBlogs = async (id) => {
         try {
-            await deleteDoc(doc(firestoreDB, "BlogPost", id));
-            getAllBlogs()
-            toast.success("Blogs deleted successfully")
+            const blogRef = doc(firestoreDB, "BlogPost", id);
+            const blogSnapshot = await getDoc(blogRef);
+            if (blogSnapshot.exists()) {
+                const blogData = blogSnapshot.data();
+                const thumbnail = blogData.thumbnail;
+                const imageRef = ref(storage, thumbnail);
+                await deleteObject(imageRef);
+
+                await deleteDoc(blogRef);
+                await getAllBlogs();
+    
+                toast.success("Blog deleted successfully");
+            } else {
+                toast.error("Blog not found");
+            }
         } catch (error) {
-            toast.error("Blogs can't deleted")
-            console.log(error)
+            toast.error("Blog can't be deleted");
+            console.error(error);
         }
-    }
+    };
 
     function getAllCareers() {
         try {

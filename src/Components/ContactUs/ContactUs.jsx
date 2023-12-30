@@ -64,7 +64,7 @@ export default function ContactUs() {
         <>
             <Header />
 
-            <TopSection title={'Get in Touch'} height={'520px'} className="ContactUs__top" />
+            <TopSection title={'Contact Us'} height={'520px'} className="ContactUs__top" />
 
             <section className='contactUs'>
                 <div className="container">

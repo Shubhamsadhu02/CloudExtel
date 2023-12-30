@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { BsArrowRight } from 'react-icons/bs'
 import News from '../../Images/Home/news.png';
 import { Link } from 'react-router-dom';
+import reducer from '../../Context/reducer';
 
 export default function HomeNewsSection() {
+  const context = useContext(reducer);
+  const { getAllBlog } = context;
+
   return (
     <>
-    <section className='news'>
+      <section className='news'>
         <div className="container">
           <div className="networks__content networks__content3">
             <div className="hero__header">
@@ -22,32 +26,44 @@ export default function HomeNewsSection() {
               <img src={News} alt="News" />
             </div>
             <div className="col-lg-6">
-              <div className="latest">
-                <div className="hero__latest">
-                  <p>Latest</p>
+            {getAllBlog.length > 0 ? (
+              <>
+                <div className="latest">
+                  <div className="hero__latest">
+                    <p>Latest</p>
+                  </div>
+                  <Link to={`/news-container/${getAllBlog[0].id}/${getAllBlog[0].blogs.title}`} state={{ data: getAllBlog[0] }} >
+                    <div className="hero__news--Header">
+                      <h4>{getAllBlog[0].blogs.title}</h4>
+                    </div>
+                    <div className="hero__para--light">
+                      <p dangerouslySetInnerHTML={{ __html: getAllBlog[0].content }}></p>
+                    </div>
+                  </Link>
                 </div>
-                <div className="hero__news--Header">
-                  <h4>Bombay Gas Ventures Expands Fiber Optic Network Coverage</h4>
+                {getAllBlog.length > 1 ? (
+                  <div className="latest">
+                    <div className="hero__latest">
+                      <p>Latest</p>
+                    </div>
+                    <Link to={`/news-container/${getAllBlog[1].id}/${getAllBlog[1].blogs.title}`} state={{ data: getAllBlog[1] }} >
+                      <div className="hero__news--Header">
+                        <h4>{getAllBlog[1].blogs.title}</h4>
+                      </div>
+                      <div className="hero__para--light">
+                        <p dangerouslySetInnerHTML={{ __html: getAllBlog[1].content }}></p>
+                      </div>
+                    </Link>
+                  </div>
+                ) : null}
+                <div className="view__btn">
+                  <Link to={"/news"}><button type='button'>VIEW ALL <BsArrowRight /></button></Link>
                 </div>
-                <div className="hero__para--light">
-                  <p>We are thrilled to announce the expansion of our fiber optic network coverage across multiple cities and regions</p>
-                </div>
-              </div>
-              <div className="latest">
-                <div className="hero__latest">
-                  <p>Latest</p>
-                </div>
-                <div className="hero__news--Header">
-                  <h4>Bombay Gas Ventures Expands Fiber Optic Network Coverage</h4>
-                </div>
-                <div className="hero__para--light">
-                  <p>We are thrilled to announce the expansion of our fiber optic network coverage across multiple cities and regions</p>
-                </div>
-              </div>
-              <div className="view__btn">
-                <Link to={"/news"}><button type='button'>VIEW ALL <BsArrowRight /></button></Link>
-              </div>
-            </div>
+              </>
+          ) : (
+          <h1>No Blogs Present</h1>
+          )}
+          </div>
           </div>
         </div>
       </section>
