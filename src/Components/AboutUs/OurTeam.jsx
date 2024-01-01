@@ -22,8 +22,6 @@ import ShashankIMG from '../../Images/AboutUs/OurTeam/Shashank Goenka.png';
 import ShubhaIMG from '../../Images/AboutUs/OurTeam/Subha S.png';
 import KunmoonIMG from '../../Images/AboutUs/OurTeam/Kunmoon Panda.png';
 
-import { BiLogoLinkedin } from 'react-icons/bi';
-
 function TeamDescription({ data }) {
     // const [showMore, setShowMore] = useState(false);
     const [showModal, setShowModal] = useState(false);

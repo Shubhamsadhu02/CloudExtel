@@ -10,7 +10,6 @@ import Logo from '../Images/logo.png';
 import LogoBlue from '../Images/logoBlue.png';
 import { AnimatePresence, motion } from 'framer-motion';
 
-
 export default function Header(props) {
     const isWhite = props.isWhite ?? true;
     const isLogin = props.isLogin ?? false;

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import Header from '../../Partials/Header'
 import Footer from '../../Partials/Footer'
 import { BsArrowDown, BsArrowRight } from 'react-icons/bs';
@@ -17,9 +17,9 @@ import Optic from '../../Images/Home/optic.png';
 import HomeNewsSection from './HomeNewsSection';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import IndiaMap from './IndiaMap';
-import {easeInOutAnimationVariants, popUpAnimationVariants, textAnimationvariants} from '../../Partials/Framer';
+import { easeInOutAnimationVariants, popUpAnimationVariants, textAnimationProps } from '../../Partials/Framer';
 
 export default function Home() {
 
@@ -142,22 +142,10 @@ export default function Home() {
             </div>
             <div className="col-sm-12 col-lg-4">
               <div className="networks__content networks__content1">
-                <motion.div className="hero__header"
-                  variants={textAnimationvariants}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{
-                    once: true,
-                  }}>
+                <motion.div className="hero__header" {...textAnimationProps}>
                   <h1>Our Mission</h1>
                 </motion.div>
-                <motion.div className="hero__para mt-4"
-                  variants={textAnimationvariants}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{
-                    once: true,
-                  }}>
+                <motion.div className="hero__para mt-4" {...textAnimationProps}>
                   <p>We aim to enable a connected
                     world and address the challenges that emerge from the growth of data consumption in India. As a leading NaaS provider, we offer the wireless infrastructure required to build a connected world and aim to bring connectivity closer to the public by addressing critical points of network stress and adopting emerging heterogeneous network technologies.</p>
                 </motion.div>
@@ -172,31 +160,13 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-8">
               <div className="networks__content networks__content2">
-                <motion.div className="hero__header"
-                  variants={textAnimationvariants}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{
-                    once: true,
-                  }}>
+                <motion.div className="hero__header" {...textAnimationProps}>
                   <h1>About CloudExtel</h1>
                 </motion.div>
-                <motion.div className="hero__para mt-4"
-                  variants={textAnimationvariants}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{
-                    once: true,
-                  }}>
+                <motion.div className="hero__para mt-4" {...textAnimationProps}>
                   <p>CloudExtel was incorporated with a vision to transform the way enterprises approach networking solutions. Our mission is to offer world-class solutions and empower businesses with seamless, secure, and tailor-made networking solutions.</p>
                 </motion.div>
-                <motion.div className=""
-                  variants={textAnimationvariants}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{
-                    once: true,
-                  }}>
+                <motion.div className="" {...textAnimationProps}>
                   <div className="hero__subHeader mt-5">
                     <h4>The Spark of Innovation</h4>
                   </div>
@@ -239,9 +209,9 @@ export default function Home() {
                 initial="initial"
                 whileInView="animate">
                 <div className="data__number"
-                viewport={{
-                  once: true,
-                }}>
+                  viewport={{
+                    once: true,
+                  }}>
                   {/* <h3>{startAnimation ? (<CountUp end={4700} duration={2} />) : ('0')}&nbsp;+</h3> */}
                   <h3>177,491</h3>
                 </div>
@@ -269,9 +239,9 @@ export default function Home() {
                 initial="initial"
                 whileInView="animate">
                 <div className="data__number"
-                viewport={{
-                  once: true,
-                }}>
+                  viewport={{
+                    once: true,
+                  }}>
                   {/* <h3>{startAnimation ? (<CountUp end={1900} duration={2} />) : ('0')}&nbsp;+</h3> */}
                   <h3>1,900+</h3>
                 </div>
@@ -305,14 +275,7 @@ export default function Home() {
             {/* <img src={India} alt="India Map" /> */}
             <IndiaMap />
           </div>
-          <motion.div className="map__details"
-          variants={textAnimationvariants}
-          initial="initial"
-          whileInView="animate"
-          viewport={{
-            once: true,
-          }}
-          >
+          <motion.div className="map__details" {...textAnimationProps}>
             <motion.div className="hero__header">
               <h1>We’re <br /> all over India</h1>
             </motion.div>
@@ -405,10 +368,7 @@ export default function Home() {
         <div className="container">
           <div className="row" style={{ background: '#F5FAFE' }}>
             <div className="col-sm-12 col-lg-6">
-              <motion.div className="optic__details"
-                variants={textAnimationvariants}
-                initial="initial"
-                whileInView="animate">
+              <motion.div className="optic__details" {...textAnimationProps}>
                 <motion.div className="hero__news--Header">
                   <h4>Bombay Gas Ventures Expands Fiber Optic Network Coverage</h4>
                 </motion.div>

@@ -4,7 +4,7 @@ import Footer from '../../Partials/Footer'
 import TopSection from '../TopSection'
 
 import AboutImg from '../../Images/AboutUs/about.png';
-import Choose from '../../Images/AboutUs/choose.png';
+// import Choose from '../../Images/AboutUs/choose.png';
 import Customer from '../../Images/AboutUs/customer.png';
 import Innovative from '../../Images/AboutUs/idea.png';
 import Process from '../../Images/AboutUs/settings.png';

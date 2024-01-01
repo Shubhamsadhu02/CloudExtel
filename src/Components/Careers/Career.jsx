@@ -1,8 +1,6 @@
 import React from 'react'
 import Header from '../../Partials/Header'
 import Footer from '../../Partials/Footer'
-import { BsArrowDown } from 'react-icons/bs'
-import { HashLink } from 'react-router-hash-link'
 
 import Career1 from "../../Images/Careers/career1.png";
 import Career2 from "../../Images/Careers/career2.png";

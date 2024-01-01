@@ -164,19 +164,7 @@ export default function OurBoard() {
             Prior to venturing into telecoms he also established The Birchman Group, a global IT services firm, where he held the positions of Chairman and CEO.<br/><br/>
             Niel holds a Bachelor of Engineering degree from the University of Stellenbosch.`
         }
-    ]
-
-    const [showModal, setShowModal] = useState(false);
-    const [selectedBoardMember, setSelectedBoardMember] = useState(null);
-
-    const openModal = (boardMember) => {
-        setSelectedBoardMember(boardMember);
-        setShowModal(true);
-    };
-
-    const closeModal = () => {
-        setShowModal(false);
-    };
+    ];
 
     return (
         <>
