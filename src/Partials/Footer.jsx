@@ -60,7 +60,7 @@ export default function Footer() {
         <section className="footer__bottom">
           <div className="container">
             <div className="copyright order-md-1 order-2">
-              <p>© {new Date().getFullYear()} Bombay Gas Ventures Pvt. Ltd. All rights reserved.</p>
+              <p>© 2023-{new Date().getFullYear()} Bombay Gas Ventures Pvt. Ltd. All rights reserved.</p>
             </div>
             <div className="our__subsidiaries order-md-2 order-1">
               {/* <p>Our Subsidiaries</p> */}

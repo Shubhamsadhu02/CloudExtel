@@ -10,24 +10,23 @@ export default function HomeNewsSection() {
 
   return (
     <>
-      <section className='news'>
-        <div className="container">
-          <div className="networks__content networks__content3">
-            <div className="hero__header">
-              <h1>In News</h1>
+      {getAllBlog.length > 0 ? (
+        <section className='news'>
+          <div className="container">
+            <div className="networks__content networks__content3">
+              <div className="hero__header">
+                <h1>In News</h1>
+              </div>
+              <div className="hero__para mt-4" style={{ width: '500px' }}>
+                <p>Stay updated with the latest news and developments from Bombay Gas Ventures Pvt. Ltd.</p>
+              </div>
             </div>
-            <div className="hero__para mt-4" style={{ width: '500px' }}>
-              <p>Stay updated with the latest news and developments from Bombay Gas Ventures Pvt. Ltd.</p>
-            </div>
-          </div>
 
-          <div className="row mt-5">
-            <div className="col-lg-6">
-              <img src={News} alt="News" />
-            </div>
-            <div className="col-lg-6">
-            {getAllBlog.length > 0 ? (
-              <>
+            <div className="row mt-5">
+              <div className="col-lg-6">
+                <img src={News} alt="News" />
+              </div>
+              <div className="col-lg-6">
                 <div className="latest">
                   <div className="hero__latest">
                     <p>Latest</p>
@@ -59,14 +58,13 @@ export default function HomeNewsSection() {
                 <div className="view__btn">
                   <Link to={"/news"}><button type='button'>VIEW ALL <BsArrowRight /></button></Link>
                 </div>
-              </>
-          ) : (
-          <h1>No Blogs Present</h1>
-          )}
+              </div>
+            </div>
           </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      ) : (
+        null
+      )}
     </>
   )
 }

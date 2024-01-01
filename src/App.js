@@ -19,11 +19,13 @@ import { Toaster } from "react-hot-toast";
 import CreateCareer from "./Admin/CreateCareer";
 import EditPost from "./Admin/EditPost";
 import EditCareer from "./Admin/EditCareer";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
 
   
   return (
+    <AnimatePresence>
     <MyState>
     <Router>
       <ScrollToTop />
@@ -46,6 +48,7 @@ function App() {
       <Toaster/>
     </Router>
   </MyState>
+  </AnimatePresence>
   );
 }
 

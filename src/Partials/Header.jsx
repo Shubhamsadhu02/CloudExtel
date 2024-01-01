@@ -8,6 +8,8 @@ import toast from "react-hot-toast";
 
 import Logo from '../Images/logo.png';
 import LogoBlue from '../Images/logoBlue.png';
+import { AnimatePresence, motion } from 'framer-motion';
+
 
 export default function Header(props) {
     const isWhite = props.isWhite ?? true;
@@ -54,6 +56,23 @@ export default function Header(props) {
         <Navigate to={'/admin'} />
     }
 
+    const sidebarVariants = {
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                delay: 0.5,
+                duration: 1.5,
+                ease: 'easeInOut',
+                staggerChildren: 1,
+            },
+        },
+        hidden: {
+            opacity: 0,
+            x: -50,
+        },
+    };
+
     return (
         <>
             <section className='header'>
@@ -67,41 +86,59 @@ export default function Header(props) {
                             </div>
                             <div className="navbar__left">
                                 {isLogin ? "" : <>
-                                    <div className={isWhite ? 'contact-nav' : 'contact-nav__blue'}>
+                                    <motion.div className={isWhite ? 'contact-nav' : 'contact-nav__blue'}
+                                        whileTap={{ scale: 0.9 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        exit={{ opacity: 0, scale: 0.6 }}
+                                    >
                                         <Link to={'/contact-us'}>Contact us</Link><BsArrowRight />
-                                    </div>
-                                    <Link to='#' className={isWhite ? 'menu-bars' : 'menu-bars__blue'}>
-                                        <LiaGripLinesSolid onClick={showSidebar} />
-                                    </Link>
+                                    </motion.div>
+                                    <motion.div
+                                        whileTap={{ scale: 0.9 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        exit={{ opacity: 0, scale: 0.6 }}
+                                    >
+                                        <Link to='#' className={isWhite ? 'menu-bars' : 'menu-bars__blue'}>
+                                            <LiaGripLinesSolid onClick={showSidebar} />
+                                        </Link>
+                                    </motion.div>
                                 </>
-                                    }
+                                }
                                 {isLogin ?
                                     <div className="logout__btn ms-3">
                                         <form onSubmit={logout}>
-                                        <button type='submit'>Log Out</button>
+                                            <button type='submit'>Log Out</button>
                                         </form>
                                     </div>
                                     : ""}
                             </div>
                         </div>
-                        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-                            <div className='navbar-toggle'>
+                        <motion.nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+                            <motion.div className='navbar-toggle'>
                                 <Link to='#' className='menu-bars' onClick={showSidebar} style={{ border: 'none' }}>
                                     <RxCross1 style={{ color: "white" }} />
                                 </Link>
-                            </div>
-                            <ul className='nav-menu-items' onClick={showSidebar}>
+                            </motion.div>
+                            <motion.ul className='nav-menu-items' onClick={showSidebar}
+                                initial='hidden'
+                                animate={sidebar ? 'visible' : 'hidden'}
+                                variants={sidebarVariants}
+                            >
+                                <AnimatePresence>
                                 {SidebarData.map((item, index) => {
                                     return (
-                                        <li key={index} className={item.cName}>
+                                        <motion.li key={index} className={item.cName}
+                                            variants={sidebarVariants}
+                                        >
                                             <Link to={item.path}>
                                                 <span>{item.title}</span>
                                             </Link>
-                                        </li>
+                                        </motion.li>
                                     );
                                 })}
-                            </ul>
-                        </nav>
+                                </AnimatePresence>
+                            </motion.ul>
+                        </motion.nav>
                     </IconContext.Provider>
                 </div>
             </section>

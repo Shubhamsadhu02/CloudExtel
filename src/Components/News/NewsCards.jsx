@@ -60,7 +60,7 @@ export default function NewdCards() {
                     />
                 </>
             ) : (
-                <h1>No Blogs Present</h1>
+                <h1>No News Present</h1>
             )}
 
         </>

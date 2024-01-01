@@ -1,6 +1,7 @@
 import React from 'react'
 import { BsArrowLeft } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function TopSection({ title, image, height, className }) {
     const navigate = useNavigate();
@@ -17,9 +18,13 @@ export default function TopSection({ title, image, height, className }) {
                             <div className="go-back" onClick={handleBack}>
                                 <BsArrowLeft />
                             </div>
-                            <div className="hero__heading">
+                            <motion.div className="hero__heading"
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.5, duration: 1.5, ease: "easeIn" }}
+                            >
                                 <h1>{title}</h1>
-                            </div>
+                            </motion.div>
                         </div>
                         <div className="col-sm-12 col-lg-5" style={{ position: 'absolute', right: '0', bottom: '0' }}>
                             <div className="hero__blue--image">

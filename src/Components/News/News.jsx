@@ -49,7 +49,7 @@ export default function News() {
                                 </div>
                             </div>
                         ) : (
-                            <h1>No Blogs Present</h1>
+                            <h1>No News Present</h1>
                         )}
                     </div>
 

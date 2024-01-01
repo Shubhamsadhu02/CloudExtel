@@ -125,7 +125,7 @@ textarea:focus {
 
 .nav-menu.active {
     left: 0;
-    transition: 350ms;
+    transition: 950ms;
     z-index: 1000;
 }
 

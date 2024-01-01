@@ -6,6 +6,8 @@ import { FaMapMarkerAlt } from 'react-icons/fa'
 import { IoIosCall } from 'react-icons/io'
 import { BsArrowRight } from 'react-icons/bs'
 import { RiCheckboxCircleFill } from 'react-icons/ri'
+import { motion } from 'framer-motion'
+import { popUpAnimationVariants, textAnimationvariants } from '../../Partials/Framer'
 
 export default function ContactUs() {
     const [formData, setFormData] = useState({
@@ -70,7 +72,13 @@ export default function ContactUs() {
                 <div className="container">
                     <div className="row position-relative">
                         <div className="col-sm-12 col-lg-6">
-                            <div className="contactUs__content">
+                            <motion.div className="contactUs__content"
+                                variants={textAnimationvariants}
+                                initial="initial"
+                                whileInView="animate"
+                                viewport={{
+                                    once: true,
+                                }}>
                                 {/* <div className="hero__header">
                                     <h1 style={{color: "#FFF"}}>Contact us</h1>
                                 </div> */}
@@ -86,39 +94,50 @@ export default function ContactUs() {
                                     <p>The Ruby, 11th Floor, AWFIS, Dadar (West),
                                         Mumbai, Maharashtra - 400028 </p>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                         <div className="col-sm-12 col-lg-6 contact__form--position">
-                        {isSubmitted ? (
-                            <div className="success__message--box">
-                                <div className="success__message text-center">
-                                    <RiCheckboxCircleFill/>
-                                    <p>Thank you for your submission!</p>
-                                </div>
+                            {isSubmitted ? (
+                                <div className="success__message--box">
+                                    <div className="success__message text-center">
+                                        <RiCheckboxCircleFill />
+                                        <p>Thank you for your submission!</p>
+                                    </div>
                                 </div>
                             ) : (
-                            <form onSubmit={handleSubmit}>
-                                <div className="contactUs__box">
-                                    <div className="contactUs__inputs">
-                                        <input type="text" placeholder='Full Name' name='fullName' value={formData.fullName} onChange={handleChange} required />
+                                <form onSubmit={handleSubmit}>
+                                    <div className="contactUs__box">
+                                    <motion.div
+                                     variants={popUpAnimationVariants}
+                                     initial="initial"
+                                     whileInView="animate"
+                                     viewport={{
+                                       once: true,
+                                     }}>
+                                        <div className="contactUs__inputs">
+                                            <input type="text" placeholder='Full Name' name='fullName' value={formData.fullName} onChange={handleChange} required />
+                                        </div>
+                                        <div className="contactUs__inputs">
+                                            <input type="email" placeholder='Email' name='email' value={formData.email} onChange={handleChange} required />
+                                        </div>
+                                        <div className="contactUs__inputs">
+                                            <input type="tel" placeholder='Contact No.' maxLength={10} name='contactNo' value={formData.contactNo} onChange={handleChange} required />
+                                        </div>
+                                        <div className="contactUs__inputs">
+                                            <input type="text" placeholder='Subject' name='subject' value={formData.subject} onChange={handleChange} required />
+                                        </div>
+                                        <div className="contactUs__inputs">
+                                            <textarea type="text" placeholder='Message' name='message' value={formData.message} onChange={handleChange} required />
+                                        </div>
+                                        <motion.div className="submit__btn text-end"
+                                            whileTap={{ scale: 0.9 }}
+                                            animate={{ opacity: 1, scale: 1 }}
+                                            exit={{ opacity: 0, scale: 0.6 }}>
+                                            <button type='submit'>Submit <BsArrowRight /></button>
+                                        </motion.div>
+                                    </motion.div>
                                     </div>
-                                    <div className="contactUs__inputs">
-                                        <input type="email" placeholder='Email' name='email' value={formData.email} onChange={handleChange} required />
-                                    </div>
-                                    <div className="contactUs__inputs">
-                                        <input type="tel" placeholder='Contact No.' maxLength={10} name='contactNo' value={formData.contactNo} onChange={handleChange} required />
-                                    </div>
-                                    <div className="contactUs__inputs">
-                                        <input type="text" placeholder='Subject' name='subject' value={formData.subject} onChange={handleChange} required />
-                                    </div>
-                                    <div className="contactUs__inputs">
-                                        <textarea type="text" placeholder='Message' name='message' value={formData.message} onChange={handleChange} required />
-                                    </div>
-                                    <div className="submit__btn text-end">
-                                        <button type='submit'>Submit <BsArrowRight /></button>
-                                    </div>
-                                </div>
-                            </form>
+                                </form>
                             )}
                         </div>
                     </div>

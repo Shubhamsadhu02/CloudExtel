@@ -288,7 +288,7 @@ export default function AboutUs() {
                                     <p>Please reach out to us at <b>careers@cloudextel.com</b> for exciting opportunities to join our rapidly growing team</p>
                                 </div>
                                 <div className="learn__more--btn">
-                                    <Link to={'/contact-us'}><button type='button'>Learn More<BsArrowRight /></button></Link>
+                                    <Link to={'/careers'}><button type='button'>Learn More<BsArrowRight /></button></Link>
                                 </div>
                             </div>
                         </div>
