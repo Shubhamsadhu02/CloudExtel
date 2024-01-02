@@ -18,6 +18,8 @@ import { BsArrowRight, BsCheck2 } from 'react-icons/bs';
 import OurBoard from './OurBoard';
 import OurTeam from './OurTeam';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { popUpAnimationProps, textAnimationProps } from '../../Partials/Framer';
 
 export default function AboutUs() {
     const [activeTab, setActiveTab] = useState('aboutUs');
@@ -83,8 +85,8 @@ export default function AboutUs() {
 
             <TopSection title={"Pioneer in Network as a Service Solutions"} image={AboutImg} height={'600px'} />
 
-            <section className='aboutUs__tabs'>
-                <div className="container">
+            <motion.section className='aboutUs__tabs'>
+                <motion.div className="container">
                     <ul className={`tabs tabs-list ${isTabsSticky ? 'sticky' : ''}`}>
                         <li className={`tab ${activeTab === 'aboutUs' ? 'active' : ''}`}
                             onClick={() => handleTabClick('aboutUs')}>About Us</li>
@@ -99,207 +101,213 @@ export default function AboutUs() {
                         <li className={`tab ${activeTab === 'joinUs' ? 'active' : ''}`}
                             onClick={() => handleTabClick('joinUs')}>Join Us</li>
                     </ul>
-                </div>
-            </section>
+                </motion.div>
+            </motion.section>
 
-            <section style={{ background: '#F5FAFE' }} id='aboutUs'>
-                <div className="container">
-                    <div className="aboutUs__tabs--container" >
-                        <div className="networks__content">
-                            <div className="hero__header text-center">
+            <motion.section style={{ background: '#F5FAFE' }} id='aboutUs'>
+                <motion.div className="container">
+                    <motion.div className="aboutUs__tabs--container" >
+                        <motion.div className="networks__content">
+                            <motion.div className="hero__header text-center" {...textAnimationProps}>
                                 <h1>Our Guiding Principles</h1>
-                            </div>
-                            <div className="hero__list mt-5">
-                                <ul>
-                                    <li><div className="tick"><BsCheck2 /></div> <div className="ms-2"><p>We strive to enable our clients and help them deliver world-class networking services to their end users to facilitate the growth of telecom services in India.</p></div></li>
-                                    <li><div className="tick"><BsCheck2 /></div> <div className="ms-2"><p>Grow as a full-stack NaaS provider and help deploy emerging technologies that deliver the most efficient networking services.</p></div></li>
-                                    <li><div className="tick"><BsCheck2 /></div> <div className="ms-2"><p>Facilitate the expansion of heterogeneous and multi-use networks to address the challenges of data consumption explosion and emerging technological architecture.</p></div></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                            </motion.div>
+                            <motion.div className="hero__list mt-5">
+                                <motion.ul>
+                                    <motion.li {...textAnimationProps}><motion.div className="tick"><BsCheck2 /></motion.div> <motion.div className="ms-2"><p>We strive to enable our clients and help them deliver world-class networking services to their end users to facilitate the growth of telecom services in India.</p></motion.div></motion.li>
+                                    <motion.li {...textAnimationProps}><motion.div className="tick"><BsCheck2 /></motion.div> <motion.div className="ms-2"><p>Grow as a full-stack NaaS provider and help deploy emerging technologies that deliver the most efficient networking services.</p></motion.div></motion.li>
+                                    <motion.li {...textAnimationProps}><motion.div className="tick"><BsCheck2 /></motion.div> <motion.div className="ms-2"><p>Facilitate the expansion of heterogeneous and multi-use networks to address the challenges of data consumption explosion and emerging technological architecture.</p></motion.div></motion.li>
+                                </motion.ul>
+                            </motion.div>
+                        </motion.div>
+                    </motion.div>
+                </motion.div>
+            </motion.section>
 
-            <section className='WhyUs' id='whyUs'>
-                <div className="container">
-                    <div className="aboutUs__tabs--container" >
-                        <div className="networks__content networks__content3">
-                            <div className="hero__header">
+            <motion.section className='WhyUs' id='whyUs'>
+                <motion.div className="container">
+                    <motion.div className="aboutUs__tabs--container" >
+                        <motion.div className="networks__content networks__content3">
+                            <motion.div className="hero__header" {...textAnimationProps}>
                                 <h1>Why CloudExtel?</h1>
-                            </div>
-                            <div className="hero__para mt-4" style={{ width: '610px' }}>
+                            </motion.div>
+                            <motion.div className="hero__para mt-4" style={{ width: '610px' }} {...textAnimationProps}>
                                 <p>We are driven by the aim of providing tailor-made network solutions that are highly scalable and ensure the utmost client satisfaction.</p>
-                            </div>
-                        </div>
-                        <div className="chooseUs__image text-center mt-4">
+                            </motion.div>
+                        </motion.div>
+                        <motion.div className="chooseUs__image text-center mt-4">
                             {/* <img src={Choose} alt="Why choose us" width={757} height={660} /> */}
                             <video autoPlay loop muted playsInline>
                                 <source src={CloudInfographicVideo} type='video/webm' />
                             </video>
-                        </div>
-                        <div className="whyUs__list mt-5">
-                            <div className="row" style={{ rowGap: '3rem' }}>
-                                <div className="col-sm-12 col-lg-4">
-                                    <div className="whyus__container">
-                                        <div className="why__container--image">
+                        </motion.div>
+                        <motion.div className="whyUs__list mt-5">
+                            <motion.div className="row" style={{ rowGap: '3rem' }}>
+                                <motion.div className="col-sm-12 col-lg-4">
+                                    <motion.div className="whyus__container" {...popUpAnimationProps}>
+                                        <motion.div className="why__container--image">
                                             <img src={Customer} alt="Customer Centric" />
-                                        </div>
-                                        <div className="why__container--header">
+                                        </motion.div>
+                                        <motion.div className="why__container--header">
                                             <h2>Customer Centric</h2>
-                                        </div>
-                                        <div className="why__container--para">
+                                        </motion.div>
+                                        <motion.div className="why__container--para">
                                             <p>Identify the client’s pain points and design bespoke quality solutions that guarantee satisfaction.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-sm-12 col-lg-4">
-                                    <div className="whyus__container">
-                                        <div className="why__container--image">
+                                        </motion.div>
+                                    </motion.div>
+                                </motion.div>
+                                <motion.div className="col-sm-12 col-lg-4">
+                                    <motion.div className="whyus__container" {...popUpAnimationProps}>
+                                        <motion.div className="why__container--image">
                                             <img src={Innovative} alt="Innovative" />
-                                        </div>
-                                        <div className="why__container--header">
+                                        </motion.div>
+                                        <motion.div className="why__container--header">
                                             <h2>Innovative</h2>
-                                        </div>
-                                        <div className="why__container--para">
+                                        </motion.div>
+                                        <motion.div className="why__container--para">
                                             <p>Stay up to date with emerging industry trends and facilitate the development of new services.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-sm-12 col-lg-4">
-                                    <div className="whyus__container">
-                                        <div className="why__container--image">
+                                        </motion.div>
+                                    </motion.div>
+                                </motion.div>
+                                <motion.div className="col-sm-12 col-lg-4">
+                                    <motion.div className="whyus__container" {...popUpAnimationProps}>
+                                        <motion.div className="why__container--image">
                                             <img src={Process} alt="Process & System" />
-                                        </div>
-                                        <div className="why__container--header">
+                                        </motion.div>
+                                        <motion.div className="why__container--header">
                                             <h2>Process & System</h2>
-                                        </div>
-                                        <div className="why__container--para">
+                                        </motion.div>
+                                        <motion.div className="why__container--para">
                                             <p>Follow guidelines and polish the best practices to grow in several other geographies. </p>
-                                        </div>
-                                    </div>
-                                </div>
+                                        </motion.div>
+                                    </motion.div>
+                                </motion.div>
 
-                                <div className="col-sm-12 col-lg-4">
-                                    <div className="whyus__container">
-                                        <div className="why__container--image">
+                                <motion.div className="col-sm-12 col-lg-4">
+                                    <motion.div className="whyus__container" {...popUpAnimationProps}>
+                                        <motion.div className="why__container--image">
                                             <img src={Scalability} alt="Scalability" />
-                                        </div>
-                                        <div className="why__container--header">
+                                        </motion.div>
+                                        <motion.div className="why__container--header">
                                             <h2>Scalability</h2>
-                                        </div>
-                                        <div className="why__container--para">
+                                        </motion.div>
+                                        <motion.div className="why__container--para">
                                             <p>We leverage operational practices in each geography to provide additional new services to our clients.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-sm-12 col-lg-4">
-                                    <div className="whyus__container">
-                                        <div className="why__container--image">
+                                        </motion.div>
+                                    </motion.div>
+                                </motion.div>
+                                <motion.div className="col-sm-12 col-lg-4">
+                                    <motion.div className="whyus__container" {...popUpAnimationProps}>
+                                        <motion.div className="why__container--image">
                                             <img src={Profatability} alt="Profatability" />
-                                        </div>
-                                        <div className="why__container--header">
+                                        </motion.div>
+                                        <motion.div className="why__container--header">
                                             <h2>Profatability</h2>
-                                        </div>
-                                        <div className="why__container--para">
+                                        </motion.div>
+                                        <motion.div className="why__container--para">
                                             <p>Ensure profitable growth by providing cost-effective networking solutions across various business verticals.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-sm-12 col-lg-4">
-                                    <div className="whyus__container">
-                                        <div className="why__container--image">
+                                        </motion.div>
+                                    </motion.div>
+                                </motion.div>
+                                <motion.div className="col-sm-12 col-lg-4">
+                                    <motion.div className="whyus__container" {...popUpAnimationProps}>
+                                        <motion.div className="why__container--image">
                                             <img src={Commitment} alt="Commitment" />
-                                        </div>
-                                        <div className="why__container--header">
+                                        </motion.div>
+                                        <motion.div className="why__container--header">
                                             <h2>Commitment to excellence</h2>
-                                        </div>
-                                        <div className="why__container--para">
+                                        </motion.div>
+                                        <motion.div className="why__container--para">
                                             <p>We leverage advanced skills and expertise to redefine networking and NaaS solutions.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section >
+                                        </motion.div>
+                                    </motion.div>
+                                </motion.div>
+                            </motion.div>
+                        </motion.div>
+                    </motion.div>
+                </motion.div>
+            </motion.section >
 
-            <section className='ourBoard' id='ourTeam' style={{ background: '#1456A2' }}>
-                <div className="container">
-                    <div className="aboutUs__tabs--container" >
-                        <div className="hero__header hero__header--white">
+            <motion.section className='ourBoard' id='ourTeam' style={{ background: '#1456A2' }}>
+                <motion.div className="container">
+                    <motion.div className="aboutUs__tabs--container" >
+                        <motion.div className="hero__header hero__header--white" {...textAnimationProps}>
                             <h1>Our Team</h1>
-                        </div>
-                        <div className="mt-5">
+                        </motion.div>
+                        <motion.div className="mt-5">
                             <OurTeam />
-                        </div>
-                    </div>
-                </div>
-            </section>
+                        </motion.div>
+                    </motion.div>
+                </motion.div>
+            </motion.section>
 
-            <section className='ourBoard' id='ourBoard' style={{ background: '#F5FAFE' }}>
-                <div className="container">
-                    <div className="aboutUs__tabs--container" >
-                        <div className="networks__content networks__content3">
-                            <div className="hero__header">
+            <motion.section className='ourBoard' id='ourBoard' style={{ background: '#F5FAFE' }}>
+                <motion.div className="container">
+                    <motion.div className="aboutUs__tabs--container" >
+                        <motion.div className="networks__content networks__content3">
+                            <motion.div className="hero__header" {...textAnimationProps}>
                                 <h1>Our Board</h1>
-                            </div>
-                        </div>
+                            </motion.div>
+                        </motion.div>
                         <OurBoard />
-                    </div>
-                </div>
-            </section>
+                    </motion.div>
+                </motion.div>
+            </motion.section>
 
-            <section className='heritage' id='ourHeritage'>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-8">
-                            <div className="networks__content networks__content5">
-                                <div className="hero__header">
+            <motion.section className='heritage' id='ourHeritage'>
+                <motion.div className="container">
+                    <motion.div className="row">
+                        <motion.div className="col-lg-8">
+                            <motion.div className="networks__content networks__content5">
+                                <motion.div className="hero__header" {...textAnimationProps}>
                                     <h1>Our Journey</h1>
-                                </div>
-                                <div className="hero__subHeader1 mt-4">
+                                </motion.div>
+                                <motion.div className="hero__subHeader1 mt-4" {...textAnimationProps}>
                                     <h3>Evolution of CloudExtel</h3>
-                                </div>
-                                <div className="hero__para mt-4">
+                                </motion.div>
+                                <motion.div className="hero__para mt-4" {...textAnimationProps}>
                                     <p>Founded in 2014 as a Dark Fiber leasing company in South Mumbai, CloudExtel has witnessed rapid growth as India’s first full-stack Network as a Service(NaaS) provider with a solid presence in over <b>21 states</b> and <b>400+ cities</b> across India.</p>
                                     <p>After the launch of 3G services, the rapid expansion of the telecom industry and the demand for high-speed internet connectivity opened new avenues for <b>BGCL</b> to install its gas pipeline infrastructure to deploy Fiber optic cables inside cast-iron pipelines. CloudExtel was at the forefront of that project and undertook the task with utmost precision and expertise.</p>
                                     <p>We have worked with marquee clients including <b> Airtel, Vodafone Idea, Tata Communications, Tata Sky, RailTel, and Power Grid Corporation of India </b> and have developed strategic partnerships with leading tech giants and industry experts worldwide.</p>
                                     <p>We possess an experienced and dedicated management team with over <b> 100+ years </b> of combined experience and a proven track record of excellence and client satisfaction.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 heritage__image background__overflow--Left">
-                        </div>
-                    </div>
-                </div>
-            </section>
+                                </motion.div>
+                            </motion.div>
+                        </motion.div>
+                        <motion.div className="col-lg-4 heritage__image background__overflow--Left">
+                        </motion.div>
+                    </motion.div>
+                </motion.div>
+            </motion.section>
 
-            <section className='optic' id='joinUs' style={{ background: '#F5FAFE' }}>
-                <div className="container">
-                    <div className="row" style={{ background: '#1456A2' }}>
-                        <div className="col-sm-12 col-lg-6">
-                            <div className="optic__details">
-                                <div className="hero__news--header2">
+            <motion.section className='optic' id='joinUs' style={{ background: '#F5FAFE' }}>
+                <motion.div className="container">
+                    <motion.div className="row" style={{ background: '#1456A2' }}>
+                        <motion.div className="col-sm-12 col-lg-6">
+                            <motion.div className="optic__details" {...textAnimationProps}>
+                                <motion.div className="hero__news--header2">
                                     <h4>Join us</h4>
-                                </div>
-                                <div className="hero__para--white">
+                                </motion.div>
+                                <motion.div className="hero__para--white">
                                     <p>Please reach out to us at <b>careers@cloudextel.com</b> for exciting opportunities to join our rapidly growing team</p>
-                                </div>
-                                <div className="learn__more--btn">
+                                </motion.div>
+                                <motion.div className="learn__more--btn"
+                                    whileTap={{ scale: 0.9 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.6 }}
+                                    viewport={{
+                                        once: true,
+                                    }}>
                                     <Link to={'/careers'}><button type='button'>Learn More<BsArrowRight /></button></Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-sm-12 col-lg-6 px-0 d-flex justify-content-end">
-                            <div className="hero__image">
+                                </motion.div>
+                            </motion.div>
+                        </motion.div>
+                        <motion.div className="col-sm-12 col-lg-6 px-0 d-flex justify-content-end">
+                            <motion.div className="hero__image">
                                 <img src={Union} alt="Union" width={250} height={300} />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                            </motion.div>
+                        </motion.div>
+                    </motion.div>
+                </motion.div>
+            </motion.section>
             <Footer />
         </>
     )

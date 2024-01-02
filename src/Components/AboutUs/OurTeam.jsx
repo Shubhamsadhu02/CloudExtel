@@ -21,6 +21,7 @@ import YashIMG from '../../Images/AboutUs/OurTeam/Yash Upadhyay.png';
 import ShashankIMG from '../../Images/AboutUs/OurTeam/Shashank Goenka.png';
 import ShubhaIMG from '../../Images/AboutUs/OurTeam/Subha S.png';
 import KunmoonIMG from '../../Images/AboutUs/OurTeam/Kunmoon Panda.png';
+import { motion } from 'framer-motion';
 
 function TeamDescription({ data }) {
     // const [showMore, setShowMore] = useState(false);
@@ -167,33 +168,53 @@ export default function OurTeam() {
             She likes travelling, reading & is into fitness.`
         }
     ]
+
+    const fadeInAnimationVariants = {
+        initial: {
+            opacity: 0,
+            y: 250,
+        },
+        animate: (index) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 0.05 * index,
+            },
+        })
+    };
+
     return (
         <>
-            <div className="row" style={{ rowGap: "30px" }}>
+            <motion.div className="row" style={{ rowGap: "30px" }}>
                 {
                     ourTeamData.map((item, index) => {
                         return (<>
-                            <div className="col-sm-12 col-lg-4" key={index}>
-                                <div className="team__container">
-                                    <div className="team__image">
+                            <motion.div className="col-sm-12 col-lg-4" key={index}
+                                variants={fadeInAnimationVariants}
+                                initial="initial"
+                                whileInView="animate"
+                                viewport={{ once: true, }}
+                                custom={index}>
+                                <motion.div className="team__container">
+                                    <motion.div className="team__image">
                                         <img src={item.Image} alt={item.Name} height={263} width={263} className='rounded-circle' />
-                                    </div>
-                                    <div className="team__name">
+                                    </motion.div>
+                                    <motion.div className="team__name">
                                         <h2>{item.Name}</h2>
-                                    </div>
-                                    <div className="team__desgn text-center">
+                                    </motion.div>
+                                    <motion.div className="team__desgn text-center">
                                         <p>{item.Designation}</p>
-                                    </div>
-                                    <div className="">
+                                    </motion.div>
+                                    <motion.div className="">
                                         <TeamDescription data={{ image: item.ImageModal, linkedin: item.Linkedin, name: item.Name, designation: item.Designation, description: item.Description }} />
-                                    </div>
-                                </div>
-                            </div>
+                                    </motion.div>
+                                </motion.div>
+                            </motion.div>
                         </>
                         )
                     })
                 }
-            </div>
+            </motion.div>
             {/* <Swiper
                 slidesPerView={'auto'}
                 spaceBetween={30}

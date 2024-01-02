@@ -20,9 +20,11 @@ import NaveenIMG from '../../Images/AboutUs/OurBorad/Naveen ChopraIMG.png';
 import RichardIMG from '../../Images/AboutUs/OurBorad/RichardIMG.png';
 import NielIMG from '../../Images/AboutUs/OurBorad/Niel SchoemanIMG.png';
 
+import { motion } from 'framer-motion';
+
 function TeamDescription({ data }) {
     const [showModal, setShowModal] = useState(false);
-    
+
     const openModal = () => {
         setShowModal(true);
     };
@@ -166,34 +168,53 @@ export default function OurBoard() {
         }
     ];
 
+    const fadeInAnimationVariants = {
+        initial: {
+            opacity: 0,
+            y: 250,
+        },
+        animate: (index) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 0.05 * index,
+            },
+        })
+    };
+
     return (
         <>
-            <div className="row" style={{ rowGap: '30px' }}>
+            <motion.div className="row" style={{ rowGap: '30px' }}>
                 {
                     ourBoardTeam.map((item, index) => {
                         return (<>
-                            <div className="col-sm-12 col-lg-4" key={index}>
-                                <div className="board__container">
-                                    <div className="board__image">
+                            <motion.div className="col-sm-12 col-lg-4" key={index}
+                                variants={fadeInAnimationVariants}
+                                initial="initial"
+                                whileInView="animate"
+                                viewport={{ once: true, }}
+                                custom={index}>
+                                <motion.div className="board__container">
+                                    <motion.div className="board__image">
                                         <img src={item.Image} alt={item.Name} />
-                                    </div>
-                                    <div className="board__name">
+                                    </motion.div>
+                                    <motion.div className="board__name">
                                         <h2>{item.Name}</h2>
-                                    </div>
-                                    {/* <div className="board__desgn">
+                                    </motion.div>
+                                    {/* <motion.div className="board__desgn">
                                         <p>{item.Designation}</p>
-                                    </div> */}
-                                    <div className="d-flex justify-content-between align-items-center mt-5">
-                                        <div className="board__linkdln">
+                                    </motion.div> */}
+                                    <motion.div className="d-flex justify-content-between align-items-center mt-5">
+                                        <motion.div className="board__linkdln">
                                             <Link to={item.Linkedin} target='__blank' rel="noopener noreferrer"><BiLogoLinkedin /></Link>
-                                        </div>
-                                        {/* <div className="read__more">
+                                        </motion.div>
+                                        {/* <motion.div className="read__more">
                                             <p onClick={() => openModal(item)}>Read More</p>
-                                        </div> */}
+                                        </motion.div> */}
                                         <TeamDescription data={{ image: item.ImageModal, linkedin: item.Linkedin, name: item.Name, designation: item.Designation, description: item.Description }} />
-                                    </div>
-                                </div>
-                            </div>
+                                    </motion.div>
+                                </motion.div>
+                            </motion.div>
 
 
                             {/* <Modal show={showModal} onHide={closeModal}>
@@ -224,7 +245,7 @@ export default function OurBoard() {
                         )
                     })
                 }
-            </div>
+            </motion.div>
         </>
     )
 }

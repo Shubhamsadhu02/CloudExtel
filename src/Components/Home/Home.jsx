@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { motion } from 'framer-motion';
 import IndiaMap from './IndiaMap';
-import { easeInOutAnimationVariants, popUpAnimationVariants, textAnimationProps } from '../../Partials/Framer';
+import { easeInOutAnimationVariants, textAnimationProps, popUpAnimationProps, easeInOutAnimationProps } from '../../Partials/Framer';
 
 export default function Home() {
 
@@ -34,9 +34,9 @@ export default function Home() {
         <div className="container">
           <motion.div
             className="hero__heading text-center"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 3, ease: "easeIn" }}
+            transition={{ delay: 0.8, ease: "easeIn" }}
           >
             <h1>India’s Leading Network as a Service (NaaS) Provider</h1>
           </motion.div>
@@ -62,13 +62,7 @@ export default function Home() {
             <div className="col-sm-12 col-lg-8 background__overflow--Right">
               <div className="row our__mission">
                 <div className="col-sm-6 col-lg-6">
-                  <motion.div className="networks__container"
-                    variants={popUpAnimationVariants}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{
-                      once: true,
-                    }}>
+                  <motion.div className="networks__container" {...popUpAnimationProps}>
                     <div className="networks__container--image">
                       <img src={Cell} alt="Cell" />
                     </div>
@@ -81,13 +75,7 @@ export default function Home() {
                   </motion.div>
                 </div>
                 <div className="col-sm-6 col-lg-6">
-                  <motion.div className="networks__container"
-                    variants={popUpAnimationVariants}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{
-                      once: true,
-                    }}>
+                  <motion.div className="networks__container" {...popUpAnimationProps}>
                     <div className="networks__container--image">
                       <img src={Fiber} alt="Fiber" />
                     </div>
@@ -101,13 +89,7 @@ export default function Home() {
                 </div>
 
                 <div className="col-sm-6 col-lg-6">
-                  <motion.div className="networks__container"
-                    variants={popUpAnimationVariants}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{
-                      once: true,
-                    }}>
+                  <motion.div className="networks__container" {...popUpAnimationProps}>
                     <div className="networks__container--image">
                       <img src={FTTH} alt="FTTH" />
                     </div>
@@ -120,13 +102,7 @@ export default function Home() {
                   </motion.div>
                 </div>
                 <div className="col-sm-6 col-lg-6">
-                  <motion.div className="networks__container"
-                    variants={popUpAnimationVariants}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{
-                      once: true,
-                    }}>
+                  <motion.div className="networks__container" {...popUpAnimationProps}>
                     <div className="networks__container--image">
                       <img src={Virtualize} alt="Virtualized" />
                     </div>
@@ -189,13 +165,7 @@ export default function Home() {
         <div className="container">
           <div className="data__list">
             <ul>
-              <motion.li
-                variants={easeInOutAnimationVariants}
-                initial="initial"
-                whileInView="animate"
-                viewport={{
-                  once: true,
-                }}>
+              <motion.li {...easeInOutAnimationProps}>
                 <div className="data__number">
                   {/* <h3>{startAnimation ? (<CountUp end={5600} duration={2} />) : ('0')}&nbsp;KMs+</h3> */}
                   <h3>5,205</h3>
@@ -204,14 +174,8 @@ export default function Home() {
                   <p>SC Cites</p>
                 </div>
               </motion.li>
-              <motion.li
-                variants={easeInOutAnimationVariants}
-                initial="initial"
-                whileInView="animate">
-                <div className="data__number"
-                  viewport={{
-                    once: true,
-                  }}>
+              <motion.li {...easeInOutAnimationProps}>
+                <div className="data__number">
                   {/* <h3>{startAnimation ? (<CountUp end={4700} duration={2} />) : ('0')}&nbsp;+</h3> */}
                   <h3>177,491</h3>
                 </div>
@@ -219,13 +183,7 @@ export default function Home() {
                   <p>HP</p>
                 </div>
               </motion.li>
-              <motion.li
-                variants={easeInOutAnimationVariants}
-                initial="initial"
-                whileInView="animate"
-                viewport={{
-                  once: true,
-                }}>
+              <motion.li {...easeInOutAnimationProps}>
                 <div className="data__number">
                   {/* <h3>{startAnimation ? (<CountUp end={427} duration={2} />) : ('0')}&nbsp;+</h3> */}
                   <h3>8,000+</h3>
@@ -234,14 +192,8 @@ export default function Home() {
                   <p>Total Fiber laid</p>
                 </div>
               </motion.li>
-              <motion.li
-                variants={easeInOutAnimationVariants}
-                initial="initial"
-                whileInView="animate">
-                <div className="data__number"
-                  viewport={{
-                    once: true,
-                  }}>
+              <motion.li {...easeInOutAnimationProps}>
+                <div className="data__number">
                   {/* <h3>{startAnimation ? (<CountUp end={1900} duration={2} />) : ('0')}&nbsp;+</h3> */}
                   <h3>1,900+</h3>
                 </div>
@@ -249,13 +201,7 @@ export default function Home() {
                   <p>No. of Societies</p>
                 </div>
               </motion.li>
-              <motion.li
-                variants={easeInOutAnimationVariants}
-                initial="initial"
-                whileInView="animate"
-                viewport={{
-                  once: true,
-                }}>
+              <motion.li {...easeInOutAnimationProps}>
                 <div className="data__number">
                   {/* <h3>{startAnimation ? (<CountUp end={1.35} decimals={2} duration={2} />) : ('0')}&nbsp;lac+</h3> */}
                   <h3>340+</h3>
@@ -275,7 +221,7 @@ export default function Home() {
             {/* <img src={India} alt="India Map" /> */}
             <IndiaMap />
           </div>
-          <motion.div className="map__details" {...textAnimationProps}>
+          <motion.div className="map__details">
             <motion.div className="hero__header">
               <h1>We’re <br /> all over India</h1>
             </motion.div>

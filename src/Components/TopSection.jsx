@@ -21,7 +21,7 @@ export default function TopSection({ title, image, height, className }) {
                             <motion.div className="hero__heading"
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.5, duration: 1.5, ease: "easeIn" }}
+                            transition={{ delay: 0.5, ease: "easeIn" }}
                             >
                                 <h1>{title}</h1>
                             </motion.div>
