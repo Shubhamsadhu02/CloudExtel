@@ -3,24 +3,14 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 import { getAuth } from "firebase/auth";
 
-// const firebaseConfig = {
-//     apiKey: "AIzaSyCy6kwToVg61SSD-GEAI7_4iShSAu22Z4E",
-//     authDomain: "cloud-extel.firebaseapp.com",
-//     projectId: "cloud-extel",
-//     storageBucket: "cloud-extel.appspot.com",
-//     messagingSenderId: "313134515745",
-//     appId: "1:313134515745:web:e279c69243bde0e2540560",
-//     measurementId: "G-GLC263Z3SE"
-//   };
-
 const firebaseConfig = {
-  apiKey: "AIzaSyBtFbK6YwidIsq9mo_1omhbgaMj5x_umL0",
-  authDomain: "cloudextel-f5bca.firebaseapp.com",
-  projectId: "cloudextel-f5bca",
-  storageBucket: "cloudextel-f5bca.appspot.com",
-  messagingSenderId: "149773867924",
-  appId: "1:149773867924:web:05f47fb9fe67349af50d81",
-  measurementId: "G-11RF61CZTS"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
