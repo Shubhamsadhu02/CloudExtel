@@ -56,7 +56,7 @@ export default App;
 
 export const ProtectedRouteForAdmin = ({ children }) => {
   const admin = JSON.parse(localStorage.getItem('admin'))
-  if (admin?.email === "cloudexteldashboard@gmail.com") {
+  if (admin?.email === process.env.REACT_APP_ADMIN_EMAIL) {
     return children
   }
   else {
