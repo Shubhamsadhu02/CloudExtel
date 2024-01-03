@@ -34,17 +34,17 @@ export default function Home() {
         <div className="container">
           <motion.div
             className="hero__heading text-center"
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, ease: "easeIn" }}
+            transition={{ delay: 0.3, duration: 0.5 }}
           >
             <h1>India’s Leading Network as a Service (NaaS) Provider</h1>
           </motion.div>
           <motion.div
             className="hero__down"
-            variants={easeInOutAnimationVariants}
-            initial="initial"
-            whileInView="animate"
+            initial={{ opacity: 0, scale: 0.5, y: 80 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 1, ease: "easeInOut" }}
             viewport={{
               once: true,
             }}
@@ -54,7 +54,7 @@ export default function Home() {
             </HashLink>
           </motion.div>
         </div>
-      </motion.section>
+      </motion.section >
 
       <section className='networks' id='network'>
         <div className="container">

@@ -1,12 +1,12 @@
 export const popUpAnimationVariants = {
     initial: {
         opacity: 0,
-        y: 100,
+        y: 60,
     },
     animate: {
         opacity: 1,
         y: 0,
-        transition: { delay: 0.5, ease: "easeIn" },
+        transition: { delay: 0.2, duration: 0.3 },
     },
 };
 
@@ -22,12 +22,12 @@ export const popUpAnimationProps = {
 export const textAnimationvariants = {
     initial: {
         opacity: 0,
-        y: 100,
+        y: 60,
     },
     animate: {
         opacity: 1,
         y: 0,
-        transition: { delay: 0.2, ease: "easeIn" },
+        transition: { delay: 0.2, duration: 0.3 },
     }
 };
 
@@ -41,9 +41,9 @@ export const textAnimationProps = {
 };
 
 export const easeInOutAnimationVariants = {
-    initial: { opacity: 0, scale: 0.5, y: 80 },
+    initial: { opacity: 0, scale: 0.5, y: 40 },
     animate: { opacity: 1, scale: 1, y: 0 },
-    transition: { delay: 1, duration: 1.5, ease: "easeInOut" },
+    transition: { delay: 0.2, duration: 0.5 },
 };
 
 export const easeInOutAnimationProps = {

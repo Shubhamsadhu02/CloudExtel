@@ -60,7 +60,7 @@ export default function Header(props) {
             opacity: 1,
             x: 0,
             transition: {
-                delay: 0.5,
+                delay: 0.3,
                 duration: 1.5,
                 ease: 'easeInOut',
                 staggerChildren: 1,

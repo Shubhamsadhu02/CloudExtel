@@ -19,9 +19,9 @@ export default function TopSection({ title, image, height, className }) {
                                 <BsArrowLeft />
                             </div>
                             <motion.div className="hero__heading"
-                            initial={{ opacity: 0, y: 50 }}
+                            initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.5, ease: "easeIn" }}
+                            transition={{ delay: 0.2, duration: 0.3 }}
                             >
                                 <h1>{title}</h1>
                             </motion.div>
