@@ -31,7 +31,7 @@ export default function HomeNewsSection() {
                   <div className="hero__latest">
                     <p>Latest</p>
                   </div>
-                  <Link to={`/news-container/${getAllBlog[0].id}/${getAllBlog[0].blogs.title}`} state={{ data: getAllBlog[0] }} >
+                  <Link to={`/${getAllBlog[0].id}/${getAllBlog[0].blogs.title}`} state={{ data: getAllBlog[0] }} >
                     <div className="hero__news--Header">
                       <h4>{getAllBlog[0].blogs.title}</h4>
                     </div>
@@ -45,7 +45,7 @@ export default function HomeNewsSection() {
                     <div className="hero__latest">
                       <p>Latest</p>
                     </div>
-                    <Link to={`/news-container/${getAllBlog[1].id}/${getAllBlog[1].blogs.title}`} state={{ data: getAllBlog[1] }} >
+                    <Link to={`/${getAllBlog[1].id}/${getAllBlog[1].blogs.title}`} state={{ data: getAllBlog[1] }} >
                       <div className="hero__news--Header">
                         <h4>{getAllBlog[1].blogs.title}</h4>
                       </div>

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import Header from '../../Partials/Header'
 import Footer from '../../Partials/Footer'
 import { useNavigate } from 'react-router-dom';
@@ -7,11 +7,17 @@ import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import NewsCards from './NewsCards';
 import { Link } from 'react-router-dom';
 import reducer from '../../Context/reducer';
+import { Circles } from 'react-loader-spinner';
 
 export default function News() {
+    const [loadingImage, setLoadingImage] = useState(true);
     const naviagte = useNavigate();
     const handleBack = () => {
         naviagte(-1);
+    };
+
+    const handleImageLoad = () => {
+        setLoadingImage(false);
     };
 
     const context = useContext(reducer);
@@ -29,8 +35,21 @@ export default function News() {
                         {getAllBlog.length > 0 ? (
                             <div className="row mt-5">
                                 <div className="col-sm-12 col-lg-6">
+                                    <div className="d-flex align-items-center justify-content-center">
+                                        {loadingImage && <Circles
+                                            height="80"
+                                            width="80"
+                                            color="#FFF"
+                                            ariaLabel="circles-loading"
+                                            wrapperStyle={{}}
+                                            wrapperClass=""
+                                            visible={true}
+                                        />}
+                                    </div>
                                     <div className="news__header--image">
-                                        <img src={getAllBlog[0].thumbnail} alt={getAllBlog[0].blogs.title} />
+                                        <img src={getAllBlog[0].thumbnail} alt={getAllBlog[0].blogs.title}
+                                            onLoad={handleImageLoad}
+                                            style={{ display: loadingImage ? 'none' : 'block' }} />
                                     </div>
                                 </div>
                                 <div className="col-sm-12 col-lg-6 d-flex flex-column">
@@ -49,7 +68,7 @@ export default function News() {
                                 </div>
                             </div>
                         ) : (
-                            <h1>No News Present</h1>
+                            <h1 style={{ color: "#FFF" }}>No News Present</h1>
                         )}
                     </div>
 

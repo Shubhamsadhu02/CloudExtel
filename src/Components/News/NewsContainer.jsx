@@ -14,22 +14,19 @@ export default function NewsContainer() {
     const location = useLocation();
     const { state } = location;
     const [blogData, setBlogData] = useState(null);
+    const [loadingImage, setLoadingImage] = useState(true);
 
     useEffect(() => {
         if (state && state.data) {
-            // If data is available in the location state, set it to state
             setBlogData(state.data);
         } else {
-            // Fetch data based on the ID from Firebase
             const fetchBlogData = async () => {
                 try {
                     const docRef = doc(firestoreDB, 'BlogPost', id);
                     const snapshot = await getDoc(docRef);
                     if (snapshot.exists()) {
-                        // Set the blog data to state if the document exists
                         setBlogData(snapshot.data());
                     } else {
-                        // Handle if document doesn't exist for the provided ID
                         console.log('No such document!');
                     }
                 } catch (error) {
@@ -47,11 +44,14 @@ export default function NewsContainer() {
         naviagte(-1);
     };
 
+    const handleImageLoad = () => {
+        setLoadingImage(false);
+    };
+
     return (
         <>
             <Header />
-
-
+            
             <section className='hero__blue hero__blue--newsbg' key={id}>
                 <div className="container">
                     <div className="go-back" onClick={handleBack}>
@@ -89,8 +89,24 @@ export default function NewsContainer() {
                 <>
                     <section className='blog__content'>
                         <div className="container">
+                            {loadingImage && <Circles
+                                height="80"
+                                width="80"
+                                color="#FFF"
+                                ariaLabel="circles-loading"
+                                wrapperStyle={{}}
+                                wrapperClass=""
+                                visible={true}
+                            />}
                             <div className="blog__image">
-                                <img src={blogData.thumbnail} alt="thumbnail" width={820} height={570} />
+                                <img
+                                    src={blogData.thumbnail}
+                                    alt="thumbnail"
+                                    width={820}
+                                    height={570}
+                                    onLoad={handleImageLoad}
+                                    style={{ display: loadingImage ? 'none' : 'block' }}
+                                />
                             </div>
                             <div className="blog__details">
                                 <p dangerouslySetInnerHTML={{ __html: blogData.content }}></p>
@@ -109,7 +125,7 @@ export default function NewsContainer() {
                 </>
             ) : (<>
                 <div className='d-flex justify-content-center'>
-                    <p>No Content Present</p>
+                    <h2>No Content Present</h2>
                 </div>
             </>
             )}

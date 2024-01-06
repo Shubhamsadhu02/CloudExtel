@@ -3,6 +3,7 @@ import { BsArrowRight } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import reducer from '../../Context/reducer';
 import ReactPaginate from 'react-paginate';
+import { Circles } from 'react-loader-spinner';
 
 export default function NewdCards() {
     const context = useContext(reducer);
@@ -18,6 +19,11 @@ export default function NewdCards() {
     const offset = currentPage * itemsPerPage;
     const displayedBlogs = getAllBlog.slice(offset, offset + itemsPerPage);
 
+    const [loadingImage, setLoadingImage] = useState(true);
+    const handleImageLoad = () => {
+        setLoadingImage(false);
+    };
+
     return (
         <>
             {getAllBlog.length > 0 ? (
@@ -30,8 +36,22 @@ export default function NewdCards() {
                                 <div className="col-sm-12 col-md-6 col-lg-4">
                                     <Link to={`/${id}/${blogs.title}`} state={{ data: item }}>
                                         <div className="news__cards" key={index}>
+                                            <div className="d-flex align-items-center justify-content-center">
+                                                {loadingImage && <Circles
+                                                    height="40"
+                                                    width="40"
+                                                    color="#233852"
+                                                    ariaLabel="circles-loading"
+                                                    wrapperStyle={{}}
+                                                    wrapperClass=""
+                                                    visible={true}
+                                                />}
+                                            </div>
                                             <div className="news__blogImage">
-                                                <img src={thumbnail} alt="thumbnail" width={295} height={220} />
+                                                <img src={thumbnail} alt="thumbnail"
+                                                    width={295} height={220}
+                                                    onLoad={handleImageLoad}
+                                                    style={{ display: loadingImage ? 'none' : 'block' }} />
                                             </div>
                                             <div className="news__blogHeader">
                                                 <h3>{blogs.title}</h3>
