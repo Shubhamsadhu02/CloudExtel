@@ -44,7 +44,7 @@ export default function News() {
                                         <p dangerouslySetInnerHTML={{ __html: getAllBlog[0].content }}></p>
                                     </div>
                                     <div className="read__more--btn mt-4">
-                                        <Link to={`/news-container/${getAllBlog[0].id}/${getAllBlog[0].blogs.title}`} state={{ data: getAllBlog[0] }} ><button type='button'>Read More <BsArrowRight /></button></Link>
+                                        <Link to={`/${getAllBlog[0].id}/${getAllBlog[0].blogs.title}`} state={{ data: getAllBlog[0] }} ><button type='button'>Read More <BsArrowRight /></button></Link>
                                     </div>
                                 </div>
                             </div>

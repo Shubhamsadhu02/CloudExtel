@@ -24,24 +24,24 @@ export default function NewdCards() {
                 <>
                     <div className="row" style={{ rowGap: "25px" }}>
                         {displayedBlogs.map((item, index) => {
-                            const { thumbnail } = item;
+                            const { id, thumbnail, blogs, content, date } = item;
                             console.log(item);
                             return (
                                 <div className="col-sm-12 col-md-6 col-lg-4">
-                                    <Link to={`/news-container/${item.id}/${item.blogs.title}`} state={{ data: item }}>
+                                    <Link to={`/${id}/${blogs.title}`} state={{ data: item }}>
                                         <div className="news__cards" key={index}>
                                             <div className="news__blogImage">
                                                 <img src={thumbnail} alt="thumbnail" width={295} height={220} />
                                             </div>
                                             <div className="news__blogHeader">
-                                                <h3>{item.blogs.title}</h3>
+                                                <h3>{blogs.title}</h3>
                                             </div>
                                             <div className="news__blogPara">
-                                                <p dangerouslySetInnerHTML={{ __html: item.content }}></p>
+                                                <p dangerouslySetInnerHTML={{ __html: content }}></p>
                                             </div>
                                             <div className="news__blogDate">
-                                                <p>{item.date}</p>
-                                                <Link to={`/news-container/${item.id}/${item.blogs.title}`} state={{ data: item }}><BsArrowRight /></Link>
+                                                <p>{date}</p>
+                                                <Link to={`/${id}/${blogs.title}`} state={{ data: item }}><BsArrowRight /></Link>
                                             </div>
                                         </div>
                                     </Link>

@@ -22,7 +22,6 @@ import EditCareer from "./Admin/EditCareer";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
-
   
   return (
     <AnimatePresence>
@@ -36,7 +35,7 @@ function App() {
         <Route path="/contact-us" element={<ContactUs/>} />
         <Route path="/careers" element={<Career/>} />
         <Route path="/news" element={<News/>} />
-        <Route path="/news-container/:id/:title" element={<NewsContainer/>} />
+        <Route path="/:id/:title" element={<NewsContainer/>} />
 
         <Route path="/admin" element={<Login/>} />
         <Route path="/dashboard" element={ <ProtectedRouteForAdmin> <Dashboard/> </ProtectedRouteForAdmin>} />

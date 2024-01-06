@@ -89,7 +89,7 @@ export default function Dashboard() {
                             <td>
                               <div className="action__items d-flex">
                                 <p className='action--delete' title='Delete' onClick={() => deleteBlogs(item.id)}><MdDelete /></p>
-                                <p className='action-view' title='View'><Link to={`/news-container/${item.id}/${item.blogs.title}`} state={{ data: item }}><AiFillEye /></Link></p>
+                                <p className='action-view' title='View'><Link to={`/${item.id}/${item.blogs.title}`} state={{ data: item }}><AiFillEye /></Link></p>
                                 <p className='action-edit' title='Edit'><Link to={`/edit-post/${item.id}/${item.blogs.title}`} state={{ data: item }}><LiaEdit /></Link></p>
                               </div>
                             </td>

@@ -81,7 +81,7 @@ export default function CreateCareer() {
                         <h2>Create Career</h2>
                     </div>
                     {loading ?
-                        <div className='d-flex justify-conter-center'>
+                        <div className='d-flex justify-content-center'>
                             <Circles
                                 height="80"
                                 width="80"
