@@ -60,7 +60,7 @@ export default function Career() {
             <h1 style={{ color: '#FFF' }}>We Prioritise Employee <br />Satisfaction</h1>
           </motion.div>
           <motion.div className="row" style={{ rowGap: "40px" }}>
-            <motion.div className="col-sm-12 col-lg-4">
+            <motion.div className="col-sm-12 col-md-6 col-lg-4">
               <motion.div className="perks__container" {...popUpAnimationProps}>
                 <motion.div className="perks__image">
                   <img src={Competitive} alt="Competitive" />
@@ -73,7 +73,7 @@ export default function Career() {
                 </motion.div>
               </motion.div>
             </motion.div>
-            <motion.div className="col-sm-12 col-lg-4">
+            <motion.div className="col-sm-12 col-md-6 col-lg-4">
               <motion.div className="perks__container" {...popUpAnimationProps}>
                 <motion.div className="perks__image">
                   <img src={Health} alt="Health" />
@@ -86,7 +86,7 @@ export default function Career() {
                 </motion.div>
               </motion.div>
             </motion.div>
-            <motion.div className="col-sm-12 col-lg-4">
+            <motion.div className="col-sm-12 col-md-6 col-lg-4">
               <motion.div className="perks__container" {...popUpAnimationProps}>
                 <motion.div className="perks__image">
                   <img src={Flexible} alt="Flexible" />
@@ -100,7 +100,7 @@ export default function Career() {
               </motion.div>
             </motion.div>
 
-            <motion.div className="col-sm-12 col-lg-4">
+            <motion.div className="col-sm-12 col-md-6 col-lg-4">
               <motion.div className="perks__container" {...popUpAnimationProps}>
                 <motion.div className="perks__image">
                   <img src={Professional} alt="Professional" />
@@ -113,7 +113,7 @@ export default function Career() {
                 </motion.div>
               </motion.div>
             </motion.div>
-            <motion.div className="col-sm-12 col-lg-4">
+            <motion.div className="col-sm-12 col-md-6 col-lg-4">
               <motion.div className="perks__container" {...popUpAnimationProps}>
                 <motion.div className="perks__image">
                   <img src={Inclusive} alt="Inclusive" />
@@ -126,7 +126,7 @@ export default function Career() {
                 </motion.div>
               </motion.div>
             </motion.div>
-            <motion.div className="col-sm-12 col-lg-4">
+            <motion.div className="col-sm-12 col-md-6 col-lg-4">
               <motion.div className="perks__container" {...popUpAnimationProps}>
                 <motion.div className="perks__image">
                   <img src={Rcognization} alt="Reward" />

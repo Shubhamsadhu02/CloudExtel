@@ -145,7 +145,7 @@ export default function OurSolution() {
                     </motion.div>
                     <motion.div className="solution__tabs--container" id='fiber'>
                         <motion.div className="row">
-                            <motion.div className="col-sm-12 col-lg-6 order-md-1 order-2">
+                            <motion.div className="col-sm-12 col-md-12 col-lg-6 order-sm-2 order-2">
                                 <motion.div className="networks__content networks__content4 d-flex flex-column justify-content-center">
                                     <motion.div className="hero__header" {...textAnimationProps}>
                                         <h1>Fiber</h1>
@@ -191,7 +191,7 @@ export default function OurSolution() {
                                     </motion.div> */}
                                 </motion.div>
                             </motion.div>
-                            <motion.div className="col-sm-12 col-lg-6 order-md-2 order-1">
+                            <motion.div className="col-sm-12 col-md-12 col-lg-6 order-sm-1 order-1">
                                 <motion.div className="solution__image">
                                     <img src={Fiber} alt="Fiber" />
                                 </motion.div>
@@ -240,7 +240,7 @@ export default function OurSolution() {
                     </motion.div>
                     <motion.div className="solution__tabs--container" id='virtualized'>
                         <motion.div className="row">
-                            <motion.div className="col-sm-12 col-lg-6 d-flex flex-column justify-content-center order-md-1 order-2">
+                            <motion.div className="col-sm-12 col-lg-6 d-flex flex-column justify-content-center order-sm-2 order-2">
                                 <motion.div className="networks__content networks__content4">
                                     <motion.div className="hero__header" {...textAnimationProps}>
                                         <h1>Virtualized Networks</h1>
@@ -259,7 +259,7 @@ export default function OurSolution() {
                                     </motion.div> */}
                                 </motion.div>
                             </motion.div>
-                            <motion.div className="col-sm-12 col-lg-6 order-md-2 order-1">
+                            <motion.div className="col-sm-12 col-lg-6 order-sm-1 order-1">
                                 <motion.div className="solution__image">
                                     <img src={Virtualized} alt="Virtualized Networks" />
                                 </motion.div>

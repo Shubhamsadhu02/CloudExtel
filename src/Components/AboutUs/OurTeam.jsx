@@ -48,15 +48,15 @@ function TeamDescription({ data }) {
                 </Modal.Header>
                 <Modal.Body>
                     <div className="row">
-                        <div className="col-lg-5">
-                            <div className="team__image position-relative overflow-hidden mt-4 d-flex justify-content-center">
+                        <div className="col-md-5 col-lg-5">
+                            <div className="team__image team__image--modal position-relative overflow-hidden mt-4 d-flex justify-content-center">
                                 <img src={data.image} alt={data.name} />
                                 {/* <div className="team__linkedin">
                                     <a href={data.linkedin} target='__blank' rel="noopener noreferrer"><BiLogoLinkedin /></a>
                                 </div> */}
                             </div>
                         </div>
-                        <div className="col-lg-7">
+                        <div className="col-md-7 col-lg-7">
                             <div className="team__name">
                                 <h2>{data.name}</h2>
                             </div>
@@ -189,7 +189,7 @@ export default function OurTeam() {
                 {
                     ourTeamData.map((item, index) => {
                         return (<>
-                            <motion.div className="col-sm-12 col-lg-4" key={index}
+                            <motion.div className="col-sm-12 col-md-6 col-lg-4" key={index}
                                 variants={fadeInAnimationVariants}
                                 initial="initial"
                                 whileInView="animate"

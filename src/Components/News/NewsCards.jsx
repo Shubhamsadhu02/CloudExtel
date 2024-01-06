@@ -27,7 +27,7 @@ export default function NewdCards() {
                             const { thumbnail } = item;
                             console.log(item);
                             return (
-                                <div className="col-sm-12 col-lg-4">
+                                <div className="col-sm-12 col-md-6 col-lg-4">
                                     <Link to={`/news-container/${item.id}/${item.blogs.title}`} state={{ data: item }}>
                                         <div className="news__cards" key={index}>
                                             <div className="news__blogImage">

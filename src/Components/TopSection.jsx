@@ -14,7 +14,7 @@ export default function TopSection({ title, image, height, className }) {
             <section className={`hero__blue ${className}`} style={{ background: '#1456A2', height: `${height}`, position: 'relative' }}>
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm-12 col-lg-7">
+                        <div className="col-sm-12 col-md-6 col-lg-7">
                             <div className="go-back" onClick={handleBack}>
                                 <BsArrowLeft />
                             </div>
@@ -26,7 +26,7 @@ export default function TopSection({ title, image, height, className }) {
                                 <h1>{title}</h1>
                             </motion.div>
                         </div>
-                        <div className="col-sm-12 col-lg-5" style={{ position: 'absolute', right: '0', bottom: '0' }}>
+                        <div className="col-sm-12 col-md-6 col-lg-5" style={{ position: 'absolute', right: '0', bottom: '0' }}>
                             <div className="hero__blue--image">
                                 {image ? ( <img src={image} alt={title} /> ) : null }
                             </div>

@@ -1,3 +1,149 @@
+@media (max-width: 800px) {
+    .header {
+        padding: 14px;
+    }
+
+    .hero {
+        padding: 160px 55px;
+        height: 745px;
+    }
+
+    .nav-text {
+        height: 80px;
+    }
+
+    .nav-text a {
+        font-size: 40px;
+    }
+
+    .background__overflow--Right {
+        left: 48px;
+    }
+
+    .our__mission {
+        padding: 120px 0px 120px;
+    }
+
+    .networks__content1 {
+        width: 600px;
+        padding-left: 78px;
+    }
+
+    .data {
+        padding: 50px 100px;
+    }
+
+    .data ul {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .data ul li {
+        padding: 25px 40px;
+        width: 230px;
+    }
+
+    .data__name p,
+    .hero__para p,
+    .tab,
+    .team__descp ul li,
+    .perks__para p {
+        font-size: 14px;
+    }
+
+    .data__number h3,
+    .data__number h3,
+    .perks__header h3 {
+        font-size: 20px;
+    }
+
+    .hero__header h1,
+    .hero__heading h1 {
+        font-size: 45px;
+    }
+
+    .map__details {
+        width: auto;
+        position: initial;
+    }
+
+    .hero__heading h1 {
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero__blue .row {
+        padding-top: 40px;
+    }
+
+    .tab {
+        padding: 16px 10px;
+    }
+
+    .footer__top .container {
+        display: grid;
+    }
+
+    .footer__lists {
+        margin-top: 25px;
+    }
+
+    .footer-list ul {
+        padding-left: 0 !important;
+    }
+
+    .footer-list ul li {
+        padding-top: 0 !important;
+        padding-bottom: 25px !important;
+    }
+
+    .contactUs .contact__form--position {
+        position: initial;
+        margin-top: 25px;
+    }
+
+    .ContactUs__top {
+        height: 315px !important;
+    }
+
+    .contactUs {
+        height: auto;
+        padding-bottom: 25px;
+    }
+
+    .modal-dialog {
+        max-width: 720px;
+    }
+
+    .team__descp {
+        height: 355px;
+    }
+
+    .team__image--modal{
+        justify-content: initial !important;
+    }
+
+    .team__image--modal img {
+        height: 280px;
+    }
+
+    .networks__content5 {
+        padding: 75px 0;
+    }
+
+    .networks__content6 {
+        padding: 0px 0px 0px 60px;
+    }
+
+    .aboutUs__tabs--container {
+        padding: 55px 0;
+    }
+
+    .blog__content .container, .blog__top{
+        padding: 0 40px;
+    }
+}
+
 @media (max-width: 500px) {
 
     .header,
@@ -39,7 +185,7 @@
         font-size: 24px;
     }
 
-    .logo{
+    .logo {
         height: 31px;
         width: 160px;
     }
@@ -97,13 +243,17 @@
         font-size: 14px;
     }
 
+    .data{
+        margin-top: 25px;
+    }
+
     .our__mission {
         row-gap: 1rem;
         padding: 55px 0px 55px 0;
     }
 
     .background__overflow--Right::after {
-        right: -20px;
+        right: 20px;
         width: 105vw;
     }
 
@@ -119,7 +269,8 @@
     }
 
     .networks__container {
-        padding: 15px 20px;
+        padding: 15px 0px;
+        width: 284px;
     }
 
     .networks__container--header {
@@ -129,7 +280,7 @@
 
     .networks__content2,
     .networks__content6 {
-        padding: 55px 0px 55px 20px;
+        padding: 0px 0px 0px 20px;
     }
 
     .data ul,
@@ -149,6 +300,7 @@
     .data ul li {
         padding: 0px 20px;
         border-right: none;
+        width: auto;
     }
 
     .data ul li:nth-child(odd) {
@@ -224,7 +376,7 @@
     }
 
     .hero__list ul li svg {
-        font-size: 3rem;
+        font-size: 1rem;
     }
 
     .hero__list ul li p {
@@ -241,11 +393,6 @@
 
     .whyus__container {
         padding: 0;
-    }
-
-    .networks__content5 {
-        padding: 55px 0;
-
     }
 
     .modal-body {
@@ -275,20 +422,6 @@
         font-size: 14px;
     }
 
-    .ContactUs__top{
-        height: 315px !important;
-    }
-
-    .contactUs .contact__form--position {
-        position: initial;
-        margin-top: 25px;
-    }
-
-    .contactUs {
-        height: auto;
-        padding-bottom: 25px;
-    }
-    
     .news__header h1 {
         font-size: 32px;
     }
@@ -300,6 +433,7 @@
     .blog__top,
     .blog__content .container {
         padding: 18px;
+        bottom: 76px;
     }
 
     .blog__image img {
@@ -311,7 +445,7 @@
         padding: 12px;
     }
 
-    .perks .hero__header{
+    .perks .hero__header {
         margin-bottom: 50px;
     }
 
@@ -322,15 +456,30 @@
         margin-top: 30px;
     }
 
-    .map__details{
+    .map__details {
         position: static;
     }
 
-    .tab-content{
+    .tab-content {
         overflow-y: auto;
     }
 
-    .apply__btn button, .create__btn button, .back__btn button{
+    .apply__btn button,
+    .create__btn button,
+    .back__btn button {
         padding: 8px 12px;
+    }
+
+    .modal-dialog {
+        height: 600px;
+    }
+
+    .modal-body .row {
+        height: 500px;
+        overflow-y: auto;
+    }
+
+    .team__descp {
+        height: auto;
     }
 }
