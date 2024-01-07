@@ -61,7 +61,7 @@ export default function Header(props) {
             x: 0,
             transition: {
                 delay: 0.3,
-                duration: 1,
+                duration: 0.3,
                 ease: 'easeIn',
                 staggerChildren: 1,
             },

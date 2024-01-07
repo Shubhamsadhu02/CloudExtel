@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { motion } from 'framer-motion';
 import IndiaMap from './IndiaMap';
-import { easeInOutAnimationVariants, textAnimationProps, popUpAnimationProps, easeInOutAnimationProps } from '../../Partials/Framer';
+import { textAnimationProps, popUpAnimationProps, easeInOutAnimationProps } from '../../Partials/Framer';
 
 export default function Home() {
 
@@ -38,7 +38,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            <h1>India’s Leading Network as a Service (NaaS) Provider</h1>
+            <h1>India’s Leading <br/> Network as a Service (NaaS) Provider</h1>
           </motion.div>
           <motion.div
             className="hero__down"

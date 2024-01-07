@@ -394,7 +394,7 @@ textarea:focus {
 .hero {
     display: flex;
     align-items: center;
-    padding: 315px 312px;
+    padding: 315px 220px;
     background-size: cover;
     background-position: center center;
     height: 900px;
@@ -485,7 +485,7 @@ textarea:focus {
 
 .our__mission {
     row-gap: 4rem;
-    padding: 120px 100px 120px 0;
+    padding: 85px 100px 85px 0;
 }
 
 .networks__container--header {
@@ -503,7 +503,7 @@ textarea:focus {
 }
 
 .networks__container--para p {
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 500;
     color: #FFF;
@@ -531,7 +531,7 @@ textarea:focus {
 
 .networks__content1 {
     width: 412px;
-    padding-left: 45px;
+    padding-left: 100px;
 }
 
 .hero__para p {
@@ -558,7 +558,6 @@ textarea:focus {
     color: var(--Black, #233852);
 }
 
-.hero__para--light p,
 .why__container--para p,
 .board__desgn p,
 .team__desgn p {
@@ -577,6 +576,11 @@ textarea:focus {
     overflow: hidden;
     text-overflow: ellipsis;
     max-height: 4.4em;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    color: var(--Black, #233852);
 }
 
 .next__sign a {
@@ -1251,7 +1255,7 @@ textarea:focus {
 }
 
 .optic__details {
-    padding: 50px 100px 50px 50px;
+    padding: 50px 95px 50px 80px;
 }
 
 .modal {

@@ -45,7 +45,7 @@ function TeamDescription({ data }) {
                 <Modal.Body>
                     <div className="row">
                         <div className="col-md-5 col-lg-5">
-                            <div className="team__image team__image--modal position-relative overflow-hidden mt-4">
+                            <div className="team__image team__image--modal position-relative overflow-hidden mt-4 d-flex justify-content-center">
                                 <img src={data.image} alt={data.name} />
                                 {/* <div className="team__linkedin">
                                     <a href={data.linkedin} target='__blank'><BiLogoLinkedin /></a>

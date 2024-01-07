@@ -4,7 +4,7 @@
     }
 
     .hero {
-        padding: 160px 55px;
+        padding: 160px 35px;
         height: 745px;
     }
 
@@ -27,6 +27,10 @@
     .networks__content1 {
         width: 600px;
         padding-left: 78px;
+    }
+
+    .networks__content4 {
+        padding: 20px 0px;
     }
 
     .data {
@@ -117,10 +121,6 @@
 
     .team__descp {
         height: 355px;
-    }
-
-    .team__image--modal{
-        justify-content: initial !important;
     }
 
     .team__image--modal img {

@@ -3,6 +3,8 @@ import { BsArrowRight } from 'react-icons/bs'
 import News from '../../Images/Home/news.png';
 import { Link } from 'react-router-dom';
 import reducer from '../../Context/reducer';
+import { motion } from 'framer-motion';
+import { textAnimationProps } from '../../Partials/Framer';
 
 export default function HomeNewsSection() {
   const context = useContext(reducer);
@@ -14,12 +16,12 @@ export default function HomeNewsSection() {
         <section className='news'>
           <div className="container">
             <div className="networks__content networks__content3">
-              <div className="hero__header">
+              <motion.div className="hero__header" {...textAnimationProps}>
                 <h1>In News</h1>
-              </div>
-              <div className="hero__para mt-4" style={{ width: '500px' }}>
+              </motion.div>
+              <motion.div className="hero__para mt-4" style={{ width: '500px' }} {...textAnimationProps}>
                 <p>Stay updated with the latest news and developments from Bombay Gas Ventures Pvt. Ltd.</p>
-              </div>
+              </motion.div>
             </div>
 
             <div className="row mt-5">
