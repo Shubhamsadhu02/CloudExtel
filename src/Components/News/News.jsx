@@ -53,17 +53,19 @@ export default function News() {
                                     </div>
                                 </div>
                                 <div className="col-sm-12 col-lg-6 d-flex flex-column">
-                                    <div className="news__date">
-                                        <p>LATEST • {getAllBlog[0].date} </p>
-                                    </div>
-                                    <div className="news__header mt-4">
-                                        <h1>{getAllBlog[0].blogs.title}</h1>
-                                    </div>
-                                    <div className="news__para mt-4">
-                                        <p dangerouslySetInnerHTML={{ __html: getAllBlog[0].content }}></p>
-                                    </div>
-                                    <div className="read__more--btn mt-4">
-                                        <Link to={`/${getAllBlog[0].id}/${getAllBlog[0].blogs.title}`} state={{ data: getAllBlog[0] }} ><button type='button'>Read More <BsArrowRight /></button></Link>
+                                    <div className="news__container">
+                                        <div className="news__date">
+                                            <p>LATEST • {getAllBlog[0].date} </p>
+                                        </div>
+                                        <div className="news__header mt-4">
+                                            <h1>{getAllBlog[0].blogs.title}</h1>
+                                        </div>
+                                        <div className="news__para mt-4">
+                                            <p dangerouslySetInnerHTML={{ __html: getAllBlog[0].content }}></p>
+                                        </div>
+                                        <div className="read__more--btn mt-4">
+                                            <Link to={`/${getAllBlog[0].id}/${getAllBlog[0].blogs.title}`} state={{ data: getAllBlog[0] }} ><button type='button'>Read More <BsArrowRight /></button></Link>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +77,7 @@ export default function News() {
                 </div>
             </section>
 
-            <section className='news__container'>
+            <section className='news__cards--container'>
                 <div className="container">
                     <div className="hero__header text-center mb-5">
                         <h1>More News</h1>
