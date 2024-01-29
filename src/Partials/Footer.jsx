@@ -48,9 +48,9 @@ export default function Footer() {
               </div>
               <div className="social-list">
                 <ul className='d-flex'>
-                  <li><BiLogoFacebook style={{ color: "#fff" }} /></li>
-                  <li><BiLogoTwitter style={{ color: "#fff" }} /></li>
-                  <li><BiLogoInstagram style={{ color: "#fff" }} /></li>
+                  <li><a href='#' target='__blank' rel="noopener noreferrer"><BiLogoFacebook style={{ color: "#fff" }} /></a></li>
+                  <li><a href='https://twitter.com/cloud_extel' target='__blank' rel="noopener noreferrer"><BiLogoTwitter style={{ color: "#fff" }} /></a></li>
+                  <li><a href='#' target='__blank' rel="noopener noreferrer"><BiLogoInstagram style={{ color: "#fff" }} /></a></li>
                   <li><a href='https://www.linkedin.com/company/cloudextel/' target='__blank' rel="noopener noreferrer"><BiLogoLinkedin style={{ color: "#fff" }} /></a></li>
                 </ul>
               </div>
@@ -66,7 +66,8 @@ export default function Footer() {
               {/* <p>Our Subsidiaries</p> */}
               <div className='our__subsidiaries--list'>
                 <div className="our__subsidiaries--header">
-                  <Link to={'https://bgcppl.in/'} target='__blank' rel="noopener noreferrer"><h6>Bombay Gas Company Proprietary Private Limited</h6><BsArrowUpRight /></Link>
+                  {/* <Link to={'https://bgcppl.in/'} target='__blank' rel="noopener noreferrer"><h6>Bombay Gas Company Proprietary Private Limited</h6><BsArrowUpRight /></Link> */}
+                  <Link to={'https://bgcppl.in/'} target='__blank' rel="noopener noreferrer"><h6>BGCPPL</h6><BsArrowUpRight /></Link>
                 </div>
                 <div className="our__subsidiaries--header">
                   <Link to={'#'} target='__blank' rel="noopener noreferrer"><h6>Orange wave Networks</h6><BsArrowUpRight /></Link>

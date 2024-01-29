@@ -149,7 +149,7 @@ export default function OurBoard() {
         {
             Image: Richard,
             ImageModal: RichardIMG,
-            Name: "Richard",
+            Name: "Richard Tunstall",
             Designation: "",
             Linkedin: "",
             Description: `Richard is a Partner at Advencap, an early-stage digital infrastructure investment firm, broadly operating out of the UK. Having come from 14 years of investment banking in South Africa and the UK, Richard led various transactions in the telecom and IT sectors.<br/><br/>

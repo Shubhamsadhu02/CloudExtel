@@ -142,6 +142,10 @@
     .blog__content .container, .blog__top{
         padding: 0 40px;
     }
+
+    .our__subsidiaries--list {
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 500px) {
@@ -289,9 +293,12 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
-        grid-auto-rows: minmax(60px, auto);
+        grid-auto-rows: minmax(10px, auto);   
     }
 
+    .copyright p{
+        margin-top: 25px;
+    }
     .our__subsidiaries--header:nth-child(1) {
         grid-column: 1 / 3;
         grid-row: 1;
@@ -332,10 +339,6 @@
     .footer-list ul,
     .data__list ul {
         padding-left: 0;
-    }
-
-    .our__subsidiaries--header a {
-        width: 90%;
     }
 
     .hero__contact {
@@ -481,5 +484,9 @@
 
     .team__descp {
         height: auto;
+    }
+
+    .contactUs__content{
+        margin-top: 50px;
     }
 }

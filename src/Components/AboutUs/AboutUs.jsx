@@ -113,7 +113,7 @@ export default function AboutUs() {
                             </motion.div>
                             <motion.div className="hero__list mt-5">
                                 <motion.ul>
-                                    <motion.li {...textAnimationProps}><motion.div className="tick"><BsCheck2 /></motion.div> <motion.div className="ms-2"><p>We strive to enable our clients and help them deliver world-class networking services to their end users to facilitate the growth of telecom services in India.</p></motion.div></motion.li>
+                                    <motion.li {...textAnimationProps}><motion.div className="tick"><BsCheck2 /></motion.div> <motion.div className="ms-2"><p>We enable our clients to deliver world-class networking services to their end users to facilitate the growth of telecom services in India.</p></motion.div></motion.li>
                                     <motion.li {...textAnimationProps}><motion.div className="tick"><BsCheck2 /></motion.div> <motion.div className="ms-2"><p>Grow as a full-stack NaaS provider and help deploy emerging technologies that deliver the most efficient networking services.</p></motion.div></motion.li>
                                     <motion.li {...textAnimationProps}><motion.div className="tick"><BsCheck2 /></motion.div> <motion.div className="ms-2"><p>Facilitate the expansion of heterogeneous and multi-use networks to address the challenges of data consumption explosion and emerging technological architecture.</p></motion.div></motion.li>
                                 </motion.ul>
@@ -201,7 +201,7 @@ export default function AboutUs() {
                                             <img src={Profatability} alt="Profatability" />
                                         </motion.div>
                                         <motion.div className="why__container--header">
-                                            <h2>Profatability</h2>
+                                            <h2>Profitability</h2>
                                         </motion.div>
                                         <motion.div className="why__container--para">
                                             <p>Ensure profitable growth by providing cost-effective networking solutions across various business verticals.</p>
