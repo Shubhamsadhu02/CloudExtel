@@ -14,7 +14,7 @@ export default function PageNotFound() {
       <div>Page Not Found</div>
       </div>
     </section> */}
-    <TopSection title={"Page Not Found"} image={Error} height={'655px'} />
+    <TopSection title={"404 - Page Not Found"} image={Error} height={'655px'} />
     <Footer/>
     </>
   )
