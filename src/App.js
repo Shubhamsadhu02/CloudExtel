@@ -20,6 +20,7 @@ import CreateCareer from "./Admin/CreateCareer";
 import EditPost from "./Admin/EditPost";
 import EditCareer from "./Admin/EditCareer";
 import { AnimatePresence } from "framer-motion";
+import PageNotFound from "./Partials/PageNotFound";
 
 function App() {
   
@@ -43,6 +44,8 @@ function App() {
         <Route path="/create-career" element={<ProtectedRouteForAdmin> <CreateCareer/> </ProtectedRouteForAdmin>} />
         <Route path="/edit-post/:id/:title" element={<ProtectedRouteForAdmin> <EditPost/> </ProtectedRouteForAdmin>} />
         <Route path="/edit-career/:id/:title" element={<ProtectedRouteForAdmin> <EditCareer/> </ProtectedRouteForAdmin>} />
+
+        <Route path="*" element={<PageNotFound/>}></Route>
       </Routes>
       <Toaster/>
     </Router>
