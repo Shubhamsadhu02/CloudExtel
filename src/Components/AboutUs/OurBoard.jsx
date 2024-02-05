@@ -80,7 +80,7 @@ export default function OurBoard() {
         {
             Image: Ashish,
             ImageModal: AshishIMG,
-            Name: "Ashish Jalan",
+            Name: "Mr. Ashish Jalan",
             Designation: "4th Generation entrepreneur",
             Linkedin: "https://www.linkedin.com/in/ashishsjalan/",
             Description: `4th Generation entrepreneur <br/><br/>
@@ -93,7 +93,7 @@ export default function OurBoard() {
         {
             Image: Brandon,
             ImageModal: BrandonIMG,
-            Name: "Brandon Prater",
+            Name: "Mr. Brandon Prater",
             Designation: "8 years of experience in financing and investing",
             Linkedin: "https://www.linkedin.com/in/brandon-prater-0541063/",
             Description: `Brandon has over 28 years of experience in financing and investing in infrastructure, primarily in the European energy and telecom sector. Brandon is an advisor to Macquarie Capital. Previously he was the Co-Head of Partners Group Infrastructure where he helped grow the business into a USD 10bn AUM global investment platform. He chaired the Infrastructure Investment Committee and represented Infrastructure on the Global Investment Committee.<br/><br/>
@@ -104,7 +104,7 @@ export default function OurBoard() {
         {
             Image: Ivan,
             ImageModal: IvanIMG,
-            Name: "Ivan Verughese",
+            Name: "Mr. Ivan Verughese",
             Designation: "Head of Infrastructure & Energy Capital Asia Pacific",
             Linkedin: "https://www.linkedin.com/in/ivan-varughese-91634b20/",
             Description: `Ivan Varughese is the Head of Infrastructure & Energy Capital, Asia Pacific and Senior Managing Director, Infrastructure and Energy Capital Macquarie Capital. Ivan joined Macquarie Capital in 2006 as part of the Australian infrastructure team and led the Infrastructure & Energy Group in Australia and New Zealand from 2017. In 2020, he moved to Singapore to be the Head of the Green Investment Group, Asia Pacific.<br/><br/>
@@ -115,7 +115,7 @@ export default function OurBoard() {
         {
             Image: Kunal,
             ImageModal: KunalIMG,
-            Name: "Kunal Bajaj",
+            Name: "Mr. Kunal Bajaj",
             Designation: "CEO & Co-Founder",
             Linkedin: "https://www.linkedin.com/in/bajajkunal/",
             Description: `22+ years of experience in the Telecom, Internet & Technology space <br/><br/>
@@ -125,7 +125,7 @@ export default function OurBoard() {
         {
             Image: Maheep,
             ImageModal: MaheepIMG,
-            Name: "Maheep Jain",
+            Name: "Mr. Maheep Jain",
             Designation: "Promoter",
             Linkedin: "https://www.linkedin.com/in/maheepjain/",
             Description: `Maheep has over 16 years of experience in minority, build-out and buy-out investments across infrastructure sectors, with a strong focus on energy transition. Maheep joined Macquarie Capital in 2022 as Managing Director, Infrastructure & Energy Capital in India. He has been responsible for the full lifecycle of deals from origination and execution to portfolio management with cumulative equity investments of ~ $1bn.<br/><br/>
@@ -136,7 +136,7 @@ export default function OurBoard() {
         {
             Image: Naveen,
             ImageModal: NaveenIMG,
-            Name: "Naveen Chopra",
+            Name: "Mr. Naveen Chopra",
             Designation: "30+ years of work experience in Telecom & FMCG",
             Linkedin: "https://www.linkedin.com/in/naveen-chopra/",
             Description: `30+ years of work experience in Telecom & FMCG<br/><br/>
@@ -149,7 +149,7 @@ export default function OurBoard() {
         {
             Image: Richard,
             ImageModal: RichardIMG,
-            Name: "Richard Tunstall",
+            Name: "Mr. Richard Tunstall",
             Designation: "",
             Linkedin: "",
             Description: `Richard is a Partner at Advencap, an early-stage digital infrastructure investment firm, broadly operating out of the UK. Having come from 14 years of investment banking in South Africa and the UK, Richard led various transactions in the telecom and IT sectors.<br/><br/>
@@ -158,7 +158,7 @@ export default function OurBoard() {
         {
             Image: Niel,
             ImageModal: NielIMG,
-            Name: "Niel Schoeman",
+            Name: "Mr. Niel Schoeman",
             Designation: "",
             Linkedin: "",
             Description: `Niel is a Partner at Advencap, an early-stage digital infrastructure investment firm, where he brings more than 25 years of experience in the telecommunications and IT industry.<br/><br/>
@@ -186,64 +186,37 @@ export default function OurBoard() {
         <>
             <motion.div className="row" style={{ rowGap: '30px' }}>
                 {
-                    ourBoardTeam.map((item, index) => {
-                        return (<>
-                            <motion.div className="col-sm-12 col-md-6 col-lg-4" key={index}
-                                variants={fadeInAnimationVariants}
-                                initial="initial"
-                                whileInView="animate"
-                                viewport={{ once: true, }}
-                                custom={index}>
-                                <motion.div className="board__container">
-                                    <motion.div className="board__image">
-                                        <img src={item.Image} alt={item.Name} />
-                                    </motion.div>
-                                    <motion.div className="board__name">
-                                        <h2>{item.Name}</h2>
-                                    </motion.div>
-                                    {/* <motion.div className="board__desgn">
-                                        <p>{item.Designation}</p>
-                                    </motion.div> */}
-                                    <motion.div className="d-flex justify-content-between align-items-center mt-5">
-                                        <motion.div className="board__linkdln">
-                                            <Link to={item.Linkedin} target='__blank' rel="noopener noreferrer"><BiLogoLinkedin /></Link>
-                                        </motion.div>
-                                        {/* <motion.div className="read__more">
-                                            <p onClick={() => openModal(item)}>Read More</p>
-                                        </motion.div> */}
-                                        <TeamDescription data={{ image: item.ImageModal, linkedin: item.Linkedin, name: item.Name, designation: item.Designation, description: item.Description }} />
-                                    </motion.div>
-                                </motion.div>
+                    ourBoardTeam
+                    .sort((a, b) => a.Name.localeCompare(b.Name))
+                    .map((item, index) => (
+                      <motion.div className="col-sm-12 col-md-6 col-lg-4" key={index}
+                        variants={fadeInAnimationVariants}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true, }}
+                        custom={index}>
+                        <motion.div className="board__container">
+                          <motion.div className="board__image">
+                            <img src={item.Image} alt={item.Name} />
+                          </motion.div>
+                          <motion.div className="board__name">
+                            <h2>{item.Name}</h2>
+                          </motion.div>
+                          {/* <motion.div className="board__desgn">
+                              <p>{item.Designation}</p>
+                          </motion.div> */}
+                          <motion.div className="d-flex justify-content-between align-items-center mt-5">
+                            <motion.div className="board__linkdln">
+                              <Link to={item.Linkedin} target='__blank' rel="noopener noreferrer"><BiLogoLinkedin /></Link>
                             </motion.div>
-
-
-                            {/* <Modal show={showModal} onHide={closeModal}>
-                                <Modal.Header closeButton>
-                                </Modal.Header>
-                                <Modal.Body>
-                                    <div className="row">
-                                        <div className="col-lg-5">
-                                            <div className="team__image">
-                                                <img src={selectedBoardMember?.Image} alt={selectedBoardMember?.Name} />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-7">
-                                            <div className="team__name">
-                                                <h2>{selectedBoardMember?.Name}</h2>
-                                            </div>
-                                            <div className="team__desgn">
-                                                <p>{selectedBoardMember?.Designation}</p>
-                                            </div>
-                                            <div className="team__descp mt-5">
-                                                <p></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Modal.Body>
-                            </Modal> */}
-                        </>
-                        )
-                    })
+                            {/* <motion.div className="read__more">
+                                <p onClick={() => openModal(item)}>Read More</p>
+                            </motion.div> */}
+                            <TeamDescription data={{ image: item.ImageModal, linkedin: item.Linkedin, name: item.Name, designation: item.Designation, description: item.Description }} />
+                          </motion.div>
+                        </motion.div>
+                      </motion.div>
+                    ))                  
                 }
             </motion.div>
         </>

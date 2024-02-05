@@ -54,6 +54,22 @@ textarea:focus {
     z-Index: 1000;
 }
 
+.header.fixed {
+    position: fixed;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0px 4px 8px 0px rgba(137, 150, 167, 0.24);
+    padding: 10px 100px;
+}
+
+.header.glassmorphic {
+    position: fixed;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+    background-color: rgba(255, 255, 255, 0.1); /* Adjust the transparency as needed */
+    padding: 10px 100px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add smooth transitions */
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -167,7 +183,7 @@ textarea:focus {
     align-items: center;
 }
 
-.logo{
+.logo {
     height: 45px;
     width: 220px;
 }
@@ -287,7 +303,8 @@ textarea:focus {
 .career {
     padding: 120px 0;
 }
-.contactUs{
+
+.contactUs {
     height: 450px;
 }
 
@@ -319,14 +336,14 @@ textarea:focus {
     overflow-y: auto;
 }
 
-.team__descp ul li{
+.team__descp ul li {
     margin-bottom: 15px;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
     color: var(--Black, #233852);
     list-style: disc;
-} 
+}
 
 .contactUs__box,
 .success__message--box {
@@ -479,7 +496,7 @@ textarea:focus {
 
 .networks__container {
     position: relative;
-    z-index: 1000;
+    z-index: 10;
     padding: 15px 45px;
 }
 
@@ -569,7 +586,7 @@ textarea:focus {
     opacity: 0.64;
 }
 
-.hero__para--light p{
+.hero__para--light p {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -620,7 +637,7 @@ textarea:focus {
     padding: 55px 70px;
 }
 
-.data__list1 ul li{
+.data__list1 ul li {
     padding: 55px 45px;
 }
 
@@ -844,12 +861,16 @@ textarea:focus {
 
 .tabs.sticky {
     position: fixed;
-    top: 0;
+    top: 90px;
     left: 0;
     right: 0;
     background-color: white;
     z-index: 100;
-    box-shadow: 0px 4px 8px 0px rgba(137, 150, 167, 0.24);;
+    box-shadow: 0px 4px 8px 0px rgba(137, 150, 167, 0.24);
+}
+
+.tabs.sticky .tab {
+    padding: 20px 20px;
 }
 
 .aboutUs__tabs--container {
@@ -986,7 +1007,7 @@ textarea:focus {
     padding: 24px 0;
 }
 
-.perks__container{
+.perks__container {
     width: 360px;
 }
 
@@ -1134,7 +1155,7 @@ textarea:focus {
     text-transform: capitalize;
 }
 
-.news__container .news__header h1{
+.news__container .news__header h1 {
     word-wrap: break-word;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -1173,7 +1194,7 @@ textarea:focus {
     padding: 177px 0px 200px 0px;
 }
 
-.news__container{
+.news__container {
     padding-left: 55px;
 }
 
@@ -1480,7 +1501,7 @@ textarea:focus {
 .map .Mizoram,
 .map .Tripura,
 .map .Ladakh,
-.map .Arunachal{
+.map .Arunachal {
     fill: #E3F1FC;
 }
 
@@ -1489,7 +1510,7 @@ textarea:focus {
 .map .Mizoram:hover,
 .map .Tripura:hover,
 .map .Ladakh:hover,
-.map .Arunachal:hover{
+.map .Arunachal:hover {
     fill: #E3F1FC;
 }
 
@@ -1497,6 +1518,6 @@ textarea:focus {
     content: attr(title);
 }
 
-.contactUs__content{
+.contactUs__content {
     margin-top: 95px;
 }

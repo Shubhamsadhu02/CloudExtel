@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, Navigate } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import { LiaGripLinesSolid } from 'react-icons/lia';
@@ -72,9 +72,22 @@ export default function Header(props) {
         },
     };
 
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrolled = window.scrollY > 0;
+            setIsScrolled(scrolled);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <>
-            <section className='header'>
+            <section className={`header ${isScrolled ? 'fixed' : ''}`} style={{backgroundColor: isScrolled ? (isWhite ? "#1456A2" : "#FFF") : "transparent"}}>
                 <div className="container">
                     <IconContext.Provider value={{ color: '#fff' }}>
                         <div className='navbar'>
@@ -124,17 +137,17 @@ export default function Header(props) {
                                 variants={sidebarVariants}
                             >
                                 <AnimatePresence>
-                                {SidebarData.map((item, index) => {
-                                    return (
-                                        <motion.li key={index} className={item.cName}
-                                            variants={sidebarVariants}
-                                        >
-                                            <Link to={item.path}>
-                                                <span>{item.title}</span>
-                                            </Link>
-                                        </motion.li>
-                                    );
-                                })}
+                                    {SidebarData.map((item, index) => {
+                                        return (
+                                            <motion.li key={index} className={item.cName}
+                                                variants={sidebarVariants}
+                                            >
+                                                <Link to={item.path}>
+                                                    <span>{item.title}</span>
+                                                </Link>
+                                            </motion.li>
+                                        );
+                                    })}
                                 </AnimatePresence>
                             </motion.ul>
                         </motion.nav>

@@ -88,7 +88,7 @@ export default function OurTeam() {
         {
             Image: Kunal,
             ImageModal: KunalIMG,
-            Name: "Kunal Bajaj",
+            Name: "Mr. Kunal Bajaj",
             Designation: "CEO & Co-Founder",
             Linkedin: "https://www.linkedin.com/in/bajajkunal/",
             Description: `22+ years of experience in the Telecom, Internet & Technology space <br/><br/>
